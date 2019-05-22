@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="毛竹">
 <meta property="og:description" content="最近在学Python，我以前用的最多的是Java。新学一门语言，免不了要和现有语言做一番比较，以便更好地掌握新语言。总结一下，有以下几点： Java定义一个变量要指明其类型，如：12int i = 3;String s = &amp;quot;abc&amp;quot;; Python定义变量时不但无须指明其类型，而且不需要任何关键字（像有些语言如JavaScript，需要var等关键词）12i = 3s = &amp;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-22T00:41:44.406Z">
+<meta property="og:updated_time" content="2019-05-22T22:58:13.910Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python和Java语法比较">
 <meta name="twitter:description" content="最近在学Python，我以前用的最多的是Java。新学一门语言，免不了要和现有语言做一番比较，以便更好地掌握新语言。总结一下，有以下几点： Java定义一个变量要指明其类型，如：12int i = 3;String s = &amp;quot;abc&amp;quot;; Python定义变量时不但无须指明其类型，而且不需要任何关键字（像有些语言如JavaScript，需要var等关键词）12i = 3s = &amp;">
@@ -183,7 +183,7 @@
 <hr>
 <p>Java布尔值(常量)为true和false<br>Python布尔值(常量)为True和False</p>
 <hr>
-<p>Java字符串只能用””（单引号用于字符）<br>Python字符串即可以用””，也可以用’’，但两者同时使用时，以外部的符号为字符串标记，内部的则保留符号本身。如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s_value1 = &quot;abc&apos;def&apos;&quot; # 外部双引号，内部单引号</span><br><span class="line">s_value2 = &apos;abc&quot;def&quot;&apos; # 外部单引号，内部双引号</span><br><span class="line"></span><br><span class="line">print(s_value1) # 输出abc&apos;def&apos;</span><br><span class="line">print(s_value2) # 输出abc&quot;def&quot;</span><br></pre></td></tr></table></figure></p>
+<p>Java字符串只能用””（单引号用于字符）<br>Python字符串即可以用””，也可以用’’，但两者同时使用时，首尾的符号必须相同，字符串内部的保留符号本身。如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s_value1 = &quot;I&apos;m abc&quot;    # 外部双引号，内部单引号</span><br><span class="line">s_value2 = &apos;abc&quot;def&quot;&apos;   # 外部单引号，内部双引号</span><br><span class="line"></span><br><span class="line">print(s_value1) # 输出I&apos;m abc</span><br><span class="line">print(s_value2) # 输出abc&quot;def&quot;</span><br></pre></td></tr></table></figure></p>
 
       
 
