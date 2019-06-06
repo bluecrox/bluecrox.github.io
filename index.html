@@ -136,6 +136,114 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-10036" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/27/10036/">Python数据可视化</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/27/10036/" class="archive-article-date">
+  	<time datetime="2019-05-27T00:51:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装matplotlib"><a href="#安装matplotlib" class="headerlink" title="安装matplotlib"></a>安装matplotlib</h2><p>折线图和散点图需要安装matplotlib：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install matplotlib</span><br></pre></td></tr></table></figure></p>
+<p>测试是否安装成功：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\&gt;python</span><br><span class="line">&gt;&gt;&gt; import matplotlib</span><br></pre></td></tr></table></figure></p>
+<p>如果没有出现任何错误消息，就说明matplotlib安装好了。有时会报：DLL load failed： %1 不是有效的 Win32应用程序。这可能是Python的版本问题，如在64bit系统上安装了32bit的python(如何判断当前安装的Python版本？方法很简单：在命令行输入python，然后从输入信息即可得知)。</p>
+<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><p>plot通常用于绘制折线图（当然也可以是离散的点，参考后边的格式化），使用plot绘图时首先要导入模块matplotlib的pyplot(将其重命名为plt是习惯做法)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure></p>
+<h3 id="坐标数据"><a href="#坐标数据" class="headerlink" title="坐标数据"></a>坐标数据</h3><h4 id="1-绘制一个点"><a href="#1-绘制一个点" class="headerlink" title="1.绘制一个点"></a>1.绘制一个点</h4><p>先看一个最简单的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(1, 2, &quot;x&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>执行上述代码将显示如下所示界面：<br><img src="/2019/05/27/10036/5.jpg"><br>上述例子中，前两个参数（标量）构成一个坐标，第三个参数是记号形状，这里必须指定，否则图上什么也看不出（关于记号形状后续会详解）</p>
+<h4 id="2-绘制一组数据"><a href="#2-绘制一组数据" class="headerlink" title="2.绘制一组数据"></a>2.绘制一组数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p>执行上述代码将显示如下所示界面：<br><img src="/2019/05/27/10036/1.jpg"></p>
+<p>如果只提供给plot函数一个数组，则它会将它视为纵轴坐标数据y，并自动构造横轴坐标数据：range(len(y))。如上例所示：纵轴坐标数据是y = [1, 4, 9, 16, 25]，则横轴坐标数据：range(len(y))=[0, 1, 2, 3, 4]，即最终结果是把(0, 1)，(1, 4)，(2, 9)，(3, 16), (4, 25)连成的折线。</p>
+<p>显然，有时这种默认横轴坐标数据的做法无法满足我们的需求，比如假设我们想每个点的y坐标是x坐标的平方。这种情况下，我们应该明确地提供横轴坐标数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = [1, 2, 3, 4, 5]</span><br><span class="line">squares = [1, 4, 9, 16, 25]</span><br><span class="line">plt.plot(x, squares)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
+<p>执行上述代码结果如下（注意横坐标的变化）：<br><img src="/2019/05/27/10036/2.jpg"></p>
+<h4 id="3-绘制多组数据"><a href="#3-绘制多组数据" class="headerlink" title="3. 绘制多组数据"></a>3. 绘制多组数据</h4><h3 id="绘图格式"><a href="#绘图格式" class="headerlink" title="绘图格式"></a>绘图格式</h3><p>可以根据需要设置plot绘图格式，包含记号形状(marker)，线条类型(line)，及颜色(color)。</p>
+<h4 id="记号形状"><a href="#记号形状" class="headerlink" title="记号形状"></a>记号形状</h4><p>记号形状用于指定坐标点所在位置形状，例如要在每个坐标点位置画一个x号，示范代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25], &quot;x&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
+<p>运行结果如下图所示：<br><img src="/2019/05/27/10036/3.jpg"></p>
+<p>除了x号，plot还可能绘制很多其它的记号，具体可查看官方文档<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" target="_blank" rel="noopener">plot</a>的Markers部分。</p>
+<h4 id="线条类型"><a href="#线条类型" class="headerlink" title="线条类型"></a>线条类型</h4><p>线条类型用于指定连接坐标点的线条类型。默认是实线（solid line），可以用如下代码改成虚线（dotted line）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25], &quot;:&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
+<p>运行结果如下图所示：<br><img src="/2019/05/27/10036/4.jpg"></p>
+<p>plot共支持4种线条类型，分别为：</p>
+<table>
+<thead>
+<tr>
+<th>线条类型</th>
+<th>格式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>实线（solid line）</td>
+<td>“-“</td>
+</tr>
+<tr>
+<td>虚线（dotted line）</td>
+<td>“:”</td>
+</tr>
+<tr>
+<td>短横线（dashed line）</td>
+<td>“–”</td>
+</tr>
+<tr>
+<td>横点线（dash-dot line）</td>
+<td>“-.”</td>
+</tr>
+</tbody>
+</table>
+<h1 id="坐标轴"><a href="#坐标轴" class="headerlink" title="坐标轴"></a>坐标轴</h1><p>plt.axis([-3, 3, -3, 3])</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/27/10036/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-10035" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -143,7 +251,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/15/10035/">Python和Java语法比较</a>
+      <a class="article-title" href="/2019/05/15/10035/">Python和Java对照学习</a>
     </h1>
   
 
@@ -156,30 +264,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在学Python，我以前用的最多的是Java。新学一门语言，免不了要和现有语言做一番比较，以便更好地掌握新语言。总结一下，有以下几点：</p>
+        <p>最近在学Python，我以前用的最多的是Java。新学一门语言，免不了要和原有语言做一番比较，以便更好地掌握新语言。总结一下，有以下几点：</p>
 <p>Java定义一个变量要指明其类型，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i = 3;</span><br><span class="line">String s = &quot;abc&quot;;</span><br></pre></td></tr></table></figure></p>
-<p>Python定义变量时不但无须指明其类型，而且不需要任何关键字（像有些语言如JavaScript，需要var等关键词）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i = 3</span><br><span class="line">s = &quot;abc&quot;</span><br></pre></td></tr></table></figure></p>
+<p>Python定义变量时不但无须指明其类型，而且不需要任何关键字（不像有些语言如JavaScript，需要var等关键词）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i = 3</span><br><span class="line">s = &quot;abc&quot;</span><br></pre></td></tr></table></figure></p>
 <hr>
 <p>Java定义变量时可以不初始化，等到真正明确变量值时再赋值，即Java可以把变量定义和变量赋值分离，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int i;</span><br><span class="line">String s;</span><br><span class="line"></span><br><span class="line">// ... 其它代码</span><br><span class="line"></span><br><span class="line">i = 3;</span><br><span class="line">s = &quot;abc&quot;;</span><br></pre></td></tr></table></figure></p>
-<p>由于Python定义变量时缺乏明确的指示，语法上就是对一个变量赋值，只不过当要赋值的变量还没有定义时，顺带先把这个变量定义了。所以，Python在定义变量时必须给它赋一个初始值，如果实在没有初始值，可以考虑赋空值，如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int_value = 0</span><br><span class="line">str_value = &quot;&quot;</span><br><span class="line">list_value = []</span><br><span class="line">dict_value = &#123;&#125;</span><br><span class="line">tuple_value = ()</span><br></pre></td></tr></table></figure></p>
+<p>由于Python定义变量时缺乏明确的指示，语法上就是对一个变量赋值，只不过当要赋值的变量还没有定义时，顺带先把这个变量定义了。所以，Python在定义变量时必须给它赋一个初始值，如果实在没有初始值，可以考虑赋空值，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int_value = 0</span><br><span class="line">str_value = &quot;&quot;</span><br><span class="line">list_value = []</span><br><span class="line">dict_value = &#123;&#125;</span><br><span class="line">tuple_value = ()</span><br></pre></td></tr></table></figure></p>
 <hr>
-<p>Java的类型是静态的，不能把一种类型的变量赋给另一种类型的变量(有时可以把一个变量类型强制转换为另一个变量类型，但要求两者有继承关系)。如以下代码在Java中时不允许的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a_value = 3;</span><br><span class="line">a_value = &quot;abc&quot;;    // 报错</span><br></pre></td></tr></table></figure></p>
-<p>Python采用的是动态类型，一个变量本质上是一个地址，它可以重新指向任意类型的数据。如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a_value = 3</span><br><span class="line">a_value = &quot;abc&quot; # a_value现在指向字符串&quot;abc&quot;</span><br></pre></td></tr></table></figure></p>
+<p>Java的类型是静态的，不能把一种类型的变量赋给另一种类型的变量(有时可以把一个变量类型强制转换为另一个变量类型，但要求两者有继承关系)。如以下代码在Java中时不允许的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int a_value = 3;</span><br><span class="line">a_value = &quot;abc&quot;;    // 报错</span><br></pre></td></tr></table></figure></p>
+<p>Python采用的是动态类型，一个变量本质上是一个地址，它可以重新指向任意类型的新数据。如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a_value = 3</span><br><span class="line">a_value = &quot;abc&quot; # a_value现在指向字符串&quot;abc&quot;</span><br></pre></td></tr></table></figure></p>
 <hr>
-<p>Java变量有块作用域，在块内定义的变量，在块外无法访问，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(condition) &#123;</span><br><span class="line">    int a_value = 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>a_value = 4; // 报错，a_value未定义</p>
-<p>Python无块作用域，在块内定义的变量，可以在块外访问，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(condition):</span><br><span class="line">    a_value = 3</span><br><span class="line">print(a_value) # 输出3</span><br></pre></td></tr></table></figure></p>
+<p>Java变量有块作用域，在块内定义的变量，在块外无法访问，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(condition) &#123;</span><br><span class="line">    int a_value = 3;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a_value = 4; // 报错，a_value未定义</span><br></pre></td></tr></table></figure></p>
+<p>Python无块作用域，在块内定义的变量，可以在块外访问，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(condition):</span><br><span class="line">    a_value = 3</span><br><span class="line">    </span><br><span class="line">print(a_value) # 输出3</span><br></pre></td></tr></table></figure></p>
 <hr>
 <p>Java函数中，如果对一个变量赋值，即修改全局的变量。当重新定义一个（同名）局部变量，才会使用局部变量，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String a_value = &quot;global old&quot;;</span><br><span class="line"></span><br><span class="line">void foo() &#123;</span><br><span class="line">    a_value = &quot;global new&quot;; // 修改全局变量a_value，新值global new</span><br><span class="line"></span><br><span class="line">    String a_value = &quot;local old&quot;; // 定义局部同名变量，不影响全局变量</span><br><span class="line">    a_value = &quot;local new&quot;; // 修改局部变量，不影响全局变量</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Python函数中，如果对一个变量赋值，则是新建一个局部变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a_value = &quot;abc&quot;</span><br><span class="line"></span><br><span class="line">def foo():</span><br><span class="line">    a_value = 7     # 新建一个局部变量</span><br><span class="line">    print(a_value) # 输出7</span><br><span class="line"></span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line">print(a_value) # 输出abc</span><br></pre></td></tr></table></figure></p>
 <p>如果要在函数中使用全局变量，则要用关键词global：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a_value = &quot;abc&quot;</span><br><span class="line"></span><br><span class="line">def foo():</span><br><span class="line">    global a_value</span><br><span class="line">    print(a_value) # 使用全局变量，输出abc</span><br><span class="line">    a_value = 7    # 修改全局变量</span><br><span class="line">    print(a_value) # 输出7</span><br><span class="line"></span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line">print(a_value) # 输出7，因为在foo中被修改</span><br></pre></td></tr></table></figure></p>
 <hr>
-<p>Java禁止未定义就使用的变量，某些情况下，即使已定义，但未初始化，也会报错。而Python没有专门的定义变量的语法，用法比Java灵活，但同时这也可能带来意想不到的问题，例如当拼错变量名时（大小写，增加某个字母之类），而Python会当成一个新变量。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">value = &quot;something&quot;</span><br><span class="line">Value = &quot;something new&quot;</span><br></pre></td></tr></table></figure></p>
+<p>Java禁止未定义就使用的变量，某些情况下，即使已定义，但未初始化，也会报错。而Python没有专门的定义变量的语法，用法比Java灵活，但同时这也可能带来意想不到的问题，例如当拼错变量名时（大小写，增加某个字母之类），Python会将它当成一个新变量。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">value = &quot;something&quot;</span><br><span class="line">Value = &quot;something new&quot;</span><br></pre></td></tr></table></figure></p>
 <p>上述，我的本意是改变value的值，但由于疏忽把字母v大小写弄错，结果Python自动创建了一个新变量。这极有可能导致后续错误。</p>
+<hr>
+<p>Java中数组是语言内置的，使用时不用导入任何包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int[] a = &#123;1, 2, 3&#125;; // 定义并初始化一个数组</span><br><span class="line">int b = a[0];        // 读取数组中的一个元素</span><br></pre></td></tr></table></figure></p>
+<p>Python中的数组通常是指numpy中的ndarray，使用前需安装numpy并import。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">x = np.arange(-4, 4)</span><br><span class="line">print(type(x))  # 结果：&lt;class &apos;numpy.ndarray&apos;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>Java中List是一个接口，实际使用时需要创建其某个实例，如ArrayList，并且不管是List还是其实例，使用前都要先import：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import java.util.List;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line"></span><br><span class="line">List l = new ArrayList();</span><br></pre></td></tr></table></figure></p>
+<p>Python中list则是语言内置，使用时不用import任何东西:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a_list = [1, 2, 3]</span><br><span class="line">print(a_list) # 结果：[1, 2, 3]</span><br><span class="line">print(a_list[0]) # 结果：1</span><br><span class="line">print(type(a_list)) # 结果：&lt;class &apos;list&apos;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>对比Pyhton和Java，发现Python的list综合了Java中数组和list的语法和功能，但既然其type是list，则建议始终称其为list，而数组则特指numpy的ndarray，以免相互混淆。</p>
 <hr>
 <p>Java注释<br>单行注释//打头，多行注释用/<em> </em>/包裹<br>Python注释<br>单行注释，#打头，没有多行注释，如果要注释多行，每行都要加#</p>
 <hr>
 <p>Java布尔值(常量)为true和false<br>Python布尔值(常量)为True和False</p>
+<hr>
+<p>Java语句要以;结尾<br>Python不需要</p>
 <hr>
 <p>Java字符串只能用””（单引号用于字符）<br>Python字符串即可以用””，也可以用’’，但两者同时使用时，首尾的符号必须相同，字符串内部的保留符号本身。如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s_value1 = &quot;I&apos;m abc&quot;    # 外部双引号，内部单引号</span><br><span class="line">s_value2 = &apos;abc&quot;def&quot;&apos;   # 外部单引号，内部双引号</span><br><span class="line"></span><br><span class="line">print(s_value1) # 输出I&apos;m abc</span><br><span class="line">print(s_value2) # 输出abc&quot;def&quot;</span><br></pre></td></tr></table></figure></p>
 
