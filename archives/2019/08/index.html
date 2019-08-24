@@ -6,26 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://maozhu.me">
-  <title>Python数据可视化 | 毛竹</title>
+  <title>Archives: 2019/8 | 毛竹</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装matplotlib折线图和散点图需要安装matplotlib：1pip install matplotlib 测试是否安装成功：12C:\&amp;gt;python&amp;gt;&amp;gt;&amp;gt; import matplotlib 如果没有出现任何错误消息，就说明matplotlib安装好了。如果报错：DLL load failed： %1 不是有效的 Win32应用程序。这可能是Python的版本问题">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Python数据可视化">
-<meta property="og:url" content="https://maozhu.me/2019/05/27/10036/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="毛竹">
+<meta property="og:url" content="https://maozhu.me/archives/2019/08/index.html">
 <meta property="og:site_name" content="毛竹">
-<meta property="og:description" content="安装matplotlib折线图和散点图需要安装matplotlib：1pip install matplotlib 测试是否安装成功：12C:\&amp;gt;python&amp;gt;&amp;gt;&amp;gt; import matplotlib 如果没有出现任何错误消息，就说明matplotlib安装好了。如果报错：DLL load failed： %1 不是有效的 Win32应用程序。这可能是Python的版本问题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://maozhu.me/2019/05/27/10036/5.jpg">
-<meta property="og:image" content="https://maozhu.me/2019/05/27/10036/1.jpg">
-<meta property="og:image" content="https://maozhu.me/2019/05/27/10036/2.jpg">
-<meta property="og:image" content="https://maozhu.me/2019/05/27/10036/7.jpg">
-<meta property="og:image" content="https://maozhu.me/2019/05/27/10036/3.jpg">
-<meta property="og:image" content="https://maozhu.me/2019/05/27/10036/4.jpg">
-<meta property="og:updated_time" content="2019-06-16T23:44:13.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python数据可视化">
-<meta name="twitter:description" content="安装matplotlib折线图和散点图需要安装matplotlib：1pip install matplotlib 测试是否安装成功：12C:\&amp;gt;python&amp;gt;&amp;gt;&amp;gt; import matplotlib 如果没有出现任何错误消息，就说明matplotlib安装好了。如果报错：DLL load failed： %1 不是有效的 Win32应用程序。这可能是Python的版本问题">
-<meta name="twitter:image" content="https://maozhu.me/2019/05/27/10036/5.jpg">
+<meta name="twitter:title" content="毛竹">
   
     <link rel="alternative" href="/atom.xml" title="毛竹" type="application/atom+xml">
   
@@ -145,207 +134,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-10036" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Python数据可视化
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/08/24/10038/" class="archive-article-date">
+  	<time datetime="2019-08-24T00:42:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/08/24/10038/">F1分数</a>
     </h1>
   
 
-        
-        <a href="/2019/05/27/10036/" class="archive-article-date">
-  	<time datetime="2019-05-27T00:51:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="安装matplotlib"><a href="#安装matplotlib" class="headerlink" title="安装matplotlib"></a>安装matplotlib</h2><p>折线图和散点图需要安装matplotlib：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install matplotlib</span><br></pre></td></tr></table></figure></p>
-<p>测试是否安装成功：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\&gt;python</span><br><span class="line">&gt;&gt;&gt; import matplotlib</span><br></pre></td></tr></table></figure></p>
-<p>如果没有出现任何错误消息，就说明matplotlib安装好了。<br>如果报错：DLL load failed： %1 不是有效的 Win32应用程序。这可能是Python的版本问题，如在64bit系统上安装了32bit的python(如何判断当前安装的Python版本？方法很简单：在命令行输入python，然后从输入信息即可得知)。</p>
-<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><p>plot通常用于绘制折线图（当然也可以是离散的点，参考后边的格式化），使用plot绘图时首先要导入模块matplotlib的pyplot(习惯上将其重命名为plt)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure></p>
-<h3 id="坐标数据"><a href="#坐标数据" class="headerlink" title="坐标数据"></a>坐标数据</h3><h4 id="1-绘制一个点"><a href="#1-绘制一个点" class="headerlink" title="1.绘制一个点"></a>1.绘制一个点</h4><p>先看一个最简单的例子，绘制一个点：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(1, 2, &quot;x&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p>执行上述代码将显示如下所示界面：<br><img src="/2019/05/27/10036/5.jpg"><br>上述例子中，前两个参数（标量）构成一个坐标，第三个参数是记号形状，这里不可省略，否则图上什么也看不出（关于记号形状后续会详解）</p>
-<h4 id="2-绘制一组数据"><a href="#2-绘制一组数据" class="headerlink" title="2.绘制一组数据"></a>2.绘制一组数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p>执行上述代码将显示如下所示界面：<br><img src="/2019/05/27/10036/1.jpg"></p>
-<p>如果只提供给plot函数一个数组，则它会将它视为纵轴坐标数据y，并自动构造横轴坐标数据：range(len(y))。如上例所示：纵轴坐标数据是y = [1, 4, 9, 16, 25]，则横轴坐标数据：range(len(y))=[0, 1, 2, 3, 4]，即最终结果是把(0, 1)，(1, 4)，(2, 9)，(3, 16), (4, 25)连成的折线。</p>
-<p>显然，有时这种默认横轴坐标数据的做法无法满足我们的需求。比如假设我们想使每个点的x坐标是y坐标的开方。这种情况下，我们应该明确地提供横轴坐标数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = [1, 2, 3, 4, 5]</span><br><span class="line">squares = [1, 4, 9, 16, 25]</span><br><span class="line">plt.plot(x, squares)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
-<p>执行上述代码结果如下（注意横坐标的变化）：<br><img src="/2019/05/27/10036/2.jpg"></p>
-<h4 id="3-绘制多组数据"><a href="#3-绘制多组数据" class="headerlink" title="3. 绘制多组数据"></a>3. 绘制多组数据</h4><p>有多种方式在一个坐标系中绘制多组数据，最简单的是多次调用plot函数，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = [1, 2, 3, 4, 5]</span><br><span class="line">squares = [1, 4, 9, 16, 25]</span><br><span class="line">plt.plot(x, squares)</span><br><span class="line"></span><br><span class="line">y = x</span><br><span class="line">plt.plot(x, y)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
-<p>如下图所示（不同的数据集自动用不同的颜色表示）：<br><img src="/2019/05/27/10036/7.jpg"></p>
-<p>注：上述图像由于横坐标和纵坐标比例不相同，导致图像“变形”，如果要修正坐标刻度，可以查看“坐标轴”相关内容。</p>
-<h3 id="绘图格式"><a href="#绘图格式" class="headerlink" title="绘图格式"></a>绘图格式</h3><p>可以根据需要设置plot绘图格式，包含记号形状(marker)，线条类型(line)，及颜色(color)。</p>
-<h4 id="记号形状"><a href="#记号形状" class="headerlink" title="记号形状"></a>记号形状</h4><p>记号形状用于指定坐标点所在位置形状，例如要在每个坐标点位置画一个x号，示范代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25], &quot;x&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
-<p>运行结果如下图所示：<br><img src="/2019/05/27/10036/3.jpg"></p>
-<p>除了x号，plot还可能绘制很多其它的记号，具体可查看官方文档<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" target="_blank" rel="noopener">plot</a>的Markers部分。</p>
-<h4 id="线条类型"><a href="#线条类型" class="headerlink" title="线条类型"></a>线条类型</h4><p>线条类型用于指定连接坐标点的线条类型。默认是实线（solid line），可以用如下代码改成虚线（dotted line）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25], &quot;:&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
-<p>运行结果如下图所示：<br><img src="/2019/05/27/10036/4.jpg"></p>
-<p>plot共支持4种线条类型，分别为：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>线条类型</th>
-<th>格式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>实线（solid line）</td>
-<td>“-“</td>
-</tr>
-<tr>
-<td>虚线（dotted line）</td>
-<td>“:”</td>
-</tr>
-<tr>
-<td>短横线（dashed line）</td>
-<td>“—“</td>
-</tr>
-<tr>
-<td>横点线（dash-dot line）</td>
-<td>“-.”</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h4 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h4><p>可以使用的颜色显示线条和记号，如下代码将用红色显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25], &quot;r&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
-<p>每种颜色用首字母表示，如r表示红色（red），y表示黄色(yellow)，更多颜色缩写参考<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" target="_blank" rel="noopener">plot</a>的Colors部分。</p>
-<h4 id="同时指定多种绘图格式"><a href="#同时指定多种绘图格式" class="headerlink" title="同时指定多种绘图格式"></a>同时指定多种绘图格式</h4><p>实际上，记号形状、线条类型及颜色是可以同时指定的，如要用红色画线，记号用x表示，线条用虚线，只需：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25], &quot;rx:&quot;)</span><br><span class="line">plt.show()</span><br><span class="line">```   </span><br><span class="line">结果如下图所示： </span><br><span class="line">&#123;% asset_img 8.jpg %&#125;</span><br><span class="line"># 定制坐标轴</span><br><span class="line">默认情况下，pyplot会自动根据提供的x, y数据源动态决定坐标轴位置，及其刻度范围。可以调用相关方法进行定制，举例如下：</span><br></pre></td></tr></table></figure></p>
-<p>ax = plt.gca() // 获取当前的坐标系(gca是get current axes首字母缩写)<br>ax.spines[‘left’].set_position(‘center’) # left边显示在水平居中<br>ax.spines[‘right’].set_visible(False) # right边不显示<br>ax.spines[‘bottom’].set_position(‘center’) # bottom边显示在垂直居中<br>ax.spines[‘top’].set_color(‘none’) # top边不显示，另一种方法将边设置为不可见<br>ax.spines[‘left’].set_smart_bounds(True)<br>ax.spines[‘bottom’].set_smart_bounds(True)<br>ax.set_aspect(‘equal’, adjustable=’box’) # 横竖坐标使用相同的比例<br>```</p>
-<h1 id="图例"><a href="#图例" class="headerlink" title="图例"></a>图例</h1><p>如果在同一坐标系中显示多个数据集，则使用图例标识不同数据是很有必要的。</p>
-<p>使用图例，主要分两步：</p>
-<ol>
-<li><p>plot数据的时候指定label参数：<br>ax.plot(x1, y1, label=”data set 1”)<br>ax.plot(x2, y2, label=”data set 2”)</p>
-</li>
-<li><p>调用legend方式显示图例<br>plt.legend(loc=’best’)</p>
-</li>
-</ol>
-<!-- # 一个更完整的例子
-幂函数示意图 -->
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">统计学</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
+          
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://maozhu.me/2019/05/27/10036/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/06/17/10037/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          什么是机器学习
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/05/15/10035/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python和Java对照学习</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -368,8 +210,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
