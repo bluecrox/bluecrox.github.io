@@ -136,6 +136,237 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-10041" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/12/10041/">Gradient descent</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/12/10041/" class="archive-article-date">
+  	<time datetime="2019-09-12T00:03:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h1><p>gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线</p>
+<p>descent[dɪ’sent] : 下降；斜坡；血统；祖先</p>
+<p>gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。</p>
+<p>使用gradient descent找出$\theta_0, \theta_1, … \theta_n$，使$J(\theta_0, \theta_1, … \theta_n)$最小，步骤如下：</p>
+<ol>
+<li>初始化$\theta_0, \theta_1, … \theta_n$，赋予任意初始值均可，但要求其在函数中有意义。</li>
+<li>逐步更新$\theta_0, \theta_1, … \theta_n$的值，不断减小$J(\theta_0, \theta_1, … \theta_n)$只到其小到期望的最小值。</li>
+</ol>
+<p>注意：起始点不同gradient descent最后达到的最小值未必相同。</p>
+<p>repeat until convergence {</p>
+<p>​    $\theta_j = \theta_j - \alpha \frac{\partial}{\partial {\theta_j}}J(\theta_0, \theta_1…,\theta_n)$</p>
+<p>}</p>
+<p>注意：更新$\theta_j$要求同步更新，如下所示：</p>
+<p> $temp0 = \theta_0 - \alpha \frac{\partial}{\partial {\theta_0}}J(\theta_0, \theta_1…,\theta_n)$</p>
+<p> $temp1 = \theta_1 - \alpha \frac{\partial}{\partial {\theta_1}}J(\theta_0, \theta_1…,\theta_n)$</p>
+<p>即先把所有值记录到临时变量中，最后再更新$\theta_j$:</p>
+<p>$\theta_0 = temp0$</p>
+<p>$\theta_1=temp1$</p>
+<p>参考资料：<a href="https://www.coursera.org/learn/machine-learning/lecture/8SpIM/gradient-descent" target="_blank" rel="noopener">Gradient Descent</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/12/10041/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-10040" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/06/10040/">F1分数</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/06/10040/" class="archive-article-date">
+  	<time datetime="2019-09-05T23:36:06.894Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们在评价一个事物时，通常会采用一个数值衡量该事物的优劣。打个比方，如果要看班级里谁的语文成绩最好，一种方法是比较全班同学语文考试分数，看谁的最高。如果只有一个指标，评判简单明了，如果是两个，比如，看全班同学中谁的语文和数学成绩综合最好，问题就没这么容易了。假设甲的语文和都考80分，乙的语文考了62、数学100，试问，谁的成绩更好？当两个指标一优一劣时，人们是很难做出客观公允的评判的。唯一的解决办法是，把两个指标综合为一个指标。怎么做呢，最简单的一种方法是取两者的平均数。甲的平均分是80分，乙的平均分是81分，因此乙优于甲。但平均数有一个潜在问题，它无法处理偏科的问题。很明显甲的两科成绩比较均匀，而已偏科严重。故此，我们引入另一种把两个指标合二为一的方法——$F_1$分数。其公式为：</p>
+<p>$F_1分数=2\times \frac{指标1 \times 指标2}{指标1 + 指标2} $</p>
+<p>套用上述公式，分别计算甲的$F_1$分数为80，乙的$F_1$分数约为76.5，由此，甲的成绩优于乙。</p>
+<p>当然，$F_1$分数不光是用来计算考试分数的，它适用于任何二分类模型（包含两个指标）。举个例子，通常用以下两个指标来衡量一个癌症筛查算法性能的优劣：</p>
+<ul>
+<li>精确率（precision），</li>
+<li>召回率（recall）</li>
+</ul>
+<p>相关资料：<br><a href="https://baike.baidu.com/item/F1%E5%88%86%E6%95%B0/13864979" target="_blank" rel="noopener">https://baike.baidu.com/item/F1%E5%88%86%E6%95%B0/13864979</a></p>
+<p><a href="https://jamesmccaffrey.wordpress.com/2018/07/11/accuracy-precision-recall-and-f1-score/" target="_blank" rel="noopener">https://jamesmccaffrey.wordpress.com/2018/07/11/accuracy-precision-recall-and-f1-score/</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/06/10040/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-10039" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/30/10039/">机器学习的分类</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/30/10039/" class="archive-article-date">
+  	<time datetime="2019-08-30T00:27:32.893Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>机器学习（算法）主要分两大类：监督学习（Supervised learning）和非监督学习（Unsupervised learning）</p>
+<p>什么是Supervised learning?</p>
+<p><a href="https://www.coursera.org/learn/machine-learning/lecture/1VkCb/supervised-learning" target="_blank" rel="noopener">https://www.coursera.org/learn/machine-learning/lecture/1VkCb/supervised-learning</a> 2:00</p>
+<p>参考资料：</p>
+<p><a href="https://www.coursera.org/learn/machine-learning/lecture/Ujm7v/what-is-machine-learning" target="_blank" rel="noopener">https://www.coursera.org/learn/machine-learning/lecture/Ujm7v/what-is-machine-learning</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/30/10039/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-10038" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -267,24 +498,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p> 关于机器学习，业界存在多个不同的定义，并不统一。</p>
-<p>例如：Arthur Samuel定义机器学习是“the field of study that gives computers the ability to learn without being explicitly learned.”Samuel的这个定义不是很正式，并且有点过时，但它强调了机器学习的一个本质特征：机器学习不是直接明确地告诉计算机具体的指令和规则，而是赋予它一种学习能力，使它通过“学习“最终获得的知识，这是它与普通软件程序的最大区别。</p>
+<p>例如：Arthur Samuel定义机器学习是“Field of study that gives computers the ability to learn without being explicitly programmed.” Samuel的这个定义不是很正式，并且有点过时，但它强调了机器学习的一个本质特征：机器学习不是直接告诉计算机具体的指令和规则，而是赋予它一种学习能力，使它梦个屁通过“学习“获得知识，这是它与普通软件程序的最大区别。</p>
 <p>Andrew Ng在其coursera课程中给出的类似的定义：Machine leaning is the science of getting computers to learn without being explicitly programmed.</p>
 <p> 另一个关于机器学习的更新的定义是Tom Mitchell给出的，它与上述定义有较大区别：</p>
 <blockquote>
-<p>a computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.</p>
+<p>A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.</p>
 </blockquote>
-<p>Tom Mitchell的这个定义有点绕，其中主要包含3个要素：经验(experience), 任务(task)和性能评估(performance measure)。有点抽象，下面举两个实际例子解释一下这3个要素分别是什么：</p>
+<p>Tom Mitchell的这个定义有点绕，其中主要包含3个要素：经验(experience E), 任务(task T)和性能评估(performance measure P)。有点抽象，下面举两个实际例子解释一下这3个要素分别是什么：</p>
 <p>1）下棋程序</p>
 <ul>
-<li>经验：程序曾经下过的成千上万局的棋</li>
-<li>任务：下棋</li>
-<li>性能评估：与新对手下棋并获胜的概率</li>
+<li>经验(experience E)：程序下过的棋</li>
+<li>任务(task T)：下棋</li>
+<li>性能评估(performance measure P)：与新对手下棋并获胜的概率</li>
 </ul>
 <p>2）垃圾邮件过滤程序</p>
 <ul>
-<li>经验：观察分析用户把哪些邮件标记为为垃圾邮件，把哪些邮件标记为为正常邮件。</li>
-<li>任务：对邮件进行分类</li>
-<li>性能评估：程序分类正确的邮件占总邮件数量的比例</li>
+<li>经验(experience E),：观察分析用户把哪些邮件标记为为垃圾邮件，把哪些邮件标记为为正常邮件。</li>
+<li>任务(task T)：对邮件进行分类</li>
+<li>性能评估(performance measure P)：程序分类正确的邮件占总邮件数量的比例</li>
 </ul>
 
       
@@ -742,6 +973,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">统计学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
             
             <div class="clearfix"></div>

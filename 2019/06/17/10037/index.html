@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://maozhu.me">
   <title>什么是机器学习 | 毛竹</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于机器学习，业界存在多个不同的定义，并不统一。 例如：Arthur Samuel定义机器学习是“the field of study that gives computers the ability to learn without being explicitly learned.”Samuel的这个定义不是很正式，并且有点过时，但它强调了机器学习的一个本质特征：机器学习不是直接明确地告诉计">
+  <meta name="description" content="关于机器学习，业界存在多个不同的定义，并不统一。 例如：Arthur Samuel定义机器学习是“Field of study that gives computers the ability to learn without being explicitly programmed.” Samuel的这个定义不是很正式，并且有点过时，但它强调了机器学习的一个本质特征：机器学习不是直接告诉计算机具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="什么是机器学习">
 <meta property="og:url" content="https://maozhu.me/2019/06/17/10037/index.html">
 <meta property="og:site_name" content="毛竹">
-<meta property="og:description" content="关于机器学习，业界存在多个不同的定义，并不统一。 例如：Arthur Samuel定义机器学习是“the field of study that gives computers the ability to learn without being explicitly learned.”Samuel的这个定义不是很正式，并且有点过时，但它强调了机器学习的一个本质特征：机器学习不是直接明确地告诉计">
+<meta property="og:description" content="关于机器学习，业界存在多个不同的定义，并不统一。 例如：Arthur Samuel定义机器学习是“Field of study that gives computers the ability to learn without being explicitly programmed.” Samuel的这个定义不是很正式，并且有点过时，但它强调了机器学习的一个本质特征：机器学习不是直接告诉计算机具">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-28T00:40:30.607Z">
+<meta property="og:updated_time" content="2019-08-30T00:29:46.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么是机器学习">
-<meta name="twitter:description" content="关于机器学习，业界存在多个不同的定义，并不统一。 例如：Arthur Samuel定义机器学习是“the field of study that gives computers the ability to learn without being explicitly learned.”Samuel的这个定义不是很正式，并且有点过时，但它强调了机器学习的一个本质特征：机器学习不是直接明确地告诉计">
+<meta name="twitter:description" content="关于机器学习，业界存在多个不同的定义，并不统一。 例如：Arthur Samuel定义机器学习是“Field of study that gives computers the ability to learn without being explicitly programmed.” Samuel的这个定义不是很正式，并且有点过时，但它强调了机器学习的一个本质特征：机器学习不是直接告诉计算机具">
   
     <link rel="alternative" href="/atom.xml" title="毛竹" type="application/atom+xml">
   
@@ -159,24 +159,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p> 关于机器学习，业界存在多个不同的定义，并不统一。</p>
-<p>例如：Arthur Samuel定义机器学习是“the field of study that gives computers the ability to learn without being explicitly learned.”Samuel的这个定义不是很正式，并且有点过时，但它强调了机器学习的一个本质特征：机器学习不是直接明确地告诉计算机具体的指令和规则，而是赋予它一种学习能力，使它通过“学习“最终获得的知识，这是它与普通软件程序的最大区别。</p>
+<p>例如：Arthur Samuel定义机器学习是“Field of study that gives computers the ability to learn without being explicitly programmed.” Samuel的这个定义不是很正式，并且有点过时，但它强调了机器学习的一个本质特征：机器学习不是直接告诉计算机具体的指令和规则，而是赋予它一种学习能力，使它梦个屁通过“学习“获得知识，这是它与普通软件程序的最大区别。</p>
 <p>Andrew Ng在其coursera课程中给出的类似的定义：Machine leaning is the science of getting computers to learn without being explicitly programmed.</p>
 <p> 另一个关于机器学习的更新的定义是Tom Mitchell给出的，它与上述定义有较大区别：</p>
 <blockquote>
-<p>a computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.</p>
+<p>A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.</p>
 </blockquote>
-<p>Tom Mitchell的这个定义有点绕，其中主要包含3个要素：经验(experience), 任务(task)和性能评估(performance measure)。有点抽象，下面举两个实际例子解释一下这3个要素分别是什么：</p>
+<p>Tom Mitchell的这个定义有点绕，其中主要包含3个要素：经验(experience E), 任务(task T)和性能评估(performance measure P)。有点抽象，下面举两个实际例子解释一下这3个要素分别是什么：</p>
 <p>1）下棋程序</p>
 <ul>
-<li>经验：程序曾经下过的成千上万局的棋</li>
-<li>任务：下棋</li>
-<li>性能评估：与新对手下棋并获胜的概率</li>
+<li>经验(experience E)：程序下过的棋</li>
+<li>任务(task T)：下棋</li>
+<li>性能评估(performance measure P)：与新对手下棋并获胜的概率</li>
 </ul>
 <p>2）垃圾邮件过滤程序</p>
 <ul>
-<li>经验：观察分析用户把哪些邮件标记为为垃圾邮件，把哪些邮件标记为为正常邮件。</li>
-<li>任务：对邮件进行分类</li>
-<li>性能评估：程序分类正确的邮件占总邮件数量的比例</li>
+<li>经验(experience E),：观察分析用户把哪些邮件标记为为垃圾邮件，把哪些邮件标记为为正常邮件。</li>
+<li>任务(task T)：对邮件进行分类</li>
+<li>性能评估(performance measure P)：程序分类正确的邮件占总邮件数量的比例</li>
 </ul>
 
       
@@ -409,6 +409,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">统计学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
             
             <div class="clearfix"></div>
