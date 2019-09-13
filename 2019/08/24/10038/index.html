@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
@@ -164,22 +164,18 @@
 <p>套用上述公式，分别计算甲的$F_1$分数为80，乙的$F_1$分数约为76.5，由此，甲的成绩优于乙。</p>
 <p>当然，$F_1$分数不光是用来计算考试分数的，它适用于任何二分类模型（包含两个指标）。下面我们通过一个癌症筛查的例子，介绍$F_1$分数在机器学习算法中的应用。</p>
 <p>一个癌症筛查算法预测情况和实际情况排列组合后无非是以下四种情况：</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
-<th style="text-align:left">预测是癌症，实际真的有癌症(TP)</th>
-<th style="text-align:left">预测是癌症，实际没有癌症(FP)</th>
+<th align="left">预测是癌症，实际真的有癌症(TP)</th>
+<th align="left">预测是癌症，实际没有癌症(FP)</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">预测没有癌症，实际上有癌症(FN)</td>
-<td style="text-align:left">预测没有癌症，实际上真的没有癌症(TN)</td>
+<tbody><tr>
+<td align="left">预测没有癌症，实际上有癌症(FN)</td>
+<td align="left">预测没有癌症，实际上真的没有癌症(TN)</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <p>注：表格中P(positive)表示预测是真值（预测有癌症），N(negative)表示预测是假值（预测没有癌症）；T(true)表示预测正确，F(false)表示预测错误。</p>
 <p>癌症筛查优劣常用以下两个指标来衡量：</p>
 <ul>
@@ -193,7 +189,7 @@
 <p>$F_\beta分数=(1+\beta^2)\times \frac{精确率 \times 召回率}{\beta^2 \times 精确率 + 召回率}$</p>
 <p>令召回率的重要性是精确率的2倍，即$\beta=2$，则：</p>
 <p>$F_2分数=5\times \frac{精确率 \times 召回率}{4 \times 精确率 + 召回率}$</p>
-<p>在统计学中，除了$F<em>1$分数，$F_2$分数，还有$F</em>{0.5}$分数也得到大量的应用。</p>
+<p>在统计学中，除了$F_1$分数，$F_2$分数，还有$F_{0.5}$分数也得到大量的应用。</p>
 <p>参考资料：<br><a href="https://baike.baidu.com/item/F1%E5%88%86%E6%95%B0/13864979" target="_blank" rel="noopener">https://baike.baidu.com/item/F1%E5%88%86%E6%95%B0/13864979</a></p>
 <p><a href="https://jamesmccaffrey.wordpress.com/2018/07/11/accuracy-precision-recall-and-f1-score/" target="_blank" rel="noopener">https://jamesmccaffrey.wordpress.com/2018/07/11/accuracy-precision-recall-and-f1-score/</a></p>
 
@@ -437,23 +433,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学公式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">LaTex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">统计学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
             
             <div class="clearfix"></div>
@@ -461,7 +445,7 @@ MathJax.Hub.Queue(function() {
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
