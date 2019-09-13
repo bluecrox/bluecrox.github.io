@@ -169,24 +169,51 @@
 <tbody>
 <tr>
 <td>行内公式：将公式插入到本行内</td>
-<td><script type="math/tex">公式内容</script></td>
-<td><script type="math/tex">xyz</script></td>
+<td><code>$$公式内容$$</code></td>
+<td><code>$$xyz$$</code></td>
 <td>$xyz$</td>
 </tr>
 <tr>
 <td>独行公式：将公式插入到新的一行内，并且居中</td>
-<td>$$$公式内容$$$</td>
-<td>$$$xyz$$$</td>
+<td><code>$$$公式内容$$$</code></td>
+<td><code>$$$xyz$$$</code></td>
 <td><script type="math/tex">xyz</script></td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 id="上标、下标与组合"><a href="#上标、下标与组合" class="headerlink" title="上标、下标与组合"></a>上标、下标与组合</h2><ol>
-<li>上标符号，符号：<code>^</code>，如：$x^4$</li>
-<li>下标符号，符号：<code>_</code>，如：$x_1$</li>
-<li>组合符号，符号：<code>{}</code>，如：${16}<em>{8}O{2+}</em>{2}$</li>
-</ol>
+<h2 id="上标、下标与组合"><a href="#上标、下标与组合" class="headerlink" title="上标、下标与组合"></a>上标、下标与组合</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>符号</th>
+<th>示例</th>
+<th>示例渲染</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上标符号</td>
+<td><code>^</code></td>
+<td><script type="math/tex">x^4</script></td>
+<td>$x^4$</td>
+</tr>
+<tr>
+<td>下标符号</td>
+<td><code>_</code></td>
+<td><script type="math/tex">x_1</script></td>
+<td>$x_1$</td>
+</tr>
+<tr>
+<td>组合符号</td>
+<td><code>{}</code></td>
+<td><script type="math/tex">{16}_{8}O{2+}_{2}</script></td>
+<td>${16}<em>{8}O{2+}</em>{2}$</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h2 id="汉字、字体与格式"><a href="#汉字、字体与格式" class="headerlink" title="汉字、字体与格式"></a>汉字、字体与格式</h2><ol>
 <li>汉字形式，符号：<code>\mbox{}</code>，如：$V_{\mbox{初始}}$</li>
 <li>字体控制，符号：<code>\displaystyle</code>，如：$\displaystyle \frac{x+y}{y+z}$</li>
