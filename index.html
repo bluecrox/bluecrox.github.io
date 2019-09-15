@@ -166,6 +166,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdown</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Latex</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学公式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -221,7 +240,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>先解释一下这两个单词的意思。<br>gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线<br>descent[dɪ’sent] : 下降；斜坡；血统；祖先</p>
-<p>gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。</p>
+<p>gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。其算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降，经过若干步后，即能达到某个局部最低值。</p>
+<p><img src="10041%5C1.jpg" alt="1"></p>
 <p>使用gradient descent找出$\theta_0, \theta_1, … \theta_n$，使$J(\theta_0, \theta_1, … \theta_n)$最小，步骤如下：</p>
 <ol>
 <li>初始化$\theta_0, \theta_1, … \theta_n$，赋予任意初始值均可，但要求其在函数中有意义。</li>
@@ -231,7 +251,7 @@
 <p>repeat until convergence {</p>
 <p>​    $\theta_j = \theta_j - \alpha \frac{\partial}{\partial {\theta_j}}J(\theta_0, \theta_1…,\theta_n)$</p>
 <p>}</p>
-<p>其中，$\alpha $是个正数，控制步进速度。</p>
+<p>其中，$\alpha$是个正数，称为learning rate，用于控制步进速度。$\alpha$越大，gradient descent每次迭代参数变化越大。因此，越快向最小值靠近。</p>
 <p>注意：更新$\theta_j$要求同步更新，如下所示：</p>
 <p> $temp0 = \theta_0 - \alpha \frac{\partial}{\partial {\theta_0}}J(\theta_0, \theta_1…,\theta_n)$</p>
 <p> $temp1 = \theta_1 - \alpha \frac{\partial}{\partial {\theta_1}}J(\theta_0, \theta_1…,\theta_n)$</p>
@@ -1104,6 +1124,18 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Latex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数学公式</a>
               </li>
             
             <div class="clearfix"></div>
