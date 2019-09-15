@@ -136,6 +136,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-10043" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/15/10043/">偏导数</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/15/10043/" class="archive-article-date">
+  	<time datetime="2019-09-15T06:47:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>偏导数（Partial derivative）是指一个多变量的函数，关于其中一个变量的导数，而视其它变量为常量。例如，$z=f(x,y)=x^2+xy+y^2$</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">偏导数</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">partial derivative</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/15/10043/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-10042" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -242,27 +324,7 @@
         <p>先解释一下这两个单词的意思。<br>gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线<br>descent[dɪ’sent] : 下降；斜坡；血统；祖先</p>
 <p>gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。其算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降，经过若干步后，即能达到某个局部最低值。</p>
 <img src="/2019/09/12/10041/1.jpg" title="示意图">
-
-<p>使用gradient descent找出$\theta_0, \theta_1, … \theta_n$，使$J(\theta_0, \theta_1, … \theta_n)$最小，步骤如下：</p>
-<ol>
-<li>初始化$\theta_0, \theta_1, … \theta_n$，赋予任意初始值均可，但要求其在函数中有意义。</li>
-<li>逐步更新$\theta_0, \theta_1, … \theta_n$的值，不断减小$J(\theta_0, \theta_1, … \theta_n)$只到其小到期望的最小值。</li>
-</ol>
-<p>注意：起始点不同gradient descent最后达到的最小值未必相同。</p>
-<p>repeat until convergence {</p>
-<p>​    $\theta_j = \theta_j - \alpha \frac{\partial}{\partial {\theta_j}}J(\theta_0, \theta_1…,\theta_n)$</p>
-<p>}</p>
-<p>其中，$\alpha$是个正数，称为learning rate，用于控制步进速度。$\alpha$越大，gradient descent每次迭代参数变化越大。因此，越快向最小值靠近。</p>
-<p>注意：更新$\theta_j$要求同步更新，如下所示：</p>
-<p> $temp0 = \theta_0 - \alpha \frac{\partial}{\partial {\theta_0}}J(\theta_0, \theta_1…,\theta_n)$</p>
-<p> $temp1 = \theta_1 - \alpha \frac{\partial}{\partial {\theta_1}}J(\theta_0, \theta_1…,\theta_n)$</p>
-<p>即先把所有值记录到临时变量中，最后再更新$\theta_j$:</p>
-<p>$\theta_0 = temp0$</p>
-<p>$\theta_1=temp1$</p>
-<p>参考资料：</p>
-<p><a href="https://www.coursera.org/learn/machine-learning/lecture/8SpIM/gradient-descent" target="_blank" rel="noopener">Gradient Descent</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Gradient_descent" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Gradient_descent</a></p>
-
+        
       
 
       
@@ -286,78 +348,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/09/12/10041/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-10040" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/06/10040/">F1分数</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/06/10040/" class="archive-article-date">
-  	<time datetime="2019-09-05T23:36:06.894Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我们在评价一个事物时，通常会采用一个数值衡量该事物的优劣。打个比方，如果要看班级里谁的语文成绩最好，一种方法是比较全班同学语文考试分数，看谁的最高。如果只有一个指标，评判简单明了，如果是两个，比如，看全班同学中谁的语文和数学成绩综合最好，问题就没这么容易了。假设甲的语文和都考80分，乙的语文考了62、数学100，试问，谁的成绩更好？当两个指标一优一劣时，人们是很难做出客观公允的评判的。唯一的解决办法是，把两个指标综合为一个指标。怎么做呢，最简单的一种方法是取两者的平均数。甲的平均分是80分，乙的平均分是81分，因此乙优于甲。但平均数有一个潜在问题，它无法处理偏科的问题。很明显甲的两科成绩比较均匀，而已偏科严重。故此，我们引入另一种把两个指标合二为一的方法——$F_1$分数。其公式为：</p>
-<p>$F_1分数=2\times \frac{指标1 \times 指标2}{指标1 + 指标2} $</p>
-<p>套用上述公式，分别计算甲的$F_1$分数为80，乙的$F_1$分数约为76.5，由此，甲的成绩优于乙。</p>
-<p>当然，$F_1$分数不光是用来计算考试分数的，它适用于任何二分类模型（包含两个指标）。举个例子，通常用以下两个指标来衡量一个癌症筛查算法性能的优劣：</p>
-<ul>
-<li>精确率（precision），</li>
-<li>召回率（recall）</li>
-</ul>
-<p>相关资料：<br><a href="https://baike.baidu.com/item/F1%E5%88%86%E6%95%B0/13864979" target="_blank" rel="noopener">https://baike.baidu.com/item/F1%E5%88%86%E6%95%B0/13864979</a></p>
-<p><a href="https://jamesmccaffrey.wordpress.com/2018/07/11/accuracy-precision-recall-and-f1-score/" target="_blank" rel="noopener">https://jamesmccaffrey.wordpress.com/2018/07/11/accuracy-precision-recall-and-f1-score/</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/06/10040/">展开全文 >></a>
         </p>
       
 
@@ -720,19 +710,19 @@
 </thead>
 <tbody><tr>
 <td>实线（solid line）</td>
-<td>“-“</td>
+<td><code>-</code></td>
 </tr>
 <tr>
 <td>虚线（dotted line）</td>
-<td>“:”</td>
+<td><code>:</code></td>
 </tr>
 <tr>
 <td>短横线（dashed line）</td>
-<td>“–”</td>
+<td><code>--</code></td>
 </tr>
 <tr>
 <td>横点线（dash-dot line）</td>
-<td>“-.”</td>
+<td><code>-.</code></td>
 </tr>
 </tbody></table>
 <h4 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h4><p>可以使用的颜色显示线条和记号，如下代码将用红色显示：</p>
@@ -740,26 +730,28 @@
 
 <p>每种颜色用首字母表示，如r表示红色（red），y表示黄色(yellow)，更多颜色缩写参考<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" target="_blank" rel="noopener">plot</a>的Colors部分。</p>
 <h4 id="同时指定多种绘图格式"><a href="#同时指定多种绘图格式" class="headerlink" title="同时指定多种绘图格式"></a>同时指定多种绘图格式</h4><p>实际上，记号形状、线条类型及颜色是可以同时指定的，如要用红色画线，记号用x表示，线条用虚线，只需：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25], &quot;rx:&quot;)</span><br><span class="line">plt.show()</span><br><span class="line">```   </span><br><span class="line">结果如下图所示： </span><br><span class="line">&#123;% asset_img 8.jpg %&#125;</span><br><span class="line"># 定制坐标轴</span><br><span class="line">默认情况下，pyplot会自动根据提供的x, y数据源动态决定坐标轴位置，及其刻度范围。可以调用相关方法进行定制，举例如下：</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25], &quot;rx:&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p>ax = plt.gca() // 获取当前的坐标系(gca是get current axes首字母缩写)<br>ax.spines[‘left’].set_position(‘center’) # left边显示在水平居中<br>ax.spines[‘right’].set_visible(False) # right边不显示<br>ax.spines[‘bottom’].set_position(‘center’) # bottom边显示在垂直居中<br>ax.spines[‘top’].set_color(‘none’) # top边不显示，另一种方法将边设置为不可见<br>ax.spines[‘left’].set_smart_bounds(True)<br>ax.spines[‘bottom’].set_smart_bounds(True)<br>ax.set_aspect(‘equal’, adjustable=’box’) # 横竖坐标使用相同的比例</p>
-<pre><code># 图例
-如果在同一坐标系中显示多个数据集，则使用图例标识不同数据是很有必要的。
+<p>结果如下图所示： </p>
+<img src="/2019/05/27/10036/8.jpg">
+<h1 id="定制坐标轴"><a href="#定制坐标轴" class="headerlink" title="定制坐标轴"></a>定制坐标轴</h1><p>默认情况下，pyplot会自动根据提供的x, y数据源动态决定坐标轴位置，及其刻度范围。可以调用相关方法进行定制，举例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ax = plt.gca() // 获取当前的坐标系(gca是get current axes首字母缩写)</span><br><span class="line">ax.spines[&apos;left&apos;].set_position(&apos;center&apos;) # left边显示在水平居中</span><br><span class="line">ax.spines[&apos;right&apos;].set_visible(False) # right边不显示</span><br><span class="line">ax.spines[&apos;bottom&apos;].set_position(&apos;center&apos;) # bottom边显示在垂直居中</span><br><span class="line">ax.spines[&apos;top&apos;].set_color(&apos;none&apos;) # top边不显示，另一种方法将边设置为不可见</span><br><span class="line">ax.spines[&apos;left&apos;].set_smart_bounds(True) </span><br><span class="line">ax.spines[&apos;bottom&apos;].set_smart_bounds(True)</span><br><span class="line">ax.set_aspect(&apos;equal&apos;, adjustable=&apos;box&apos;) # 横竖坐标使用相同的比例</span><br></pre></td></tr></table></figure>
 
-使用图例，主要分两步：
-1. plot数据的时候指定label参数：
-ax.plot(x1, y1, label=&quot;data set 1&quot;)
-ax.plot(x2, y2, label=&quot;data set 2&quot;)
+<h1 id="图例"><a href="#图例" class="headerlink" title="图例"></a>图例</h1><p>如果在同一坐标系中显示多个数据集，则使用图例标识不同数据是很有必要的。</p>
+<p>使用图例，主要分两步：</p>
+<ol>
+<li><p>plot数据的时候指定label参数：<br>ax.plot(x1, y1, label=”data set 1”)<br>ax.plot(x2, y2, label=”data set 2”)</p>
+</li>
+<li><p>调用legend方式显示图例<br>plt.legend(loc=’best’)</p>
+</li>
+</ol>
+<!-- # 一个更完整的例子
+幂函数示意图 -->
 
-2. 调用legend方式显示图例
-plt.legend(loc=&apos;best&apos;)
-
-&lt;!-- # 一个更完整的例子
-幂函数示意图 --&gt;
 
 
 
-</code></pre>
+
       
 
       
@@ -1125,6 +1117,18 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">partial derivative</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
               <li class="article-tag-list-item">
