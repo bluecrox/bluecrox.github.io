@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://maozhu.me/2019/05/27/10036/3.jpg">
 <meta property="og:image" content="https://maozhu.me/2019/05/27/10036/4.jpg">
 <meta property="og:image" content="https://maozhu.me/2019/05/27/10036/8.jpg">
-<meta property="og:updated_time" content="2019-09-15T07:39:34.108Z">
+<meta property="og:updated_time" content="2019-09-15T07:41:54.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python数据可视化">
 <meta name="twitter:description" content="安装matplotlib折线图和散点图需要安装matplotlib： 1pip install matplotlib  测试是否安装成功： 12C:\&amp;gt;python&amp;gt;&amp;gt;&amp;gt; import matplotlib  如果没有出现任何错误消息，就说明matplotlib安装好了。如果报错：DLL load failed： %1 不是有效的 Win32应用程序。这可能是Python的">
@@ -248,6 +248,7 @@
 
 <p>结果如下图所示： </p>
 <img src="/2019/05/27/10036/8.jpg">
+
 <h1 id="定制坐标轴"><a href="#定制坐标轴" class="headerlink" title="定制坐标轴"></a>定制坐标轴</h1><p>默认情况下，pyplot会自动根据提供的x, y数据源动态决定坐标轴位置，及其刻度范围。可以调用相关方法进行定制，举例如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ax = plt.gca() // 获取当前的坐标系(gca是get current axes首字母缩写)</span><br><span class="line">ax.spines[&apos;left&apos;].set_position(&apos;center&apos;) # left边显示在水平居中</span><br><span class="line">ax.spines[&apos;right&apos;].set_visible(False) # right边不显示</span><br><span class="line">ax.spines[&apos;bottom&apos;].set_position(&apos;center&apos;) # bottom边显示在垂直居中</span><br><span class="line">ax.spines[&apos;top&apos;].set_color(&apos;none&apos;) # top边不显示，另一种方法将边设置为不可见</span><br><span class="line">ax.spines[&apos;left&apos;].set_smart_bounds(True) </span><br><span class="line">ax.spines[&apos;bottom&apos;].set_smart_bounds(True)</span><br><span class="line">ax.set_aspect(&apos;equal&apos;, adjustable=&apos;box&apos;) # 横竖坐标使用相同的比例</span><br></pre></td></tr></table></figure>
 
