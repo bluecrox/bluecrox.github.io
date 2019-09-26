@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://maozhu.me">
   <title>线性回归 | 毛竹</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="回归分析按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多重线性回归分析。 线性回归(Linear Re">
+  <meta name="description" content="回归分析按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多元线性回归分析。 线性回归(Linear Re">
 <meta name="keywords" content="机器学习,统计分析">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性回归">
 <meta property="og:url" content="https://maozhu.me/2019/09/25/10046/index.html">
 <meta property="og:site_name" content="毛竹">
-<meta property="og:description" content="回归分析按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多重线性回归分析。 线性回归(Linear Re">
+<meta property="og:description" content="回归分析按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多元线性回归分析。 线性回归(Linear Re">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-25T00:30:36.104Z">
+<meta property="og:updated_time" content="2019-09-26T00:34:20.513Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性回归">
-<meta name="twitter:description" content="回归分析按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多重线性回归分析。 线性回归(Linear Re">
+<meta name="twitter:description" content="回归分析按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多元线性回归分析。 线性回归(Linear Re">
   
     <link rel="alternative" href="/atom.xml" title="毛竹" type="application/atom+xml">
   
@@ -159,11 +159,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="回归分析"><a href="#回归分析" class="headerlink" title="回归分析"></a>回归分析</h2><p>按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多重线性回归分析。</p>
-<h2 id="线性回归-Linear-Regression"><a href="#线性回归-Linear-Regression" class="headerlink" title="线性回归(Linear Regression)"></a>线性回归(Linear Regression)</h2><p>hypothesis function：</p>
+        <h2 id="回归分析"><a href="#回归分析" class="headerlink" title="回归分析"></a>回归分析</h2><p>按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多元线性回归分析。</p>
+<h2 id="线性回归-Linear-Regression"><a href="#线性回归-Linear-Regression" class="headerlink" title="线性回归(Linear Regression)"></a>线性回归(Linear Regression)</h2><h3 id="hypothesis-function"><a href="#hypothesis-function" class="headerlink" title="hypothesis function"></a>hypothesis function</h3><p>一元线性回归：</p>
 <p>$h_\theta(x)=\theta_0+\theta_1x$</p>
+<p>多元线性回归：</p>
+<p>$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\cdots+\theta_nx_n$</p>
 <p>注意：在hypothesis function中，$\theta$是已知求得的数。</p>
-<p>cost function是用来衡量hypothesis function好不好的。(We can measure the accuracy of our hypothesis function by using a <strong>cost function</strong>， or measure how well the hypothesis function fits int the data.): </p>
+<p>$\left[ \begin{matrix} \theta_0 \\theta_1\end{matrix} \right]$</p>
+<h3 id="cost-function"><a href="#cost-function" class="headerlink" title="cost function"></a>cost function</h3><p>cost function是用来衡量hypothesis function好不好的。(We can measure the accuracy of our hypothesis function by using a <strong>cost function</strong>， or measure how well the hypothesis function fits int the data.): </p>
 <p>$J(\theta)=\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)}-y^{(i)}))^2}$</p>
 <p> $J(\theta)$就是我们的优化目标（optimization objective），机器学习的任务就是找出合适的$\theta$，使$J(\theta)$函数值最小。</p>
 <p>注意：$\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)}-y^{(i)}))^2}$是方差的$\frac{1}{2}$，之所以cost function不是方差，主要是为了后续求解最小值时方面计算（使用Gradient descent算法对$(h_\theta(x^{(i)}-y^{(i)}))^2$求导后会有一个2，正好和增加的$\frac{1}{2}$抵消掉）</p>
@@ -268,7 +271,7 @@
   
   
     <a href="/2019/09/21/10045/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">对数函数</div>
+      <div class="article-nav-title">对数与对数函数</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -423,14 +426,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">partial derivative</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
@@ -452,6 +447,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">partial derivative</a>
               </li>
              
               <li class="article-tag-list-item">
