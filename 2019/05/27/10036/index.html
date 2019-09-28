@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://maozhu.me/2019/05/27/10036/3.jpg">
 <meta property="og:image" content="https://maozhu.me/2019/05/27/10036/4.jpg">
 <meta property="og:image" content="https://maozhu.me/2019/05/27/10036/8.jpg">
-<meta property="og:updated_time" content="2019-09-16T23:52:09.059Z">
+<meta property="og:updated_time" content="2019-09-28T08:33:50.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python数据可视化">
 <meta name="twitter:description" content="安装matplotlib折线图和散点图需要安装matplotlib： 1pip install matplotlib  测试是否安装成功： 12C:\&amp;gt;python&amp;gt;&amp;gt;&amp;gt; import matplotlib  如果没有出现任何错误消息，就说明matplotlib安装好了。如果报错：DLL load failed： %1 不是有效的 Win32应用程序。这可能是Python的">
@@ -179,41 +179,30 @@
 <h3 id="坐标数据"><a href="#坐标数据" class="headerlink" title="坐标数据"></a>坐标数据</h3><h4 id="1-绘制一个点"><a href="#1-绘制一个点" class="headerlink" title="1.绘制一个点"></a>1.绘制一个点</h4><p>先看一个最简单的例子，绘制一个点：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(1, 2, &quot;x&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p>执行上述代码将显示如下所示界面：</p>
-<img src="/2019/05/27/10036/5.jpg">
-<p>上述例子中，前两个参数（标量）构成一个坐标，第三个参数是记号形状，这里不可省略，否则图上什么也看不出（关于记号形状后续会详解）</p>
+<p>执行上述代码将显示如下所示界面：<br><img src="5.jpg" alt><br>上述例子中，前两个参数（标量）构成一个坐标，第三个参数是记号形状，这里不可省略，否则图上什么也看不出（关于记号形状后续会详解）</p>
 <h4 id="2-绘制一组数据"><a href="#2-绘制一组数据" class="headerlink" title="2.绘制一组数据"></a>2.绘制一组数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p>执行上述代码将显示如下所示界面：</p>
-<img src="/2019/05/27/10036/1.jpg">
-
+<p>执行上述代码将显示如下所示界面：<br><img src="1.jpg" alt></p>
 <p>如果只提供给plot函数一个数组，则它会将它视为纵轴坐标数据y，并自动构造横轴坐标数据：range(len(y))。如上例所示：纵轴坐标数据是y = [1, 4, 9, 16, 25]，则横轴坐标数据：range(len(y))=[0, 1, 2, 3, 4]，即最终结果是把(0, 1)，(1, 4)，(2, 9)，(3, 16), (4, 25)连成的折线。</p>
 <p>显然，有时这种默认横轴坐标数据的做法无法满足我们的需求。比如假设我们想使每个点的x坐标是y坐标的开方。这种情况下，我们应该明确地提供横轴坐标数据：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = [1, 2, 3, 4, 5]</span><br><span class="line">squares = [1, 4, 9, 16, 25]</span><br><span class="line">plt.plot(x, squares)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p>执行上述代码结果如下（注意横坐标的变化）：</p>
-<img src="/2019/05/27/10036/2.jpg">
+<p>执行上述代码结果如下（注意横坐标的变化）：<br><img src="2.jpg" alt></p>
 <h4 id="3-绘制多组数据"><a href="#3-绘制多组数据" class="headerlink" title="3. 绘制多组数据"></a>3. 绘制多组数据</h4><p>有多种方式在一个坐标系中绘制多组数据，最简单的是多次调用plot函数，如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = [1, 2, 3, 4, 5]</span><br><span class="line">squares = [1, 4, 9, 16, 25]</span><br><span class="line">plt.plot(x, squares)</span><br><span class="line"></span><br><span class="line">y = x</span><br><span class="line">plt.plot(x, y)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p>如下图所示（不同的数据集自动用不同的颜色表示）：</p>
-<img src="/2019/05/27/10036/7.jpg">
-
+<p>如下图所示（不同的数据集自动用不同的颜色表示）：<br><img src="7.jpg" alt></p>
 <p>注：上述图像由于横坐标和纵坐标比例不相同，导致图像“变形”，如果要修正坐标刻度，可以查看“坐标轴”相关内容。</p>
 <h3 id="绘图格式"><a href="#绘图格式" class="headerlink" title="绘图格式"></a>绘图格式</h3><p>可以根据需要设置plot绘图格式，包含记号形状(marker)，线条类型(line)，及颜色(color)。</p>
 <h4 id="记号形状"><a href="#记号形状" class="headerlink" title="记号形状"></a>记号形状</h4><p>记号形状用于指定坐标点所在位置形状，例如要在每个坐标点位置画一个x号，示范代码如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25], &quot;x&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p>运行结果如下图所示：</p>
-<img src="/2019/05/27/10036/3.jpg">
-
+<p>运行结果如下图所示：<br><img src="3.jpg" alt></p>
 <p>除了x号，plot还可能绘制很多其它的记号，具体可查看官方文档<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" target="_blank" rel="noopener">plot</a>的Markers部分。</p>
 <h4 id="线条类型"><a href="#线条类型" class="headerlink" title="线条类型"></a>线条类型</h4><p>线条类型用于指定连接坐标点的线条类型。默认是实线（solid line），可以用如下代码改成虚线（dotted line）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25], &quot;:&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p>运行结果如下图所示：</p>
-<img src="/2019/05/27/10036/4.jpg">
-
+<p>运行结果如下图所示：<br><img src="4.jpg" alt></p>
 <p>plot共支持4种线条类型，分别为：</p>
 <table>
 <thead>
@@ -246,9 +235,7 @@
 <h4 id="同时指定多种绘图格式"><a href="#同时指定多种绘图格式" class="headerlink" title="同时指定多种绘图格式"></a>同时指定多种绘图格式</h4><p>实际上，记号形状、线条类型及颜色是可以同时指定的，如要用红色画线，记号用x表示，线条用虚线，只需：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25], &quot;rx:&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p>结果如下图所示： </p>
-<img src="/2019/05/27/10036/8.jpg">
-
+<p>结果如下图所示：<br><img src="8.jpg" alt></p>
 <h1 id="定制坐标轴"><a href="#定制坐标轴" class="headerlink" title="定制坐标轴"></a>定制坐标轴</h1><p>默认情况下，pyplot会自动根据提供的x, y数据源动态决定坐标轴位置，及其刻度范围。可以调用相关方法进行定制，举例如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ax = plt.gca() // 获取当前的坐标系(gca是get current axes首字母缩写)</span><br><span class="line">ax.spines[&apos;left&apos;].set_position(&apos;center&apos;) # left边显示在水平居中</span><br><span class="line">ax.spines[&apos;right&apos;].set_visible(False) # right边不显示</span><br><span class="line">ax.spines[&apos;bottom&apos;].set_position(&apos;center&apos;) # bottom边显示在垂直居中</span><br><span class="line">ax.spines[&apos;top&apos;].set_color(&apos;none&apos;) # top边不显示，另一种方法将边设置为不可见</span><br><span class="line">ax.spines[&apos;left&apos;].set_smart_bounds(True) </span><br><span class="line">ax.spines[&apos;bottom&apos;].set_smart_bounds(True)</span><br><span class="line">ax.set_aspect(&apos;equal&apos;, adjustable=&apos;box&apos;) # 横竖坐标使用相同的比例</span><br></pre></td></tr></table></figure>
 
@@ -503,6 +490,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">partial derivative</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
@@ -524,14 +519,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">partial derivative</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="毛竹">
 <meta property="og:description" content="回归分析按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多元线性回归分析。 线性回归(Linear Re">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-26T00:34:20.513Z">
+<meta property="og:updated_time" content="2019-09-26T00:48:00.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性回归">
 <meta name="twitter:description" content="回归分析按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多元线性回归分析。 线性回归(Linear Re">
@@ -165,7 +165,7 @@
 <p>多元线性回归：</p>
 <p>$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\cdots+\theta_nx_n$</p>
 <p>注意：在hypothesis function中，$\theta$是已知求得的数。</p>
-<p>$\left[ \begin{matrix} \theta_0 \\theta_1\end{matrix} \right]$</p>
+<p>$\left[ \begin{matrix} \theta_0 \\ \theta_1\end{matrix} \right]$</p>
 <h3 id="cost-function"><a href="#cost-function" class="headerlink" title="cost function"></a>cost function</h3><p>cost function是用来衡量hypothesis function好不好的。(We can measure the accuracy of our hypothesis function by using a <strong>cost function</strong>， or measure how well the hypothesis function fits int the data.): </p>
 <p>$J(\theta)=\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)}-y^{(i)}))^2}$</p>
 <p> $J(\theta)$就是我们的优化目标（optimization objective），机器学习的任务就是找出合适的$\theta$，使$J(\theta)$函数值最小。</p>
@@ -426,6 +426,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">partial derivative</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
@@ -447,14 +455,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">partial derivative</a>
               </li>
              
               <li class="article-tag-list-item">

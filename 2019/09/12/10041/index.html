@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://maozhu.me/2019/09/12/10041/1.jpg">
 <meta property="og:image" content="https://maozhu.me/2019/09/12/10041/1568763725662.png">
-<meta property="og:updated_time" content="2019-09-21T01:25:18.046Z">
+<meta property="og:updated_time" content="2019-09-28T08:34:23.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gradient descent">
 <meta name="twitter:description" content="简介先解释一下gradient descent这两个单词的意思。gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线descent[dɪ’sent] : 下降；斜坡；血统；祖先 gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。其算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降">
@@ -164,8 +164,7 @@
       
         <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>先解释一下gradient descent这两个单词的意思。<br>gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线<br>descent[dɪ’sent] : 下降；斜坡；血统；祖先</p>
 <p>gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。其算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降，经过若干步后，即能达到某个局部最低值。</p>
-<img src="/2019/09/12/10041/1.jpg" title="示意图">
-
+<p><img src="1.jpg" alt></p>
 <a id="more"></a>
 
 <p>使用gradient descent找出$\theta_0, \theta_1, … \theta_n$，使$J(\theta_0, \theta_1, … \theta_n)$最小，步骤如下：</p>
@@ -178,8 +177,7 @@
 <p>​    $\theta_j = \theta_j - \alpha \frac{\partial}{\partial {\theta_j}}J(\theta_0, \theta_1…,\theta_n)$</p>
 <p>}</p>
 <p>其中，$\alpha$是个正数，称为learning rate，用于控制步进速度。$\alpha$越大，gradient descent每次迭代参数变化越大。因此，越快向最小值靠近。但是$\alpha$也不能太大，否则可能因步子太大，超过最小值所在的位置，导致不聚合。偏导数$\frac{\partial}{\partial {\theta_j}}J(\theta_0, \theta_1…,\theta_n)$的意义是当前点斜率的值，它有两个用途，首先，根据其正负即可知道$\theta$应该是增大还是减小才能是函数变小，其次斜率越大（越陡），则$\theta$改变越大，斜率越小（函数越接近局部最小值），$\theta$变化越小。</p>
-<img src="/2019/09/12/10041/1568763725662.png" title="示意图">
-
+<p><img src="1568763725662.png" alt></p>
 <p>当函数抵达局部最小值时，偏导数=0，$\theta$不再变化。</p>
 <p>注意：更新$\theta_j$要求同步更新，如下所示：</p>
 <p> $temp0 = \theta_0 - \alpha \frac{\partial}{\partial {\theta_0}}J(\theta_0, \theta_1…,\theta_n)$</p>
@@ -442,6 +440,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">partial derivative</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
@@ -463,14 +469,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">partial derivative</a>
               </li>
              
               <li class="article-tag-list-item">

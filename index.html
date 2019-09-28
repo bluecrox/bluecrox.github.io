@@ -477,7 +477,7 @@
 <p>逻辑回归又是怎么回事，它和分类问题有什么联系吗？</p>
 <h2 id="Regression-vs-Classification"><a href="#Regression-vs-Classification" class="headerlink" title="Regression vs Classification"></a>Regression vs Classification</h2><p>前者是定量分析，后者是定性分析</p>
 <h1 id="算法流程图"><a href="#算法流程图" class="headerlink" title="算法流程图"></a>算法流程图</h1><p>Lesson 1 Model Representation 4:47</p>
-<p><img src="10047/flowchart.jpg" alt="flowchart"></p>
+<p><img src="flowchart.jpg" alt="flowchart"></p>
 <p>h: hypothesis(a function that takes as input the size of a house like maybe the size of the new your friend’s, and output the estimated price). h is a map from x to y</p>
 <p>$h_\theta = \theta_0 + \theta_1x$</p>
 <p>Linear regression with one variable, 也叫Univariate linear regression.</p>
@@ -562,7 +562,7 @@
 <p>多元线性回归：</p>
 <p>$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\cdots+\theta_nx_n$</p>
 <p>注意：在hypothesis function中，$\theta$是已知求得的数。</p>
-<p>$\left[ \begin{matrix} \theta_0 \\theta_1\end{matrix} \right]$</p>
+<p>$\left[ \begin{matrix} \theta_0 \\ \theta_1\end{matrix} \right]$</p>
 <h3 id="cost-function"><a href="#cost-function" class="headerlink" title="cost function"></a>cost function</h3><p>cost function是用来衡量hypothesis function好不好的。(We can measure the accuracy of our hypothesis function by using a <strong>cost function</strong>， or measure how well the hypothesis function fits int the data.): </p>
 <p>$J(\theta)=\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)}-y^{(i)}))^2}$</p>
 <p> $J(\theta)$就是我们的优化目标（optimization objective），机器学习的任务就是找出合适的$\theta$，使$J(\theta)$函数值最小。</p>
@@ -856,15 +856,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">偏导数</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">partial derivative</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
         		</li>
       		
 		</ul>
@@ -1009,7 +1009,7 @@
       
         <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>先解释一下gradient descent这两个单词的意思。<br>gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线<br>descent[dɪ’sent] : 下降；斜坡；血统；祖先</p>
 <p>gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。其算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降，经过若干步后，即能达到某个局部最低值。</p>
-<img src="/2019/09/12/10041/1.jpg" title="示意图">
+<p><img src="1.jpg" alt></p>
         
       
 
@@ -1256,6 +1256,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">partial derivative</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
@@ -1277,14 +1285,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">partial derivative</a>
               </li>
              
               <li class="article-tag-list-item">
