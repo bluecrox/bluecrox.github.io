@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://maozhu.me">
-  <title>Archives: 2019/5 | 毛竹</title>
+  <title>LaTex符号 | 毛竹</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="毛竹">
-<meta property="og:url" content="https://maozhu.me/archives/2019/05/index.html">
+  <meta name="description" content="行内与独行行内公式：将公式插入到本行内符号：$公式内容$。示例：before $y=x$ afterbefore $y=x$ after 独行公式：将公式插入到新的一行内，并且居中符号：$$公式内容$$。示例：before $$y=x$$ afterbefore $$y=x$$ after">
+<meta name="keywords" content="Markdown,Latex,数学公式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LaTex符号">
+<meta property="og:url" content="https://maozhu.me/10042/index.html">
 <meta property="og:site_name" content="毛竹">
+<meta property="og:description" content="行内与独行行内公式：将公式插入到本行内符号：$公式内容$。示例：before $y=x$ afterbefore $y=x$ after 独行公式：将公式插入到新的一行内，并且居中符号：$$公式内容$$。示例：before $$y=x$$ afterbefore $$y=x$$ after">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-26T00:47:40.405Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="毛竹">
+<meta name="twitter:title" content="LaTex符号">
+<meta name="twitter:description" content="行内与独行行内公式：将公式插入到本行内符号：$公式内容$。示例：before $y=x$ afterbefore $y=x$ after 独行公式：将公式插入到新的一行内，并且居中符号：$$公式内容$$。示例：before $$y=x$$ afterbefore $$y=x$$ after">
   
     <link rel="alternative" href="/atom.xml" title="毛竹" type="application/atom+xml">
   
@@ -134,103 +139,271 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-10042" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      LaTex符号
+    </h1>
+  
+
+        
+        <a href="/10042/" class="archive-article-date">
+  	<time datetime="2019-09-12T23:34:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="行内与独行"><a href="#行内与独行" class="headerlink" title="行内与独行"></a>行内与独行</h3><p><strong>行内公式：将公式插入到本行内</strong><br><strong>符号</strong>：<code>$公式内容$</code>。<br><strong>示例</strong>：<code>before $y=x$ after</code><br>before $y=x$ after</p>
+<p><strong>独行公式：将公式插入到新的一行内，并且居中</strong><br><strong>符号</strong>：<code>$$公式内容$$</code>。<br><strong>示例</strong>：<code>before $$y=x$$ after</code><br>before $$y=x$$ after</p>
+<a id="more"></a>
+
+<h2 id="上标、下标与组合"><a href="#上标、下标与组合" class="headerlink" title="上标、下标与组合"></a>上标、下标与组合</h2><p><strong>上标符号</strong>：<code>^</code><br><strong>示例</strong>：<code>x^4</code><br>$x^4$</p>
+<p><strong>下标符号</strong>：<code>_</code><br><strong>示例</strong>：<code>x_1</code><br>$x_1$</p>
+<p><strong>组合符号</strong>：<code>{}</code><br><strong>示例</strong>：<code>J_{a,b}=2^{a+b}</code><br>$J_{a,b}=2^{a+b}$ </p>
+<h2 id="汉字、字体与格式"><a href="#汉字、字体与格式" class="headerlink" title="汉字、字体与格式"></a>汉字、字体与格式</h2><p><strong>汉字形式</strong>：<code>\mbox{}</code><br><strong>示例</strong>：<code>V_{\mbox{初始}}</code><br>$V_{\mbox{初始}}$</p>
+<p><strong>字体控制</strong>：<code>\displaystyle</code><br><strong>示例</strong>：<code>\displaystyle \frac{x+y}{y+z}</code><br>$\displaystyle \frac{x+y}{y+z}$</p>
+<p><strong>下划线符号</strong>：<code>\underline</code><br><strong>示例</strong>：<code>\underline{x+y}</code><br>$\underline{x+y}$</p>
+<p><strong>标签</strong><code>\tag{数字}</code><br><strong>示例</strong>：<code>\tag{11}</code><br>$\tag{11}$</p>
+<p><strong>上大括号</strong>：<code>\overbrace{算式}</code><br><strong>示例</strong>：<code>\overbrace{a+b+c+d}^{2.0}</code><br>$\overbrace{a+b+c+d}^{2.0}$</p>
+<p><strong>下大括号</strong>：<code>\underbrace{算式}</code><br><strong>示例</strong>：<code>a+\underbrace{b+c}_{1.0}+d</code><br>$a+\underbrace{b+c}_{1.0}+d$</p>
+<p><strong>上位符号</strong>：<code>\stacrel{上位符号}{基位符号}</code><br><strong>示例</strong>：<code>\vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n}</code><br>$\vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n}$</p>
+<h2 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h2><p><strong>两个quad空格</strong>：<code>\qquad</code><br><strong>示例</strong>：<code>x \qquad y</code><br>$x \qquad y$</p>
+<p><strong>quad空格</strong>：<code>\quad</code><br><strong>示例</strong>：<code>x \quad y</code><br>$x \quad y$</p>
+<p><strong>大空格</strong><code>\</code><br><strong>示例</strong>：<code>x \ y</code><br>$x \ y$</p>
+<p><strong>中空格</strong><code>\:</code><br><strong>示例</strong>：<code>x : y</code><br>$x : y$</p>
+<p><strong>小空格</strong><code>\,</code><br><strong>示例</strong>：<code>x , y</code><br>$x , y$</p>
+<p><strong>没有空格</strong>``<br><strong>示例</strong>：<code>xy</code><br>$xy$</p>
+<p><strong>紧贴</strong><code>\!</code><br><strong>示例</strong>：<code>x ! y</code><br>$x ! y$</p>
+<h2 id="定界符与组合"><a href="#定界符与组合" class="headerlink" title="定界符与组合"></a>定界符与组合</h2><p><strong>括号</strong>：<code>()\big(\big) \Big(\Big) \bigg(\bigg) \Bigg(\Bigg)</code><br><strong>示例</strong>：<code>()\big(\big) \Big(\Big) \bigg(\bigg) \Bigg(\Bigg)</code><br>$()\big(\big) \Big(\Big) \bigg(\bigg) \Bigg(\Bigg)$</p>
+<p><strong>中括号</strong>：<code>[]</code><br><strong>示例</strong>：<code>[x+y]</code><br>$[x+y]$</p>
+<p><strong>大括号</strong>：<code>\{ \}</code><br><strong>示例</strong>：<code>{x+y}</code><br>${x+y}$</p>
+<p><strong>自适应括号</strong>：<code>\left \right</code><br><strong>示例</strong>：<code>\left(x\right)$，$\left(x{yz}\right)</code><br>$\left(x\right)$，$\left(x{yz}\right)$</p>
+<p><strong>组合公式</strong>：<code>{上位公式 \choose 下位公式}</code><br><strong>示例</strong>：<code>{n+1 \choose k}={n \choose k}+{n \choose k-1}</code><br>${n+1 \choose k}={n \choose k}+{n \choose k-1}$</p>
+<p><strong>组合公式</strong>：<code>{上位公式 \atop 下位公式}</code><br><strong>示例</strong>：<code>\sum_{k_0,k_1,\ldots&gt;0 \atop k_0+k_1+\cdots=n}A_{k_0}A_{k_1}\cdots</code><br>$\sum_{k_0,k_1,\ldots&gt;0 \atop k_0+k_1+\cdots=n}A_{k_0}A_{k_1}\cdots$</p>
+<h2 id="四则运算"><a href="#四则运算" class="headerlink" title="四则运算"></a>四则运算</h2><p><strong>加法运算</strong>：<code>+</code><br><strong>示例</strong>：<code>x+y=z</code><br>$x+y=z$</p>
+<p><strong>减法运算</strong>：<code>-</code><br><strong>示例</strong>：<code>x-y=z</code><br>$x-y=z$</p>
+<p><strong>加减运算</strong>：<code>\pm</code><br><strong>示例</strong>：<code>x \pm y=z</code><br>$x \pm y=z$</p>
+<p><strong>减甲运算</strong>：<code>\mp</code><br><strong>示例</strong>：<code>x \mp y=z</code><br>$x \mp y=z$</p>
+<p><strong>乘法运算</strong>：<code>\times</code><br><strong>示例</strong>：<code>x \times y=z</code><br>$x \times y=z$</p>
+<p><strong>点乘运算</strong>：<code>\cdot</code><br><strong>示例</strong>：<code>x \cdot y=z</code><br>$x \cdot y=z$</p>
+<p><strong>星乘运算</strong>：<code>\ast</code><br><strong>示例</strong>：<code>x \ast y=z</code><br>$x \ast y=z$</p>
+<p><strong>除法运算</strong>：<code>\div</code><br><strong>示例</strong>：<code>\div y=z</code><br>$x \div y=z$</p>
+<p><strong>斜法运算</strong>：<code>/</code><br><strong>示例</strong>：<code>x/y=z</code><br>$x/y=z$</p>
+<p><strong>分式表示</strong>：<code>\frac{分子}{分母}</code><br><strong>示例</strong>：<code>\frac{x+y}{y+z}</code><br>$\frac{x+y}{y+z}$</p>
+<p><strong>分式表示</strong>：<code>{分子} \voer {分母}</code><br><strong>示例</strong>：<code>{x+y} \over {y+z}</code><br>${x+y} \over {y+z}$</p>
+<p><strong>绝对值表示</strong>：<code>||</code><br><strong>示例</strong>：<code>|x+y|</code><br>$|x+y|$</p>
+<h2 id="高级运算"><a href="#高级运算" class="headerlink" title="高级运算"></a>高级运算</h2><p><strong>平均数运算</strong>：<code>\overline{算式}</code><br><strong>示例</strong>：<code>\overline{xyz}</code><br>$\overline{xyz}$</p>
+<p><strong>开二次方运算</strong>：<code>\sqrt</code><br><strong>示例</strong>：<code>\sqrt x</code><br>$\sqrt x$</p>
+<p><strong>开方运算</strong>：<code>\sqrt[开方数]{被开方数}</code><br><strong>示例</strong>：<code>\sqrt[3]{x+y}</code><br>$\sqrt[3]{x+y}$</p>
+<p><strong>对数运算</strong>：<code>\log</code><br><strong>示例</strong>：<code>\log(x)</code><br>$\log(x)$</p>
+<p><strong>极限运算</strong>：<code>\lim</code><br><strong>示例</strong>：<code>\lim^{x \to \infty}_{y \to 0}{\frac{x}{y}}</code><br>$\lim^{x \to \infty}_{y \to 0}{\frac{x}{y}}$</p>
+<p><strong>极限运算</strong>：<code>\displaystyle \lim</code><br><strong>示例</strong>：<code>\displaystyle \lim^{x \to \infty}_{y \to 0}{\frac{x}{y}}</code><br>$\displaystyle \lim^{x \to \infty}_{y \to 0}{\frac{x}{y}}$</p>
+<p><strong>求和运算</strong>：<code>\sum</code><br><strong>示例</strong>：<code>\sum^{x \to \infty}_{y \to 0}{\frac{x}{y}}</code><br>$\sum^{x \to \infty}_{y \to 0}{\frac{x}{y}}$</p>
+<p><strong>求和运算</strong>：<code>\displaystyle \sum</code><br><strong>示例</strong>：<code>\displaystyle \sum^{x \to \infty}_{y \to 0}{\frac{x}{y}}</code><br>$\displaystyle \sum^{x \to \infty}_{y \to 0}{\frac{x}{y}}$</p>
+<p><strong>积分运算</strong>：<code>\int</code><br><strong>示例</strong>：<code>\int^{\infty}_{0}{xdx}</code><br>$\int^{\infty}_{0}{xdx}$</p>
+<p><strong>积分运算</strong>：<code>\displaystyle \int</code><br><strong>示例</strong>：<code>\displaystyle \int^{\infty}_{0}{xdx}</code><br>$\displaystyle \int^{\infty}_{0}{xdx}$</p>
+<p><strong>微分运算</strong>：<code>\partial</code><br><strong>示例</strong>：<code>\frac{\partial x}{\partial y}</code><br>$\frac{\partial x}{\partial y}$</p>
+<p><strong>矩阵表示</strong>：<code>\begin{matrix} \end{matrix}</code><br><strong>示例</strong>：<code>\left[ \begin{matrix} 1 &amp;2 &amp;\cdots &amp;4 &amp;5 &amp;6 &amp;\cdots &amp;8 \\\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots &amp;13 &amp;14 &amp;\cdots &amp;16\end{matrix} \right]</code><br>$\left[ \begin{matrix} 1 &amp;2 &amp;\cdots &amp;4 &amp;5 &amp;6 &amp;\cdots &amp;8 \\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots &amp;13 &amp;14 &amp;\cdots &amp;16\end{matrix} \right]$</p>
+<p>&amp;开头表示在同一行，连续两个<code>\\</code>表示换行，但如果渲染前<code>\</code>经过预处理，可能要<code>\\\</code>才起到换行效果。</p>
+<h2 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h2><p><strong>等于运算</strong>：<code>=</code><br><strong>示例</strong>：<code>x+y=z</code><br>$x+y=z$</p>
+<p><strong>大于运算</strong>：<code>&gt;</code><br><strong>示例</strong>：<code>x+y&gt;z</code><br>$x+y&gt;z$</p>
+<p><strong>小于运算</strong>：<code>&lt;</code><br><strong>示例</strong>：<code>x+y&lt;z</code><br>$x+y&lt;z$</p>
+<p><strong>大于等于运算</strong>：<code>\geq</code><br><strong>示例</strong>：<code>x+y \geq z</code><br>$x+y \geq z$</p>
+<p><strong>小于等于运算</strong>：<code>\leq</code><br><strong>示例</strong>：<code>x+y \leq z</code><br>$x+y \leq z$</p>
+<p><strong>不等于运算</strong>：<code>\neq</code><br><strong>示例</strong>：<code>x+y \neq z</code><br>$x+y \neq z$</p>
+<p><strong>不大于等于运算</strong>：<code>\ngeq</code><br><strong>示例</strong>：<code>x+y \ngeq z</code><br>$x+y \ngeq z$</p>
+<p><strong>不大于等于运算</strong>：<code>\not\geq</code><br><strong>示例</strong>：<code>x+y \not\geq z</code><br>$x+y \not\geq z$</p>
+<p><strong>不小于等于运算</strong>：<code>\nleq</code><br><strong>示例</strong>：<code>x+y \nleq z</code><br>$x+y \nleq z$</p>
+<p><strong>不小于等于运算</strong>：<code>\not\leq</code><br><strong>示例</strong>：<code>x+y \not\leq z</code><br>$x+y \not\leq z$</p>
+<p><strong>约等于运算</strong>：<code>\approx</code><br><strong>示例</strong>：<code>x+y \approx z</code><br>$x+y \approx z$</p>
+<p>** 恒定等于运算<strong>：<code>\equiv</code><br>**示例</strong>：<code>x+y \equiv z</code><br>$x+y \equiv z$</p>
+<h2 id="集合运算"><a href="#集合运算" class="headerlink" title="集合运算"></a>集合运算</h2><p><strong>属于运算</strong>：<code>\in</code><br><strong>示例</strong>：<code>x \in y</code><br>$x \in y$</p>
+<p><strong>不属于运算</strong>：<code>\notin</code><br><strong>示例</strong>：<code>x \notin y</code><br>$x \notin y$</p>
+<p><strong>不属于运算</strong>：<code>\not\in</code><br><strong>示例</strong>：<code>x \not\in y</code><br>$x \not\in y$</p>
+<p><strong>子集运算</strong>：<code>\subset</code><br><strong>示例</strong>：<code>x \subset y</code><br>$x \subset y$</p>
+<p><strong>子集运算</strong>：<code>\supset</code><br><strong>示例</strong>：<code>x \supset y</code><br>$x \supset y$</p>
+<p><strong>真子集运算</strong>：<code>\subseteq</code><br><strong>示例</strong>：<code>x \subseteq y</code><br>$x \subseteq y$</p>
+<p><strong>非真子集运算</strong>：<code>\subsetneq</code><br><strong>示例</strong>：<code>x \subsetneq y</code><br>$x \subsetneq y$</p>
+<p><strong>真子集运算</strong>：<code>\supseteq</code><br><strong>示例</strong>：<code>x \supseteq y</code><br>$x \supseteq y$</p>
+<p><strong>非真子集运算</strong>：<code>\supsetneq</code><br><strong>示例</strong>：<code>x \supsetneq y</code><br>$x \supsetneq y$</p>
+<p><strong>非子集运算</strong>：<code>\not\subset</code><br><strong>示例</strong>：<code>x \not\subset y</code><br>$x \not\subset y$</p>
+<p><strong>非子集运算</strong>：<code>\not\supset</code><br><strong>示例</strong>：<code>x \not\supset y</code><br>$x \not\supset y$</p>
+<p><strong>并集运算</strong>：<code>\cup</code><br><strong>示例</strong>：<code>x \cup y</code><br>$x \cup y$</p>
+<p><strong>交集运算</strong>：<code>\cap</code><br><strong>示例</strong>：<code>x \cap y</code><br>$x \cap y$</p>
+<p><strong>差集运算</strong>：<code>\setminus</code><br><strong>示例</strong>：<code>x \setminus y</code><br>$x \setminus y$</p>
+<p><strong>同或运算</strong>：<code>\bigodot</code><br><strong>示例</strong>：<code>x \bigodot y</code><br>$x \bigodot y$</p>
+<p><strong>同与运算</strong>：<code>\bigotimes</code><br><strong>示例</strong>：<code>x \bigotimes y</code><br>$x \bigotimes y$</p>
+<p><strong>实数集合</strong>：<code>\mathbb{R}</code><br><strong>示例</strong>：<code>\mathbb{R}</code><br><code>\mathbb{R}</code></p>
+<p><strong>自然数集合</strong>：<code>\mathbb{Z}</code><br><strong>示例</strong>：<code>\mathbb{Z}</code><br><code>\mathbb{Z}</code></p>
+<p><strong>空集</strong>：<code>\emptyset</code><br><strong>示例</strong>：<code>\emptyset</code><br>$\emptyset$</p>
+<h2 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h2><p><strong>无穷</strong>：<code>\infty</code><br><strong>示例</strong>：<code>\infty</code><br>$\infty$</p>
+<p><strong>虚数</strong>：<code>\imath</code><br><strong>示例</strong>：<code>\imath</code><br>$\imath$</p>
+<p><strong>虚数</strong>：<code>\jmath</code><br><strong>示例</strong>：<code>\jmath</code><br>$\jmath$</p>
+<p><strong>数学符号</strong><code>\hat{a}</code><br><strong>示例</strong>：<code>\hat{a}</code><br>$\hat{a}$</p>
+<p><strong>数学符号</strong><code>\check{a}</code><br><strong>示例</strong>：<code>\check{a}</code><br>$\check{a}$</p>
+<p><strong>数学符号</strong><code>\breve{a}</code><br><strong>示例</strong>：<code>\breve{a}</code><br>$\breve{a}$</p>
+<p><strong>数学符号</strong><code>\tilde{a}</code><br><strong>示例</strong>：<code>\tilde{a}</code><br>$\tilde{a}$</p>
+<p><strong>数学符号</strong><code>\bar{a}</code><br><strong>示例</strong>：<code>\bar{a}</code><br>$\bar{a}$</p>
+<p><strong>矢量符号</strong><code>\vec{a}</code><br><strong>示例</strong>：<code>\vec{a}</code><br>$\vec{a}$</p>
+<p><strong>数学符号</strong><code>\acute{a}</code><br><strong>示例</strong>：<code>\acute{a}</code><br>$\acute{a}$</p>
+<p><strong>数学符号</strong><code>\grave{a}</code><br><strong>示例</strong>：<code>\grave{a}</code><br>$\grave{a}$</p>
+<p><strong>数学符号</strong><code>\mathring{a}</code><br><strong>示例</strong>：<code>\mathring{a}</code><br>$\mathring{a}$</p>
+<p><strong>一阶导数符号</strong><code>\dot{a}</code><br><strong>示例</strong>：<code>\dot{a}</code><br>$\dot{a}$</p>
+<p><strong>二阶导数符号</strong><code>\ddot{a}</code><br><strong>示例</strong>：<code>\ddot{a}</code><br>$\ddot{a}$</p>
+<p><strong>上箭头</strong>：<code>\uparrow</code><br><strong>示例</strong>：<code>\uparrow</code><br>$\uparrow$</p>
+<p><strong>上箭头</strong>：<code>\Uparrow</code><br><strong>示例</strong>：<code>\Uparrow</code><br>$\Uparrow$</p>
+<p><strong>下箭头</strong>：<code>\downarrow</code><br><strong>示例</strong>：<code>\downarrow</code><br>$\downarrow$</p>
+<p><strong>下箭头</strong>：<code>\Downarrow</code><br><strong>示例</strong>：<code>\Downarrow</code><br>$\Downarrow$</p>
+<p><strong>左箭头</strong>：<code>\leftarrow</code><br><strong>示例</strong>：<code>\leftarrow</code><br>$\leftarrow$</p>
+<p><strong>左箭头</strong>：<code>\Leftarrow</code><br><strong>示例</strong>：<code>\Leftarrow</code><br>$\Leftarrow$</p>
+<p><strong>右箭头</strong>：<code>\rightarrow</code><br><strong>示例</strong>：<code>\rightarrow</code><br>$\rightarrow$</p>
+<p><strong>右箭头</strong>：<code>\Rightarrow</code><br><strong>示例</strong>：<code>\Rightarrow</code><br>$\Rightarrow$</p>
+<p><strong>底端对齐的省略号</strong>：<code>\ldots</code><br><strong>示例</strong>：<code>1,2,\ldots,n</code><br>$1,2,\ldots,n$</p>
+<p><strong>中线对齐的省略号</strong>：<code>\cdots</code><br><strong>示例</strong>：<code>x_1^2 + x_2^2 + \cdots + x_n^2</code><br>$x_1^2 + x_2^2 + \cdots + x_n^2$</p>
+<p><strong>竖直对齐的省略号</strong>：<code>\vdots</code><br><strong>示例</strong>：<code>\vdots</code><br>$\vdots$</p>
+<p><strong>斜对齐的省略号</strong>：<code>\ddots</code><br><strong>示例</strong>：<code>\ddots</code><br>$\ddots$</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/10036/" class="archive-article-date">
-  	<time datetime="2019-05-27T00:51:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/10036/">Python数据可视化</a>
-    </h1>
-  
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdown</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Latex</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学公式</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://maozhu.me/10042/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/10035/" class="archive-article-date">
-  	<time datetime="2019-05-14T21:46:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-15</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/10043/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          偏导数
+        
+      </div>
+    </a>
+  
+  
+    <a href="/10041/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Gradient descent</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/10035/">Python和Java对照学习</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/10034/" class="archive-article-date">
-  	<time datetime="2019-05-07T22:35:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/10034/">人工智能学习路径规划</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -253,8 +426,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

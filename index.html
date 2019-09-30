@@ -136,6 +136,90 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-10050" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/10050/">逻辑回归</a>
+    </h1>
+  
+
+        
+        <a href="/10050/" class="archive-article-date">
+  	<time datetime="2019-09-29T05:25:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="hypothesis-function"><a href="#hypothesis-function" class="headerlink" title="hypothesis function"></a>hypothesis function</h2><p>Logistic regression的hypothesis function相当于一个复合函数，它是sigmoid function和$\theta^Tx$的复合（后者正是Linear regression的hypothesis function）。</p>
+<p>注意：hypothesis function函数值$h_\theta(x)$表示某label的概率，而不是lable值。</p>
+<p>$h_\theta(x)=g(z)$<br>其中，g称为sigmoid function，即：<br>$g(z)=\frac{1}{1+e^{-z}}$<br>令$z=\theta^Tx$<br>$h_\theta=\frac{1}{1+e^{-\theta^Tx}}$</p>
+<h2 id="cost-function"><a href="#cost-function" class="headerlink" title="cost function"></a>cost function</h2><p>$J(\theta )=\frac{1}{m}\displaystyle \sum^{m}_{i=1}{Cost(h_\theta(x^{(i)}),y^{(i)}})$</p>
+<p>$=-\frac{1}{m}\displaystyle \sum^{m}_{i=1}{[y^{(i)}log(h_\theta(x^{(i)}))+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]}$</p>
+<h2 id="gradient-descent推导"><a href="#gradient-descent推导" class="headerlink" title="gradient descent推导"></a>gradient descent推导</h2><p>用到复合函数的求导，$J(\theta)$由以下几个公式复合而成：</p>
+<ol>
+<li>$\frac{d}{d(x)}log(x)=\frac{1}{x}$</li>
+<li>而$h(\theta)$是一个sigmoid function，定义为： $g(z)=\frac{1}{1+e^{-z}}$<br>sigmoid function的导数满足以下公式：<br>$\frac{d}{d(x)}g(z)=g(z)(1-g(z))$<br>证明过程参考：<a href="https://kawahara.ca/how-to-compute-the-derivative-of-a-sigmoid-function-fully-worked-example/" target="_blank" rel="noopener">https://kawahara.ca/how-to-compute-the-derivative-of-a-sigmoid-function-fully-worked-example/</a></li>
+<li>$z=\theta^Tx=\theta_0+\theta_1x_1+…+\theta_nx_n$<br>所以：$\frac{d}{d\theta_j}z=x_j$(除了$\theta_j外其它都视为常数$ )<br>通过复合函数求导并化简得到：<br>$\frac{d}{d\theta_j}[y^{(i)}log(h_\theta(x^{(i)}))+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]=(h_\theta(x^{i})-y^{(i)})x_j^{(i)}$</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/10050/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-10049" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -143,12 +227,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/25/10049/">希腊字母</a>
+      <a class="article-title" href="/10049/">希腊字母</a>
     </h1>
   
 
         
-        <a href="/2019/09/25/10049/" class="archive-article-date">
+        <a href="/10049/" class="archive-article-date">
   	<time datetime="2019-09-25T00:34:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
 </a>
         
@@ -337,7 +421,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/25/10049/">展开全文 >></a>
+          <a class="article-more-a" href="/10049/">展开全文 >></a>
         </p>
       
 
@@ -374,12 +458,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/25/10048/">非监督学习</a>
+      <a class="article-title" href="/10048/">非监督学习</a>
     </h1>
   
 
         
-        <a href="/2019/09/25/10048/" class="archive-article-date">
+        <a href="/10048/" class="archive-article-date">
   	<time datetime="2019-09-25T00:27:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
 </a>
         
@@ -418,7 +502,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/25/10048/">展开全文 >></a>
+          <a class="article-more-a" href="/10048/">展开全文 >></a>
         </p>
       
 
@@ -455,12 +539,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/25/10047/">监督学习</a>
+      <a class="article-title" href="/10047/">监督学习</a>
     </h1>
   
 
         
-        <a href="/2019/09/25/10047/" class="archive-article-date">
+        <a href="/10047/" class="archive-article-date">
   	<time datetime="2019-09-25T00:27:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
 </a>
         
@@ -477,7 +561,7 @@
 <p>逻辑回归又是怎么回事，它和分类问题有什么联系吗？</p>
 <h2 id="Regression-vs-Classification"><a href="#Regression-vs-Classification" class="headerlink" title="Regression vs Classification"></a>Regression vs Classification</h2><p>前者是定量分析，后者是定性分析</p>
 <h1 id="算法流程图"><a href="#算法流程图" class="headerlink" title="算法流程图"></a>算法流程图</h1><p>Lesson 1 Model Representation 4:47</p>
-<p><img src="flowchart.jpg" alt="flowchart"></p>
+<p><img src="/10047/flowchart.jpg" alt="flowchart"></p>
 <p>h: hypothesis(a function that takes as input the size of a house like maybe the size of the new your friend’s, and output the estimated price). h is a map from x to y</p>
 <p>$h_\theta = \theta_0 + \theta_1x$</p>
 <p>Linear regression with one variable, 也叫Univariate linear regression.</p>
@@ -506,7 +590,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/25/10047/">展开全文 >></a>
+          <a class="article-more-a" href="/10047/">展开全文 >></a>
         </p>
       
 
@@ -543,12 +627,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/25/10046/">线性回归</a>
+      <a class="article-title" href="/10046/">线性回归</a>
     </h1>
   
 
         
-        <a href="/2019/09/25/10046/" class="archive-article-date">
+        <a href="/10046/" class="archive-article-date">
   	<time datetime="2019-09-25T00:26:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
 </a>
         
@@ -562,9 +646,12 @@
 <p>多元线性回归：</p>
 <p>$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\cdots+\theta_nx_n$</p>
 <p>注意：在hypothesis function中，$\theta$是已知求得的数。</p>
-<p>$\left[ \begin{matrix} \theta_0 \\ \theta_1\end{matrix} \right]$</p>
+<p>用向量法表示$\theta和x$如下：</p>
+<p>$x = \left[ \begin{matrix} x_0 \\ x_1 \\ \vdots \\ x_n \end{matrix} \right]$，其中，$x_0=1$，$x_j(j=1…n)$表示训练数据的第j个特征值。</p>
+<p>$\theta = \left[ \begin{matrix} \theta_0 \\ \theta_1 \\ \vdots \\ \theta_n \end{matrix} \right]$</p>
+<p>则$h_\theta(x)=\theta^Tx$</p>
 <h3 id="cost-function"><a href="#cost-function" class="headerlink" title="cost function"></a>cost function</h3><p>cost function是用来衡量hypothesis function好不好的。(We can measure the accuracy of our hypothesis function by using a <strong>cost function</strong>， or measure how well the hypothesis function fits int the data.): </p>
-<p>$J(\theta)=\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)}-y^{(i)}))^2}$</p>
+<p>$J(\theta)=\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)}))^2}$</p>
 <p> $J(\theta)$就是我们的优化目标（optimization objective），机器学习的任务就是找出合适的$\theta$，使$J(\theta)$函数值最小。</p>
 <p>注意：$\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)}-y^{(i)}))^2}$是方差的$\frac{1}{2}$，之所以cost function不是方差，主要是为了后续求解最小值时方面计算（使用Gradient descent算法对$(h_\theta(x^{(i)}-y^{(i)}))^2$求导后会有一个2，正好和增加的$\frac{1}{2}$抵消掉）</p>
 <p>参考资料：</p>
@@ -597,7 +684,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/25/10046/">展开全文 >></a>
+          <a class="article-more-a" href="/10046/">展开全文 >></a>
         </p>
       
 
@@ -634,12 +721,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/21/10045/">对数与对数函数</a>
+      <a class="article-title" href="/10045/">对数与对数函数</a>
     </h1>
   
 
         
-        <a href="/2019/09/21/10045/" class="archive-article-date">
+        <a href="/10045/" class="archive-article-date">
   	<time datetime="2019-09-21T00:10:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
 </a>
         
@@ -708,7 +795,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/21/10045/">展开全文 >></a>
+          <a class="article-more-a" href="/10045/">展开全文 >></a>
         </p>
       
 
@@ -745,12 +832,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/19/10044/">指数函数</a>
+      <a class="article-title" href="/10044/">指数函数</a>
     </h1>
   
 
         
-        <a href="/2019/09/19/10044/" class="archive-article-date">
+        <a href="/10044/" class="archive-article-date">
   	<time datetime="2019-09-19T00:20:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
 </a>
         
@@ -786,7 +873,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/19/10044/">展开全文 >></a>
+          <a class="article-more-a" href="/10044/">展开全文 >></a>
         </p>
       
 
@@ -823,12 +910,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/15/10043/">偏导数</a>
+      <a class="article-title" href="/10043/">偏导数</a>
     </h1>
   
 
         
-        <a href="/2019/09/15/10043/" class="archive-article-date">
+        <a href="/10043/" class="archive-article-date">
   	<time datetime="2019-09-15T06:47:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-15</time>
 </a>
         
@@ -874,7 +961,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/15/10043/">展开全文 >></a>
+          <a class="article-more-a" href="/10043/">展开全文 >></a>
         </p>
       
 
@@ -911,12 +998,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/13/10042/">LaTex符号</a>
+      <a class="article-title" href="/10042/">LaTex符号</a>
     </h1>
   
 
         
-        <a href="/2019/09/13/10042/" class="archive-article-date">
+        <a href="/10042/" class="archive-article-date">
   	<time datetime="2019-09-12T23:34:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
 </a>
         
@@ -957,7 +1044,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/13/10042/">展开全文 >></a>
+          <a class="article-more-a" href="/10042/">展开全文 >></a>
         </p>
       
 
@@ -994,12 +1081,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/12/10041/">Gradient descent</a>
+      <a class="article-title" href="/10041/">Gradient descent</a>
     </h1>
   
 
         
-        <a href="/2019/09/12/10041/" class="archive-article-date">
+        <a href="/10041/" class="archive-article-date">
   	<time datetime="2019-09-12T00:03:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-12</time>
 </a>
         
@@ -1009,7 +1096,7 @@
       
         <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>先解释一下gradient descent这两个单词的意思。<br>gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线<br>descent[dɪ’sent] : 下降；斜坡；血统；祖先</p>
 <p>gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。其算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降，经过若干步后，即能达到某个局部最低值。</p>
-<p><img src="1.jpg" alt></p>
+<p><img src="/10041/1.jpg" alt></p>
         
       
 
@@ -1033,74 +1120,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/12/10041/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-10039" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/30/10039/">机器学习的分类</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/30/10039/" class="archive-article-date">
-  	<time datetime="2019-08-30T00:27:32.893Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>机器学习（算法）主要分两大类：监督学习（Supervised learning）和非监督学习（Unsupervised learning）</p>
-<p>什么是Supervised learning?</p>
-<p><a href="https://www.coursera.org/learn/machine-learning/lecture/1VkCb/supervised-learning" target="_blank" rel="noopener">https://www.coursera.org/learn/machine-learning/lecture/1VkCb/supervised-learning</a> 2:00</p>
-<p>参考资料：</p>
-<p><a href="https://www.coursera.org/learn/machine-learning/lecture/Ujm7v/what-is-machine-learning" target="_blank" rel="noopener">https://www.coursera.org/learn/machine-learning/lecture/Ujm7v/what-is-machine-learning</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/30/10039/">展开全文 >></a>
+          <a class="article-more-a" href="/10041/">展开全文 >></a>
         </p>
       
 
