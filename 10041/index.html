@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://maozhu.me/10041/1.jpg">
 <meta property="og:image" content="https://maozhu.me/10041/1568763725662.png">
-<meta property="og:updated_time" content="2019-09-30T06:12:20.925Z">
+<meta property="og:updated_time" content="2019-09-30T06:42:07.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gradient descent">
 <meta name="twitter:description" content="简介先解释一下gradient descent这两个单词的意思。gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线descent[dɪ’sent] : 下降；斜坡；血统；祖先 gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。其算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降">
@@ -185,7 +185,7 @@
 <p>即先把所有值记录到临时变量中，最后再更新$\theta_j$:</p>
 <p>$\theta_0 = temp0$</p>
 <p>$\theta_1=temp1$</p>
-<h2 id="全量法-“Batch”-Gradient-Descent"><a href="#全量法-“Batch”-Gradient-Descent" class="headerlink" title="全量法(“Batch” Gradient Descent)"></a>全量法(“Batch” Gradient Descent)</h2><p>由于$J(\theta)=\displaystyle \sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2$，可知每步都要遍历所有的训练数据。这种Gradient Descent称为全量法。除了全量法外，也可以每步只用若干个训练数据，甚至只用一个训练数据。</p>
+<h2 id="全量法-“Batch”-Gradient-Descent"><a href="#全量法-“Batch”-Gradient-Descent" class="headerlink" title="全量法(“Batch” Gradient Descent)"></a>全量法(“Batch” Gradient Descent)</h2><p>以<a href="/10046">Linear Regression</a>的cost function为例，其$J(\theta)=\displaystyle \sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2$，可知每步都要遍历所有的训练数据。这种Gradient Descent称为全量法。除了全量法外，也可以每步只用若干个训练数据，甚至只用一个训练数据。</p>
 <h2 id="其它求取最小值的技术"><a href="#其它求取最小值的技术" class="headerlink" title="其它求取最小值的技术"></a>其它求取最小值的技术</h2><p>normal equation method</p>
 <p>gradient descent和normal equation method适用于不同训练数据数量级。</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.coursera.org/learn/machine-learning/lecture/8SpIM/gradient-descent" target="_blank" rel="noopener">Gradient Descent</a></p>
@@ -452,11 +452,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">指数函数</a>
+                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
+                <a href="javascript:void(0)" class="js-tag color5">指数函数</a>
               </li>
              
               <li class="article-tag-list-item">
