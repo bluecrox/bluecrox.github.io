@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://maozhu.me">
-  <title>Gradient descent | 毛竹</title>
+  <title>梯度下降算法 | 毛竹</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简介先解释一下gradient descent这两个单词的意思。gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线descent[dɪ’sent] : 下降；斜坡；血统；祖先 gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。其算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降">
-<meta name="keywords" content="机器学习">
+  <meta name="description" content="简介梯度下降（Gradient descent）是一种用于找出某个函数最小值的算法。该算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降，经过若干步后，即能达到某个局部最低值。">
+<meta name="keywords" content="机器学习,梯度下降,gradient descent">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gradient descent">
+<meta property="og:title" content="梯度下降算法">
 <meta property="og:url" content="https://maozhu.me/10041/index.html">
 <meta property="og:site_name" content="毛竹">
-<meta property="og:description" content="简介先解释一下gradient descent这两个单词的意思。gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线descent[dɪ’sent] : 下降；斜坡；血统；祖先 gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。其算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降">
+<meta property="og:description" content="简介梯度下降（Gradient descent）是一种用于找出某个函数最小值的算法。该算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降，经过若干步后，即能达到某个局部最低值。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://maozhu.me/10041/1.jpg">
 <meta property="og:image" content="https://maozhu.me/10041/1568763725662.png">
-<meta property="og:updated_time" content="2019-09-30T06:42:07.362Z">
+<meta property="og:updated_time" content="2019-10-03T02:47:20.287Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gradient descent">
-<meta name="twitter:description" content="简介先解释一下gradient descent这两个单词的意思。gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线descent[dɪ’sent] : 下降；斜坡；血统；祖先 gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。其算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降">
+<meta name="twitter:title" content="梯度下降算法">
+<meta name="twitter:description" content="简介梯度下降（Gradient descent）是一种用于找出某个函数最小值的算法。该算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降，经过若干步后，即能达到某个局部最低值。">
 <meta name="twitter:image" content="https://maozhu.me/10041/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="毛竹" type="application/atom+xml">
@@ -63,7 +63,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/读书笔记/">读书笔记</a></li>
 	        
 			</ul>
 		</nav>
@@ -71,10 +71,6 @@
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -127,7 +123,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/读书笔记/">读书笔记</a></li>
 		        
 				</ul>
 			</nav>
@@ -149,7 +145,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Gradient descent
+      梯度下降算法
     </h1>
   
 
@@ -162,21 +158,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>先解释一下gradient descent这两个单词的意思。<br>gradient[‘ɡreɪdiənt]: 倾斜度；坡度；梯度变化曲线<br>descent[dɪ’sent] : 下降；斜坡；血统；祖先</p>
-<p>gradient descent是一种用于找出某个函数最小值的技术，这里的函数可以是任意函数，而不仅限于线性回归的cost function J。其算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降，经过若干步后，即能达到某个局部最低值。</p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>梯度下降（Gradient descent）是一种用于找出某个函数最小值的算法。该算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降，经过若干步后，即能达到某个局部最低值。</p>
 <p><img src="/10041/1.jpg" alt></p>
 <a id="more"></a>
 
-<p>使用gradient descent找出$\theta_0, \theta_1, … \theta_n$，使$J(\theta_0, \theta_1, … \theta_n)$最小，步骤如下：</p>
+<p>使用梯度下降算法找出$\theta_0, \theta_1, … \theta_n$，使$J(\theta_0, \theta_1, … \theta_n)$最小，步骤如下：</p>
 <ol>
 <li>初始化$\theta_0, \theta_1, … \theta_n$，赋予任意初始值均可，但要求其在函数中有意义。</li>
 <li>逐步更新$\theta_0, \theta_1, … \theta_n$的值，不断减小$J(\theta_0, \theta_1, … \theta_n)$只到其小到期望的最小值。</li>
 </ol>
-<p>注意：起始点不同gradient descent最后达到的最小值未必相同。</p>
+<p>注意：起始点不同梯度下降算法最后达到的最小值未必相同。</p>
 <h2 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h2><p>repeat until convergence {</p>
 <p>​    $\theta_j = \theta_j - \alpha \frac{\partial}{\partial {\theta_j}}J(\theta_0, \theta_1…,\theta_n)$</p>
 <p>}</p>
-<p>其中，$\alpha$是个正数，称为learning rate，用于控制步进速度。$\alpha$越大，gradient descent每次迭代参数变化越大。因此，越快向最小值靠近。但是$\alpha$也不能太大，否则可能因步子太大，越过最小值所在的位置，导致不聚合。偏导数$\frac{\partial}{\partial {\theta_j}}J(\theta_0, \theta_1…,\theta_n)$的意义是当前点斜率的值，它有两个用途：首先，根据其正负即可知道$\theta$应该是增大还是减小才能是函数变小，其次斜率越大（越陡），则$\theta$改变越大，斜率越小（函数越接近局部最小值），$\theta$变化越小。</p>
+<p>其中，$\alpha$是个正数，称为learning rate，用于控制步进速度。$\alpha$越大，梯度下降算法每次迭代参数变化越大。因此，越快向最小值靠近。但是$\alpha$也不能太大，否则可能因步子太大，越过最小值所在的位置，导致不聚合。偏导数$\frac{\partial}{\partial {\theta_j}}J(\theta_0, \theta_1…,\theta_n)$的意义是当前点斜率的值，它有两个用途：首先，根据其正负即可知道$\theta$应该是增大还是减小才能是函数变小，其次斜率越大（越陡），则$\theta$改变越大，斜率越小（函数越接近局部最小值），$\theta$变化越小。</p>
 <p><img src="/10041/1568763725662.png" alt></p>
 <p>当函数抵达局部最小值时，偏导数=0，$\theta$不再变化。</p>
 <p>注意：更新$\theta_j$要求同步更新，如下所示：</p>
@@ -185,7 +180,10 @@
 <p>即先把所有值记录到临时变量中，最后再更新$\theta_j$:</p>
 <p>$\theta_0 = temp0$</p>
 <p>$\theta_1=temp1$</p>
-<h2 id="全量法-“Batch”-Gradient-Descent"><a href="#全量法-“Batch”-Gradient-Descent" class="headerlink" title="全量法(“Batch” Gradient Descent)"></a>全量法(“Batch” Gradient Descent)</h2><p>以<a href="/10046">Linear Regression</a>的cost function为例，其$J(\theta)=\displaystyle \sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2$，可知每步都要遍历所有的训练数据。这种Gradient Descent称为全量法。除了全量法外，也可以每步只用若干个训练数据，甚至只用一个训练数据。</p>
+<h2 id="线性回归的梯度下降"><a href="#线性回归的梯度下降" class="headerlink" title="线性回归的梯度下降"></a>线性回归的梯度下降</h2><p><a href="/10046">线性回归</a>的假设函数$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\cdots+\theta_nx_n$，代价函数$J(\theta)=\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)}))^2}$</p>
+<p>$\frac{\partial}{\partial {\theta_j}}J(\theta)=\frac{1}{m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)})x_j}$</p>
+<p>因此，    $\theta_j = \theta_j -\alpha \frac{1}{m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)})x_j}$</p>
+<h2 id="全量梯度下降-“Batch”-Gradient-Descent"><a href="#全量梯度下降-“Batch”-Gradient-Descent" class="headerlink" title="全量梯度下降(“Batch” Gradient Descent)"></a>全量梯度下降(“Batch” Gradient Descent)</h2><p>以<a href="/10046">Linear Regression</a>的cost function为例，其$J(\theta)=\displaystyle \sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2$，可知每步都要遍历所有的训练数据。这种Gradient Descent称为全量法。除了全量法外，也可以每步只用若干个训练数据，甚至只用一个训练数据。</p>
 <h2 id="其它求取最小值的技术"><a href="#其它求取最小值的技术" class="headerlink" title="其它求取最小值的技术"></a>其它求取最小值的技术</h2><p>normal equation method</p>
 <p>gradient descent和normal equation method适用于不同训练数据数量级。</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.coursera.org/learn/machine-learning/lecture/8SpIM/gradient-descent" target="_blank" rel="noopener">Gradient Descent</a></p>
@@ -205,6 +203,14 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">梯度下降</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">gradient descent</a>
         		</li>
       		
 		</ul>
@@ -393,25 +399,17 @@ MathJax.Hub.Queue(function() {
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -440,6 +438,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">梯度下降</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">gradient descent</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">偏导数</a>
               </li>
              
@@ -452,11 +458,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
+                <a href="javascript:void(0)" class="js-tag color5">指数函数</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">指数函数</a>
+                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -469,6 +475,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -523,43 +533,11 @@ MathJax.Hub.Queue(function() {
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">资深码农，就职于上海张江一家新创企业。&lt;br&gt;联系方式：306867669@qq.com</div>
   	  	
     	</section>
     
