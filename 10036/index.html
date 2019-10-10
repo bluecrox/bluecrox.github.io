@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://maozhu.me/10036/3.jpg">
 <meta property="og:image" content="https://maozhu.me/10036/4.jpg">
 <meta property="og:image" content="https://maozhu.me/10036/8.jpg">
-<meta property="og:updated_time" content="2019-09-30T06:33:59.817Z">
+<meta property="og:updated_time" content="2019-10-09T05:30:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python数据可视化">
 <meta name="twitter:description" content="安装matplotlib折线图和散点图需要安装matplotlib： 1pip install matplotlib   12C:\&amp;gt;python&amp;gt;&amp;gt;&amp;gt; import matplotlib  如果没有出现任何错误消息，就说明matplotlib安装好了。如果报错：DLL load failed： %1 不是有效的 Win32应用程序。这可能是Python的版本问题，如在64">
@@ -169,23 +169,25 @@
 <p><img src="//10041/1.jpg" alt></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\&gt;python</span><br><span class="line">&gt;&gt;&gt; import matplotlib</span><br></pre></td></tr></table></figure>
 
-<p>如果没有出现任何错误消息，就说明matplotlib安装好了。<br>如果报错：DLL load failed： %1 不是有效的 Win32应用程序。这可能是Python的版本问题，如在64bit系统上安装了32bit的python(如何判断当前安装的Python版本？方法很简单：在命令行输入python，然后从输入信息即可得知)。</p>
-<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><p>plot通常用于绘制折线图（当然也可以是离散的点，参考后边的格式化），使用plot绘图时首先要导入模块matplotlib的pyplot(习惯上将其重命名为plt)</p>
+<p>如果没有出现任何错误消息，就说明matplotlib安装好了。<br>如果报错：DLL load failed： %1 不是有效的 Win32应用程序。这可能是Python的版本问题，如在64bit系统上安装了32bit的python</p>
+<p>Q: 如何判断当前安装的Python版本？</p>
+<p>A: 在命令行输入python，然后从输入信息即可得知。</p>
+<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><p>plot通常用于绘制折线图（当然也可以是离散的点，参考后边的格式化），使用plot绘图时首先要导入模块matplotlib中的pyplot(习惯上将其重命名为plt)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure>
 
 <h3 id="坐标数据"><a href="#坐标数据" class="headerlink" title="坐标数据"></a>坐标数据</h3><h4 id="1-绘制一个点"><a href="#1-绘制一个点" class="headerlink" title="1.绘制一个点"></a>1.绘制一个点</h4><p>先看一个最简单的例子，绘制一个点：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(1, 2, &quot;x&quot;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
-<p>执行上述代码将显示如下所示界面：<br><img src="/10036/5.jpg" alt><br>上述例子中，前两个参数（标量）构成一个坐标，第三个参数是记号形状，这里不可省略，否则图上什么也看不出（关于记号形状后续会详解）</p>
+<p>执行上述代码将显示如下所示界面：<br><img src="/10036/5.jpg" alt><br>上述例子中，前两个参数（标量）构成一个坐标，第三个参数是记号形状（这个例子，由于只画一个点，所以必须修改记号形状，否则图上什么也看不出，关于记号形状后续会详解）</p>
 <h4 id="2-绘制一组数据"><a href="#2-绘制一组数据" class="headerlink" title="2.绘制一组数据"></a>2.绘制一组数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot([1, 4, 9, 16, 25])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 <p>执行上述代码将显示如下所示界面：<br><img src="/10036/1.jpg" alt></p>
-<p>如果只提供给plot函数一个数组，则它会将它视为纵轴坐标数据y，并自动构造横轴坐标数据：range(len(y))。如上例所示：纵轴坐标数据是y = [1, 4, 9, 16, 25]，则横轴坐标数据：range(len(y))=[0, 1, 2, 3, 4]，即最终结果是把(0, 1)，(1, 4)，(2, 9)，(3, 16), (4, 25)连成的折线。</p>
-<p>显然，有时这种默认横轴坐标数据的做法无法满足我们的需求。比如假设我们想使每个点的x坐标是y坐标的开方。这种情况下，我们应该明确地提供横轴坐标数据：</p>
+<p>如果只提供给plot函数一个数组，则它会将它视为纵坐标数据y，并自动构造横坐标数据：range(len(y))。如上例所示：纵坐标数据是y = [1, 4, 9, 16, 25]，则横坐标数据：range(len(y))=[0, 1, 2, 3, 4]，即最终结果是把(0, 1)，(1, 4)，(2, 9)，(3, 16), (4, 25)连成的折线。</p>
+<p>显然，有时这种默认横坐标数据的做法无法满足我们的需求。假设我们想使每个点的纵坐标是横坐标的平方。这种情况下，我们应该明确地提供横坐标数据：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = [1, 2, 3, 4, 5]</span><br><span class="line">squares = [1, 4, 9, 16, 25]</span><br><span class="line">plt.plot(x, squares)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 <p>执行上述代码结果如下（注意横坐标的变化）：<br><img src="/10036/2.jpg" alt></p>
-<h4 id="3-绘制多组数据"><a href="#3-绘制多组数据" class="headerlink" title="3. 绘制多组数据"></a>3. 绘制多组数据</h4><p>有多种方式在一个坐标系中绘制多组数据，最简单的是多次调用plot函数，如：</p>
+<h4 id="3-绘制多组数据"><a href="#3-绘制多组数据" class="headerlink" title="3. 绘制多组数据"></a>3. 绘制多组数据</h4><p>有多种方式在一个坐标系中绘制多组数据，最简单的是多次调用plot函数（show函数只需调一次），如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x = [1, 2, 3, 4, 5]</span><br><span class="line">squares = [1, 4, 9, 16, 25]</span><br><span class="line">plt.plot(x, squares)</span><br><span class="line"></span><br><span class="line">y = x</span><br><span class="line">plt.plot(x, y)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 <p>如下图所示（不同的数据集自动用不同的颜色表示）：<br><img src="/10036/7.jpg" alt></p>

@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://maozhu.me">
   <title>Python和Java对照学习 | 毛竹</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近在学Python，我以前用的最多的是Java。新学一门语言，免不了要和原有语言做一番比较，以便更好地掌握新语言。总结一下，有以下几点： Java定义一个变量要指明其类型，如： 12int i = 3;String s = &amp;quot;abc&amp;quot;;  Python定义变量时不但无须指明其类型，而且不需要任何关键字（不像有些语言如JavaScript，需要var等关键词） 12i = 3s">
+  <meta name="description" content="最近在学Python，我以前用的最多的是Java。新学一门语言，免不了要和原有语言做一番比较，以便更好地掌握新语言。总结一下，有以下几点： Java定义一个变量要指明其类型，如： 12int i = 3;String s = &amp;quot;abc&amp;quot;;  Python定义变量时不但无须指明其类型，而且不需要借助任何关键字（如var, const, let等）。 12i = 3s = &amp;quo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python和Java对照学习">
 <meta property="og:url" content="https://maozhu.me/10035/index.html">
 <meta property="og:site_name" content="毛竹">
-<meta property="og:description" content="最近在学Python，我以前用的最多的是Java。新学一门语言，免不了要和原有语言做一番比较，以便更好地掌握新语言。总结一下，有以下几点： Java定义一个变量要指明其类型，如： 12int i = 3;String s = &amp;quot;abc&amp;quot;;  Python定义变量时不但无须指明其类型，而且不需要任何关键字（不像有些语言如JavaScript，需要var等关键词） 12i = 3s">
+<meta property="og:description" content="最近在学Python，我以前用的最多的是Java。新学一门语言，免不了要和原有语言做一番比较，以便更好地掌握新语言。总结一下，有以下几点： Java定义一个变量要指明其类型，如： 12int i = 3;String s = &amp;quot;abc&amp;quot;;  Python定义变量时不但无须指明其类型，而且不需要借助任何关键字（如var, const, let等）。 12i = 3s = &amp;quo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-06T00:39:56.616Z">
+<meta property="og:updated_time" content="2019-10-08T05:17:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python和Java对照学习">
-<meta name="twitter:description" content="最近在学Python，我以前用的最多的是Java。新学一门语言，免不了要和原有语言做一番比较，以便更好地掌握新语言。总结一下，有以下几点： Java定义一个变量要指明其类型，如： 12int i = 3;String s = &amp;quot;abc&amp;quot;;  Python定义变量时不但无须指明其类型，而且不需要任何关键字（不像有些语言如JavaScript，需要var等关键词） 12i = 3s">
+<meta name="twitter:description" content="最近在学Python，我以前用的最多的是Java。新学一门语言，免不了要和原有语言做一番比较，以便更好地掌握新语言。总结一下，有以下几点： Java定义一个变量要指明其类型，如： 12int i = 3;String s = &amp;quot;abc&amp;quot;;  Python定义变量时不但无须指明其类型，而且不需要借助任何关键字（如var, const, let等）。 12i = 3s = &amp;quo">
   
     <link rel="alternative" href="/atom.xml" title="毛竹" type="application/atom+xml">
   
@@ -158,7 +158,7 @@
 <p>Java定义一个变量要指明其类型，如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i = 3;</span><br><span class="line">String s = &quot;abc&quot;;</span><br></pre></td></tr></table></figure>
 
-<p>Python定义变量时不但无须指明其类型，而且不需要任何关键字（不像有些语言如JavaScript，需要var等关键词）</p>
+<p>Python定义变量时不但无须指明其类型，而且不需要借助任何关键字（如var, const, let等）。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i = 3</span><br><span class="line">s = &quot;abc&quot;</span><br></pre></td></tr></table></figure>
 
 <hr>
@@ -183,10 +183,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(condition):</span><br><span class="line">    a_value = 3</span><br><span class="line">    </span><br><span class="line">print(a_value) # 输出3</span><br></pre></td></tr></table></figure>
 
 <hr>
-<p>Java函数中，如果对一个变量赋值，即修改全局的变量。当重新定义一个（同名）局部变量，才会使用局部变量，如：</p>
+<p>Java函数中，对一个变量赋值时，如果外层作用域存在同名变量，则对该变量赋值。当重新定义一个（同名）局部变量，才会使用局部变量，如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String a_value = &quot;global old&quot;;</span><br><span class="line"></span><br><span class="line">void foo() &#123;</span><br><span class="line">    a_value = &quot;global new&quot;; // 修改全局变量a_value，新值global new</span><br><span class="line"></span><br><span class="line">    String a_value = &quot;local old&quot;; // 定义局部同名变量，不影响全局变量</span><br><span class="line">    a_value = &quot;local new&quot;; // 修改局部变量，不影响全局变量</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>Python函数中，如果对一个变量赋值，则是新建一个局部变量。</p>
+<p>Python函数中，如果对一个变量赋值，则是新建一个局部变量，不管是否存在全局变量。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a_value = &quot;abc&quot;</span><br><span class="line"></span><br><span class="line">def foo():</span><br><span class="line">    a_value = 7     # 新建一个局部变量</span><br><span class="line">    print(a_value) # 输出7</span><br><span class="line"></span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line">print(a_value) # 输出abc</span><br></pre></td></tr></table></figure>
 
 <p>如果要在函数中使用全局变量，则要用关键词global：</p>
@@ -204,22 +204,23 @@
 <p>Python中的数组通常是指numpy中的ndarray，使用前需安装numpy并import。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">x = np.arange(-4, 4)</span><br><span class="line">print(type(x))  # 结果：&lt;class &apos;numpy.ndarray&apos;&gt;</span><br></pre></td></tr></table></figure>
 
+<hr>
 <p>Java中List是一个接口，实际使用时需要创建其某个实例，如ArrayList，并且不管是List还是其实例，使用前都要先import：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import java.util.List;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line"></span><br><span class="line">List l = new ArrayList();</span><br></pre></td></tr></table></figure>
 
 <p>Python中list则是语言内置，使用时不用import任何东西:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a_list = [1, 2, 3]</span><br><span class="line">print(a_list) # 结果：[1, 2, 3]</span><br><span class="line">print(a_list[0]) # 结果：1</span><br><span class="line">print(type(a_list)) # 结果：&lt;class &apos;list&apos;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">print(a_list) <span class="comment"># 结果：[1, 2, 3]</span></span><br><span class="line">print(a_list[<span class="number">0</span>]) <span class="comment"># 结果：1</span></span><br><span class="line">print(type(a_list)) <span class="comment"># 结果：&lt;class 'list'&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>对比Pyhton和Java，发现Python的list综合了Java中数组和list的语法和功能，但既然其type是list，则建议始终称其为list，而数组则特指numpy的ndarray，以免相互混淆。</p>
+<p>对比Pyhton和Java，发现Python的list综合了Java中数组和List的语法和功能，但既然其type是list，则建议始终称其为list，而数组则特指numpy的ndarray，以免相互混淆。</p>
 <hr>
 <p>Java注释<br>单行注释//打头，多行注释用/* */包裹<br>Python注释<br>单行注释，#打头，没有多行注释，如果要注释多行，每行都要加#</p>
 <hr>
 <p>Java布尔值(常量)为true和false<br>Python布尔值(常量)为True和False</p>
 <hr>
-<p>Java语句要以;结尾<br>Python不需要</p>
+<p>Java语句要以;结尾<br>Python语句不需要;结尾</p>
 <hr>
-<p>Java字符串只能用””（单引号用于字符）<br>Python字符串即可以用””，也可以用’’，但两者同时使用时，首尾的符号必须相同，字符串内部的保留符号本身。如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s_value1 = &quot;I&apos;m abc&quot;    # 外部双引号，内部单引号</span><br><span class="line">s_value2 = &apos;abc&quot;def&quot;&apos;   # 外部单引号，内部双引号</span><br><span class="line"></span><br><span class="line">print(s_value1) # 输出I&apos;m abc</span><br><span class="line">print(s_value2) # 输出abc&quot;def&quot;</span><br></pre></td></tr></table></figure>
+<p>Java字符串只能用””（单引号用于字符）<br>Python字符串即可以用””，也可以用’’，但如果在一个字符串同时混用两者时，首尾位置的符号必须相同，字符串内部的引号保留为其本身。如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s_value1 = <span class="string">"I'm abc"</span>    <span class="comment"># 外部双引号，内部单引号</span></span><br><span class="line">s_value2 = <span class="string">'abc"def"'</span>   <span class="comment"># 外部单引号，内部双引号</span></span><br><span class="line"></span><br><span class="line">print(s_value1) <span class="comment"># 输出I'm abc</span></span><br><span class="line">print(s_value2) <span class="comment"># 输出abc"def"</span></span><br></pre></td></tr></table></figure>
       
 
       
@@ -300,11 +301,6 @@
       </div>
     </a>
   
-  
-    <a href="/10034/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">人工智能学习路径规划</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 

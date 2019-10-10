@@ -132,6 +132,368 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-10055" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/10055/">正规方程</a>
+    </h1>
+  
+
+        
+        <a href="/10055/" class="archive-article-date">
+  	<time datetime="2019-10-07T23:28:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>正规方程(Normal Equation)是一种求取函数最小值的技术，其计算公式如下：</p>
+<p>$\theta=(X^TX)^{-1}X^Ty$</p>
+<p>其中，X称为Design Matrix，假设有m个训练数据，每个数据有n个特征，X矩阵结构如下：</p>
+<p>$X=\left[ \begin{matrix} 1 &amp;x_1^{(1)} &amp;x_2^{(1)} &amp;\cdots &amp;x_n^{(1)} \\ 1 &amp;x_1^{(2)} &amp;x_2^{(2)} &amp;\cdots &amp;x_n^{(2)} \\ \vdots &amp;\vdots &amp;\vdots &amp;\cdots &amp;\vdots \\ 1 &amp;x_1^{(m)} &amp;x_2^{(m)} &amp;\cdots &amp;x_n^{(m)}\end{matrix} \right]$</p>
+<p>y是一个列向量：</p>
+<p>$y=\left[ \begin{matrix} y^{(1)} \\ y^{(2)} \\ \vdots \\ y^{(m)} \end{matrix} \right]$</p>
+<h3 id="正规方程-vs-梯度下降算法"><a href="#正规方程-vs-梯度下降算法" class="headerlink" title="正规方程 vs 梯度下降算法"></a>正规方程 vs 梯度下降算法</h3><table>
+<thead>
+<tr>
+<th align="left">正规方程</th>
+<th align="left">梯度下降算法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">👍不需要选择 $\alpha$</td>
+<td align="left">👎 需要选择$\alpha$</td>
+</tr>
+<tr>
+<td align="left">👍运算前不需要特征缩放</td>
+<td align="left">👎运算前需要特征缩放</td>
+</tr>
+<tr>
+<td align="left">👍不需要迭代</td>
+<td align="left">👎需要运行很多次迭代</td>
+</tr>
+<tr>
+<td align="left">👎当n(特征数)很大n(特征数)很大性能很差，该算法计算$(X^TX)^{-1}$，其计算复杂度是$O(n^3)$。仅适用于n&lt;1000的情况。</td>
+<td align="left">👍当n(特征数)很大时(如n&gt;10000)依然能正常运行，计算复杂度是$O(kn^2)$</td>
+</tr>
+<tr>
+<td align="left">👎仅适用于线性回归等问题</td>
+<td align="left">👍适用于更多问题，如神经网络</td>
+</tr>
+</tbody></table>
+<p>正规方程和<a href="10041">梯度下降算法</a>的功能一样，两者都是求取函数极小值时的参数。但和后者不同，Normal Equation不用经过一步步迭代才能达到极小值，而是一次性计算即可得出最优参数，另外，Noral Equation也不需要选择学习率（learning rate $\alpha$），计算前不需要<a href="10052">特征缩放</a>，因此，它比<a href="10041">梯度下降算法</a>简单，但当特征数很大时，性能低于<a href="10041">梯度下降算法</a>。</p>
+<p>参考：<a href="https://www.coursera.org/learn/machine-learning/lecture/2DKxQ/normal-equation" target="_blank" rel="noopener">https://www.coursera.org/learn/machine-learning/lecture/2DKxQ/normal-equation</a> 11:59</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/10055/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-10054" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/10054/">多项式模型</a>
+    </h1>
+  
+
+        
+        <a href="/10054/" class="archive-article-date">
+  	<time datetime="2019-10-07T00:26:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原假设函数（hypothesis function）是线性的：<br>$h_\theta(x)=\theta_0+\theta_1x_1$</p>
+<p>只要给它在加一项$\theta_2x_1^2$即变为二次函数（quadratic function）：</p>
+<p>$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_1^2$</p>
+<p>通常令$x_2=x_1^2$，得到新的假设函数</p>
+<p>$h’_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2$</p>
+<p>用这种方法，可以把一个假设函数演变成任意的新的假设函数，如：</p>
+<p>$h’_\theta(x)=\theta_0+\theta_1x_1+\theta_2\sqrt{x_1}$</p>
+<p>$h’_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_1^2+\theta_3x_1^3$</p>
+<p>另外，我们也可以原来两个或多个特征组合出一个新的特征：</p>
+<p>如：</p>
+<p>$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2$，</p>
+<p>$h’_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\theta_3x_3+\theta_4x_4$，其中$x_3=x_1x_2，x_4=x_1^2\sqrt{x_2}$</p>
+<p>虽然训练数据没有变，但新创造的特征将改变假设函数模型，如下图所示：绿线是原模型图，蓝线是创造新特征后的模型图，显然后者更匹配训练数据。</p>
+<p><img src="/10054/1570411343283.png" alt="1570411343283"></p>
+<p>注意：通常用这种方式得到的特征值范围和原来的相差较大，在<a href="10041">梯度下降</a>时一定要先<a href="10052">特征缩放</a>，以免降低性能。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/10054/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-10053" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/10053/">标准差</a>
+    </h1>
+  
+
+        
+        <a href="/10053/" class="archive-article-date">
+  	<time datetime="2019-10-05T13:27:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Standard Deviation</p>
+<p>In <a href="https://en.wikipedia.org/wiki/Statistics" target="_blank" rel="noopener">statistics</a>, the <strong>standard deviation</strong> (<strong>SD</strong>, also represented by the lower case Greek letter sigma <strong>σ</strong> for the population standard deviation or the Latin letter <a href="https://en.wikipedia.org/wiki/S" target="_blank" rel="noopener">s</a> for the sample standard deviation) is a measure of the amount of variation or <a href="https://en.wikipedia.org/wiki/Statistical_dispersion" target="_blank" rel="noopener">dispersion</a> of a set of values.<a href="https://en.wikipedia.org/wiki/Standard_deviation#cite_note-StatNotes-1" target="_blank" rel="noopener">[1]</a> </p>
+<p>A low standard deviation indicates that the values tend to be close to the <a href="https://en.wikipedia.org/wiki/Mean" target="_blank" rel="noopener">mean</a> (also called the expected value) of the set, while a high standard deviation indicates that the values are spread out over a wider range.</p>
+<p>$\sigma=\sqrt{\frac{1}{N} \displaystyle \sum ^{N} _{i=1}{(x_i-\bar{x})}}$ </p>
+<p>其中，$\bar{x}$表示$x$的平均值，即$\bar{x}=\frac{1}{N} \displaystyle \sum ^{N} _{i=1}{x_i}$</p>
+<p>参考资料：<a href="https://en.wikipedia.org/wiki/Standard_deviation" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Standard_deviation</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/10053/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-10052" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/10052/">特征缩放</a>
+    </h1>
+  
+
+        
+        <a href="/10052/" class="archive-article-date">
+  	<time datetime="2019-10-05T09:35:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>如果不同特征的取值范围相差较大，在进行<a href="10041">梯度下降</a>时会导致性能低下。而特征缩放(Feature Scaling)后再计算可以更快速地（需要更少的迭代步骤）寻找到最小值。</p>
+<blockquote>
+<p> We can speed up gradient descent by having each of our input values in roughly the same range. This is because θ will descend quickly on small ranges and slowly on large ranges, and so will oscillate([‘ɒsɪleɪt]摇摆)  inefficiently down to the optimum when the variables are very uneven.</p>
+</blockquote>
+<p><img src="/10052/1.jpg" alt></p>
+<p>由上图可知，如果$\theta_1$和$\theta_2$的取值范围相差大，其代价函数（Cost Function）的轮廓图比较“扁”，梯度下降路线摇摆不定，要很多次才能找到最小值。而特征缩放后，轮廓图相对较圆，梯度下降路线更直，因此更快找到最小值。</p>
+<h2 id="哪些特征需要缩放？"><a href="#哪些特征需要缩放？" class="headerlink" title="哪些特征需要缩放？"></a>哪些特征需要缩放？</h2><p>通常，特征缩放的目标是使新的特征值落在[-1, 1]范围中。因为$x_0=1$，所以$x_0$没必要再缩放。事实上，即使超出[-1, 1]这个范围一点点，如[0, 3]或[-2, 0.5]，不调整问题也不大。</p>
+<p>而对于范围特别大的，比如$-100\leq x_i\leq 100$，或特别小的，如[-0.0001, 0.0001]就有必要进行缩放。</p>
+<h2 id="实现算法"><a href="#实现算法" class="headerlink" title="实现算法"></a>实现算法</h2><p>有很多种特征缩放的方法，调整的大致相同的范文：Feature Scaling和Mean normalization</p>
+<ul>
+<li><p>最小最大值法</p>
+<p>$x’=\frac{x-min(x)}{max(x)-min(x)}$</p>
+<p>其中，$x$表示缩放前的特征值，$x’$表示缩放后的特征值，$min(x)$表示$x$的最小值，$max(x)$表示$x$的最大值。</p>
+</li>
+<li><p>均值法</p>
+<p>$x’=\frac{x-\bar x}{max(x)-min(x)}$</p>
+<p>其中，$\bar x$是的x平均值。</p>
+<p>均值法还有另一种形式：</p>
+<p>$x’=\frac{x-\bar x}{\sigma}$</p>
+<p>其中$\sigma$是$x$的<a href="10053">标准差</a>，此种形式的均值法有一个专门的名字叫标准法（Standardization）</p>
+</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://en.wikipedia.org/wiki/Feature_scaling" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Feature_scaling</a></p>
+<p><a href="https://www.coursera.org/learn/machine-learning/lecture/xx3Da/gradient-descent-in-practice-i-feature-scaling" target="_blank" rel="noopener">https://www.coursera.org/learn/machine-learning/lecture/xx3Da/gradient-descent-in-practice-i-feature-scaling</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/10052/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-10051" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -153,7 +515,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="正式开始读书前"><a href="#正式开始读书前" class="headerlink" title="正式开始读书前"></a>正式开始读书前</h2><h3 id="本书作者"><a href="#本书作者" class="headerlink" title="本书作者"></a>本书作者</h3><p>约翰·霍兰德（John Henry Holland，1929.2.2－）复杂理论和非线性科学的先驱，<a href="https://baike.baidu.com/item/遗传算法/838140" target="_blank" rel="noopener">遗传算法</a>之父</p>
-<h2 id="阅读目的和期望收获"><a href="#阅读目的和期望收获" class="headerlink" title="阅读目的和期望收获"></a>阅读目的和期望收获</h2><h3 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h3><h3 id="一级目录架构"><a href="#一级目录架构" class="headerlink" title="一级目录架构"></a>一级目录架构</h3><h2 id="正式开始阅读"><a href="#正式开始阅读" class="headerlink" title="正式开始阅读"></a>正式开始阅读</h2><h3 id="通读"><a href="#通读" class="headerlink" title="通读"></a>通读</h3><p>边读边添加标签，为符合以下特征的页添加标签：</p>
+<h2 id="阅读目的和期望收获"><a href="#阅读目的和期望收获" class="headerlink" title="阅读目的和期望收获"></a>阅读目的和期望收获</h2><p>通过阅读此书，希望能了解一个低级系统是如何涌现出高级特性的，如神经系统如何涌现出意识。当人工智能发展到一定程度，是否最终也能涌现出意识，需要哪些条件？</p>
+<h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><p>本书是对涌现现象进行深入探索的第一部著作。在本书中，作者比较了显示涌现现象的不同系统和模型，展现了它们之间共同的规则或规律，讲述了从“蕴含着规范、能够生成像巨大的红杉和普通的雏菊那样复杂而独特结构”的微小种子，到能够通过自学习在西洋跳棋游戏中让设计者一败涂地的计算机；从能够修建桥梁、跨越深沟和驾驭树叶之舟在溪流上航行的蚁群，到诗人充满感情的创作等涌现现象的具体表现。</p>
+<p>涌现的概念(即整体大于其各部分之和)简单得令人惊讶，然而它在科学、商业以及艺术等诸多领域牛都具有极深的寓意。本书中，作者用深入浅出的描述向我们生动地阐明：涌现的理论能够预言许多复杂的行为，同时也给予我们关于生命、智慧和组织的很多启示。</p>
+<h2 id="一级目录架构"><a href="#一级目录架构" class="headerlink" title="一级目录架构"></a>一级目录架构</h2><h3 id="1-序言"><a href="#1-序言" class="headerlink" title="1 序言"></a>1 序言</h3><h3 id="第一章-启程之前"><a href="#第一章-启程之前" class="headerlink" title="第一章 启程之前"></a>第一章 启程之前</h3><h3 id="第二章-游戏与数字"><a href="#第二章-游戏与数字" class="headerlink" title="第二章 游戏与数字"></a>第二章 游戏与数字</h3><h3 id="第三章-地图、对策论和计算机建模"><a href="#第三章-地图、对策论和计算机建模" class="headerlink" title="第三章 地图、对策论和计算机建模"></a>第三章 地图、对策论和计算机建模</h3><h3 id="第四章-西洋跳棋"><a href="#第四章-西洋跳棋" class="headerlink" title="第四章 西洋跳棋"></a>第四章 西洋跳棋</h3><h3 id="第五章-神经网络"><a href="#第五章-神经网络" class="headerlink" title="第五章 神经网络"></a>第五章 神经网络</h3><h3 id="第六章-普适理论"><a href="#第六章-普适理论" class="headerlink" title="第六章 普适理论"></a>第六章 普适理论</h3><h3 id="第七章-受限生成过程"><a href="#第七章-受限生成过程" class="headerlink" title="第七章 受限生成过程"></a>第七章 受限生成过程</h3><h3 id="第八章-西洋跳棋程序和其他受限生成过程模型"><a href="#第八章-西洋跳棋程序和其他受限生成过程模型" class="headerlink" title="第八章 西洋跳棋程序和其他受限生成过程模型"></a>第八章 西洋跳棋程序和其他受限生成过程模型</h3><h3 id="第九章-变易"><a href="#第九章-变易" class="headerlink" title="第九章 变易"></a>第九章 变易</h3><h3 id="第十章-层次描述和还原方法"><a href="#第十章-层次描述和还原方法" class="headerlink" title="第十章 层次描述和还原方法"></a>第十章 层次描述和还原方法</h3><h3 id="第十一章-隐喻和创新"><a href="#第十一章-隐喻和创新" class="headerlink" title="第十一章 隐喻和创新"></a>第十一章 隐喻和创新</h3><h3 id="第十二章-结束语"><a href="#第十二章-结束语" class="headerlink" title="第十二章 结束语"></a>第十二章 结束语</h3><h2 id="正式开始阅读"><a href="#正式开始阅读" class="headerlink" title="正式开始阅读"></a>正式开始阅读</h2><h3 id="通读"><a href="#通读" class="headerlink" title="通读"></a>通读</h3><p>读到 18</p>
+<p>边读边添加标签，为符合以下特征的页添加标签：</p>
 <ul>
 <li>这页告诉我以前不知道的事</li>
 <li>这页讲的观念、知识和我当前理解的不一样</li>
@@ -765,366 +1131,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/10046/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-10045" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/10045/">对数与对数函数</a>
-    </h1>
-  
-
-        
-        <a href="/10045/" class="archive-article-date">
-  	<time datetime="2019-09-21T00:10:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>对数的定义如下：</p>
-<p>如果$a^x=N(a&gt;0,且a\neq1)$，那么数$x$叫做以$a$为底$N$的对数，记作$x=log_aN$，其中$a$叫做对数的底数，$N$叫做真数。注：log是logarithm[‘lɔːɡərɪðəm]的缩写。特别地，以e为底N的对数，记作$lnN$。(e是一个无理常数，$e\approx2.718$)</p>
-<p>一般地，函数$y=log_ax(a&gt;0,且a\neq1)$叫做对数函数，即以幂（真数）为自变量，指数为因变量，底数为常数的函数。对数函数是基本初等函数之一。对数函数的定义域是$(0,+\infty)$，值域是$R$。</p>
-<h2 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h2><img src="10045/1569118356585.png" alt="1569118356585" style="zoom:67%;">
-
-<h2 id="对数法则"><a href="#对数法则" class="headerlink" title="对数法则"></a>对数法则</h2><p>对于任意的底数$a&gt;1$，和正的实数$x$和$y$有：</p>
-<ol>
-<li><p>$log_a(1)=0$</p>
-</li>
-<li><p>$log_a(a)=1$</p>
-</li>
-<li><p>$log_a(xy)=log_a(x)+log_a(y)$ 幂相乘，对数相加</p>
-</li>
-<li><p>$log_a(x/y)=log_a(x)-log_a(y)$ 幂相除，对数相减</p>
-</li>
-<li><p>$log_a(x^y)=ylog_a(x)$</p>
-</li>
-<li><p>换底法则</p>
-<p>$log_a(x)=\frac{log_c(x)}{log_c{(a)}}$</p>
-</li>
-</ol>
-<h2 id="以e为底的对数公式"><a href="#以e为底的对数公式" class="headerlink" title="以e为底的对数公式"></a>以e为底的对数公式</h2><ol>
-<li>$ln(1) = 0$</li>
-<li>$ln(e)=1$</li>
-<li>$ln(xy)=ln(x)+ln(y)$</li>
-<li>$ln(\frac{x}{y})=ln(x)-ln(y)$</li>
-<li>$ln(x^y)=yln(x)$</li>
-</ol>
-<h2 id="有关e的重要极限"><a href="#有关e的重要极限" class="headerlink" title="有关e的重要极限"></a>有关e的重要极限</h2><p>$\displaystyle \lim_{n \to \infty}(1+\frac{r}{n})^n=e^r$</p>
-<p>关于这个极限的应用是，假设银行的年利息为r，每年计息n次（所得利息作为本金参与下次计息），当$n\to \infty$时(时时刻刻都在计息)，一年后利息是原来的$e^r$倍。</p>
-<p>上述公式也可以改为：</p>
-<p>$\displaystyle \lim _{h \to 0}(1+rh)^\frac{1}{h}=e^r$</p>
-<h2 id="对数的导数"><a href="#对数的导数" class="headerlink" title="对数的导数"></a>对数的导数</h2><p>$\frac {d}{dx}ln(x)=\frac{1}{x}$</p>
-<p>$\frac {d}{dx}log_b(x)=\frac{1}{xln(b)}$</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">对数函数</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/10045/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-10044" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/10044/">指数函数</a>
-    </h1>
-  
-
-        
-        <a href="/10044/" class="archive-article-date">
-  	<time datetime="2019-09-19T00:20:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>指数函数是重要的基本初等函数之一。一般地，$y=a^x$函数($a$为常数且以$a&gt;0，a≠1$)叫做指数函数。指数函数的定义域是$R$，值域是$(0,+\infty)$。 注意，在指数函数的定义表达式中，在$a^x$前的系数必须是数1，自变量x必须在指数的位置上，且不能是x的其他表达式，否则，就不是指数函数。例如：$y=3 \times 2^x$ 函数前系数为3，故不是指数函数。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">指数函数</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/10044/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-10043" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/10043/">偏导数</a>
-    </h1>
-  
-
-        
-        <a href="/10043/" class="archive-article-date">
-  	<time datetime="2019-09-15T06:47:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>偏导数（Partial derivative）是指包含多个变量的函数，对其中一个变量求取导数，求取时视其它变量为已知常量。例如：</p>
-<p> $z=f(x,y)=x^2+xy+y^2$，实际包含两个变量，分别为$x,y$</p>
-<p>求偏导数$\frac{\partial z}{\partial x}$时y视为y常量，因此，$\frac{\partial z}{\partial x}=2x+y$</p>
-<p>求偏导数$\frac{\partial z}{\partial y}$时x视为常量，因此，$\frac{\partial z}{\partial y}=x+2y$</p>
-<p>如果函数中只包含一个变量，导数符号通常用d表示，例如：</p>
-<p>$z=f(x)=x^2+2x+1$</p>
-<p>导数$\frac{dz}{dx}=2x+2$</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">偏导数</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">partial derivative</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/10043/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-10042" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/10042/">LaTex符号</a>
-    </h1>
-  
-
-        
-        <a href="/10042/" class="archive-article-date">
-  	<time datetime="2019-09-12T23:34:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="行内与独行"><a href="#行内与独行" class="headerlink" title="行内与独行"></a>行内与独行</h3><p><strong>行内公式：将公式插入到本行内</strong><br><strong>符号</strong>：<code>$公式内容$</code>。<br><strong>示例</strong>：<code>before $y=x$ after</code><br>before $y=x$ after</p>
-<p><strong>独行公式：将公式插入到新的一行内，并且居中</strong><br><strong>符号</strong>：<code>$$公式内容$$</code>。<br><strong>示例</strong>：<code>before $$y=x$$ after</code><br>before $$y=x$$ after</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdown</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Latex</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数学公式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/10042/">展开全文 >></a>
         </p>
       
 
