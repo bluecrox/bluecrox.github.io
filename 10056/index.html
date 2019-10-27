@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://maozhu.me">
-  <title>偏导数 | 毛竹</title>
+  <title>sigmoid函数 | 毛竹</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="偏导数（Partial derivative）是指包含多个变量的函数，对其中一个变量求取导数，求取时视其它变量为已知常量。例如：  $z=f(x,y)=x^2+xy+y^2$，实际包含两个变量，分别为$x,y$ 求偏导数$\frac{\partial z}{\partial x}$时y视为y常量，因此，$\frac{\partial z}{\partial x}=2x+y$ 求偏导数$\frac{">
-<meta name="keywords" content="偏导数,partial derivative,数学">
+  <meta name="description" content="sigmoid函数是一个S型函数，其图形如下图所示：  sigmoid函数定义为：  $g(z)=\frac{1}{1+e^{-z}}$ 由sigmoid函数的图形及其定义不难得出： $当z=0时，e^{-0}=1，\Rightarrow g(z)=0.5$ $当z \to \infty时，e^{-\infty} \to 0 \Rightarrow g(z)=1$ $当z \to -\infty时">
 <meta property="og:type" content="article">
-<meta property="og:title" content="偏导数">
-<meta property="og:url" content="https://maozhu.me/10043/index.html">
+<meta property="og:title" content="sigmoid函数">
+<meta property="og:url" content="https://maozhu.me/10056/index.html">
 <meta property="og:site_name" content="毛竹">
-<meta property="og:description" content="偏导数（Partial derivative）是指包含多个变量的函数，对其中一个变量求取导数，求取时视其它变量为已知常量。例如：  $z=f(x,y)=x^2+xy+y^2$，实际包含两个变量，分别为$x,y$ 求偏导数$\frac{\partial z}{\partial x}$时y视为y常量，因此，$\frac{\partial z}{\partial x}=2x+y$ 求偏导数$\frac{">
+<meta property="og:description" content="sigmoid函数是一个S型函数，其图形如下图所示：  sigmoid函数定义为：  $g(z)=\frac{1}{1+e^{-z}}$ 由sigmoid函数的图形及其定义不难得出： $当z=0时，e^{-0}=1，\Rightarrow g(z)=0.5$ $当z \to \infty时，e^{-\infty} \to 0 \Rightarrow g(z)=1$ $当z \to -\infty时">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-03T02:49:11.702Z">
+<meta property="og:image" content="https://maozhu.me/10056/1571786004702.png">
+<meta property="og:updated_time" content="2019-10-22T23:25:12.472Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="偏导数">
-<meta name="twitter:description" content="偏导数（Partial derivative）是指包含多个变量的函数，对其中一个变量求取导数，求取时视其它变量为已知常量。例如：  $z=f(x,y)=x^2+xy+y^2$，实际包含两个变量，分别为$x,y$ 求偏导数$\frac{\partial z}{\partial x}$时y视为y常量，因此，$\frac{\partial z}{\partial x}=2x+y$ 求偏导数$\frac{">
+<meta name="twitter:title" content="sigmoid函数">
+<meta name="twitter:description" content="sigmoid函数是一个S型函数，其图形如下图所示：  sigmoid函数定义为：  $g(z)=\frac{1}{1+e^{-z}}$ 由sigmoid函数的图形及其定义不难得出： $当z=0时，e^{-0}=1，\Rightarrow g(z)=0.5$ $当z \to \infty时，e^{-\infty} \to 0 \Rightarrow g(z)=1$ $当z \to -\infty时">
+<meta name="twitter:image" content="https://maozhu.me/10056/1571786004702.png">
   
     <link rel="alternative" href="/atom.xml" title="毛竹" type="application/atom+xml">
   
@@ -135,33 +136,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-10043" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-10056" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      偏导数
+      sigmoid函数
     </h1>
   
 
         
-        <a href="/10043/" class="archive-article-date">
-  	<time datetime="2019-09-15T06:47:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-15</time>
+        <a href="/10056/" class="archive-article-date">
+  	<time datetime="2019-10-22T23:02:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>偏导数（Partial derivative）是指包含多个变量的函数，对其中一个变量求取导数，求取时视其它变量为已知常量。例如：</p>
-<p> $z=f(x,y)=x^2+xy+y^2$，实际包含两个变量，分别为$x,y$</p>
-<p>求偏导数$\frac{\partial z}{\partial x}$时y视为y常量，因此，$\frac{\partial z}{\partial x}=2x+y$</p>
-<p>求偏导数$\frac{\partial z}{\partial y}$时x视为常量，因此，$\frac{\partial z}{\partial y}=x+2y$</p>
-<p>如果函数中只包含一个变量，导数符号通常用d表示，例如：</p>
-<p>$z=f(x)=x^2+2x+1$</p>
-<p>导数$\frac{dz}{dx}=2x+2$</p>
+        <p>sigmoid函数是一个S型函数，其图形如下图所示：</p>
+<p><img src="/10056/1571786004702.png" alt="1571786004702"></p>
+<p>sigmoid函数定义为：</p>
+<p> $g(z)=\frac{1}{1+e^{-z}}$</p>
+<p>由sigmoid函数的图形及其定义不难得出：</p>
+<p>$当z=0时，e^{-0}=1，\Rightarrow g(z)=0.5$</p>
+<p>$当z \to \infty时，e^{-\infty} \to 0 \Rightarrow g(z)=1$</p>
+<p>$当z \to -\infty时，e^{\infty} \to \infty \Rightarrow g(z)=0$</p>
+<p>另外，sigmoid function的导数满足以下公式：<br>$\frac{d}{d(z)}g(z)=g(z)(1-g(z))$<br>证明过程参考：<a href="https://kawahara.ca/how-to-compute-the-derivative-of-a-sigmoid-function-fully-worked-example/" target="_blank" rel="noopener">https://kawahara.ca/how-to-compute-the-derivative-of-a-sigmoid-function-fully-worked-example/</a></p>
 
       
 
@@ -170,25 +173,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">偏导数</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">partial derivative</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -239,7 +223,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://maozhu.me/10043/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://maozhu.me/10056/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -253,18 +237,18 @@
   
 <nav id="article-nav">
   
-    <a href="/10044/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/10057/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          指数函数
+          python语言基础知识
         
       </div>
     </a>
   
   
-    <a href="/10042/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LaTex符号</div>
+    <a href="/10055/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">正规方程</div>
       <i class="icon-circle-right"></i>
     </a>
   

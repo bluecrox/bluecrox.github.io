@@ -132,6 +132,217 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-10057" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/10057/">python语言基础知识</a>
+    </h1>
+  
+
+        
+        <a href="/10057/" class="archive-article-date">
+  	<time datetime="2019-10-27T02:02:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="运行python"><a href="#运行python" class="headerlink" title="运行python"></a>运行python</h2><p>直接在命令行输入python，会显示如下提示符：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其后可以输入python命令。</p>
+<p>如果是开发调试python程序，建议用Visual Studio Code开发环境。</p>
+<h2 id="字符-数字时，数字不会自动转字符串，需要用str先把数字转字符串"><a href="#字符-数字时，数字不会自动转字符串，需要用str先把数字转字符串" class="headerlink" title="字符+数字时，数字不会自动转字符串，需要用str先把数字转字符串"></a>字符+数字时，数字不会自动转字符串，需要用str先把数字转字符串</h2><h2 id="布尔值常量True和False，首字母大写"><a href="#布尔值常量True和False，首字母大写" class="headerlink" title="布尔值常量True和False，首字母大写"></a>布尔值常量True和False，首字母大写</h2><h2 id="截断字符串首尾空白符用strip"><a href="#截断字符串首尾空白符用strip" class="headerlink" title="截断字符串首尾空白符用strip"></a>截断字符串首尾空白符用strip</h2><h2 id="注释和文档字符串"><a href="#注释和文档字符串" class="headerlink" title="注释和文档字符串"></a>注释和文档字符串</h2><p> 注释用#<br> 文档字符串用”””和”””包裹， 文档字符串可以被help查询。每个模块开头，以及每个函数定义后应添加文档描述</p>
+<h2 id="使用缩进关系指明块代码，而不是用"><a href="#使用缩进关系指明块代码，而不是用" class="headerlink" title="使用缩进关系指明块代码，而不是用{}"></a>使用缩进关系指明块代码，而不是用{}</h2><h2 id="语句结尾不需要"><a href="#语句结尾不需要" class="headerlink" title="语句结尾不需要;"></a>语句结尾不需要;</h2><h2 id="控制台输出print"><a href="#控制台输出print" class="headerlink" title="控制台输出print"></a>控制台输出print</h2><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串比较用 ==和!=，字符串可以用一对双引号（<code>&quot;字符串内容&quot;</code>），也可以用一对单引号(<code>&#39;字符串内容&#39;</code>)</p>
+<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><h3 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h3><p>pop可以指定序号，pop不指定序号则移除最后一个，或del list[index] del也可以加括号<br>remove指定值，如果没有该值则报错，如果数组中有多个指定值，remove只会移除第一个</p>
+<h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a_list = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span><br><span class="line">a_list[from_index:to_index]</span><br></pre></td></tr></table></figure>
+
+<h3 id="长度"><a href="#长度" class="headerlink" title="长度"></a>长度</h3><p>len(a_list)</p>
+<h3 id="判断非空"><a href="#判断非空" class="headerlink" title="判断非空"></a>判断非空</h3><p>if a_list:<br>    do_sth</p>
+<h3 id="访问最后一个元素"><a href="#访问最后一个元素" class="headerlink" title="访问最后一个元素"></a>访问最后一个元素</h3><p>a_list[-1]</p>
+<p>同理，访问倒数第二个元素是：a_list[-2]</p>
+<h3 id="元组turple（不可改列表）"><a href="#元组turple（不可改列表）" class="headerlink" title="元组turple（不可改列表）"></a>元组turple（不可改列表）</h3><p>a_list = (“a”, “b”, “c”, “d”)</p>
+<h3 id="二维list"><a href="#二维list" class="headerlink" title="二维list"></a>二维list</h3><p>lists = [[] for i in range(3)]<br>lists[0].append(3)<br>lists[1].append(5)<br>lists[2].append(7)<br>lists<br>[[3], [5], [7]]</p>
+<p>注意： lists = [[]] * 3是浅复制</p>
+<h2 id="numpy数组"><a href="#numpy数组" class="headerlink" title="numpy数组"></a>numpy数组</h2><p>lists = [1, 2, 3] # &lt;class ‘list’&gt;<br>print(type(lists)) # &lt;class ‘numpy.ndarray’&gt;</p>
+<p>to_array = np.array(lists, dtype = int)<br>print(type(to_array))</p>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>遍历</p>
+<p>for key, value in a_dict.items():<br>    do_something</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>变量没有固定类型，赋予什么值，就成为什么类型        </p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数定义<br>def func_name(var):<br>    do_something</p>
+<p> func_name(xxx)   </p>
+<p>函数调用时可指明参数名（以便实参的数量和顺序可以不等于形参）<br>cars.sort(reverse=True)</p>
+<p>函数没有返回类型，形参没有类型</p>
+<p>任意数量实参：形参前加*<br>任意数量键值对：形参前加**</p>
+<p>def foo(**user_info):<br>    for key, value in user_info:<br>        do_something</p>
+<p>foo(first_name=”mao”, last_name=”rl”)      </p>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>class Class_Name():<br>    # 构造函数<br>    def <strong>init</strong>(self):<br><br>    def func_name():</p>
+<p>实例化<br>object1 = Class_Name();</p>
+<p>实例化类不用new</p>
+<p>类的方法定义的首个参数必须是self，但实例化或调用时不需要传self</p>
+<p>不需要定义类的属性，而是通过给self来管理类的属性</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>class SuperClass():<br>    def <strong>init</strong>(self):<br>        do_super_job</p>
+<p>class SubClass(SuperClass):<br>    def <strong>init_(self):<br>        super().</strong>init__()<br>        do_sub_job()        </p>
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><p>a_list = [1, 5, 7]<br>for num in a_list:<br>    print(num)</p>
+<p>fruits = [‘banana’, ‘apple’,  ‘mango’]<br>for index in range(len(fruits)):<br>   print ‘当前水果 :’, fruits[index]    </p>
+<p>注意：后要带:   </p>
+<h1 id="if判断"><a href="#if判断" class="headerlink" title="if判断"></a>if判断</h1><p>if value == “abc”:<br>    doxxx</p>
+<p>一个元素是否在列表中， in或not in</p>
+<p>if elif else</p>
+<p>多个条件用and or组合</p>
+<p>ii 空数组或空字符串均返回false</p>
+<h2 id="乘方用两个"><a href="#乘方用两个" class="headerlink" title="乘方用两个*"></a>乘方用两个*</h2><p>如平方：<br>value**2</p>
+<h2 id="导入模块及方法"><a href="#导入模块及方法" class="headerlink" title="导入模块及方法"></a>导入模块及方法</h2><p>import module_name<br>from module_name import function_name<br>from module_name import function_name as fn<br>import module_name as mn<br>import module_name *</p>
+<p>先导入标准库，再导自己编写的模块，两者用空行分隔</p>
+<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><p>with open(‘your_file’) as file_object:<br>    contents = file_object.read()<br>    print(contents.tstrip())</p>
+<p>with的作用是在指定代码块结束后自动释放资源    </p>
+<p>也可一行一行读取</p>
+<h2 id="块作用域"><a href="#块作用域" class="headerlink" title="块作用域"></a>块作用域</h2><p>变量无块作用域，即在代码块内定义的变量，在代码块外也能使用</p>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p>官方文档：<br><a href="https://www.runoob.com/python/python-exceptions.html" target="_blank" rel="noopener">https://www.runoob.com/python/python-exceptions.html</a></p>
+<p>try:<br>    4/0<br>except ZeroDivisionError:<br>    print()   </p>
+<p>except可以指定错误类型，也可以不指定：<br>a=10<br>b=0<br>try:<br>    print a/b<br>except:<br>    print “error”</p>
+<p>还可以有一个else代码块，即依赖于try代码块成功执行（无异常）的代码应放在else代码块中。</p>
+<p>try:<br>    c = b/ a<br>    print c<br>except (IOError ,ZeroDivisionError),x:<br>    print x<br>else:<br>    print “no error”</p>
+<p>finally不管是否有异常都执行<br>finally:<br>    print “always excute”</p>
+<h2 id="pass语句"><a href="#pass语句" class="headerlink" title="pass语句"></a>pass语句</h2><p>用于需要代码，但实际上不需要执行任何代码的地方<br>values = [1, 3, 5, 7, 9, 11, 13, 15]<br>for value1 in values:<br>   pass<br>print(“done”)</p>
+<h2 id="json读取和保持数据"><a href="#json读取和保持数据" class="headerlink" title="json读取和保持数据"></a>json读取和保持数据</h2><p>import json</p>
+<p>with open(flename, ‘w’) as file_obj:<br>    json.dump(json_data, file_obj)</p>
+<h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>P104/237 </p>
+<h2 id="数学相关"><a href="#数学相关" class="headerlink" title="数学相关"></a>数学相关</h2><p>import numpy as np</p>
+<p>print(np.pi)</p>
+<p>包含一些三角函数工具库</p>
+<p>随机数<br>from random import randint<br>randint时一个方法：<br>生成一个1到5之间的随机数：randint(1, 5)</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p> <strong>dtype</strong> </p>
+<h2 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h2><p>类名用驼峰命名法，方法名，实例名和模块名采用小写字母并下划线分隔不同单词<br>文件名命名习惯：小写字母并用_分隔<br><a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/#id16" target="_blank" rel="noopener">Python风格规范</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/10057/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-10056" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/10056/">sigmoid函数</a>
+    </h1>
+  
+
+        
+        <a href="/10056/" class="archive-article-date">
+  	<time datetime="2019-10-22T23:02:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>sigmoid函数是一个S型函数，其图形如下图所示：</p>
+<p><img src="/10056/1571786004702.png" alt="1571786004702"></p>
+<p>sigmoid函数定义为：</p>
+<p> $g(z)=\frac{1}{1+e^{-z}}$</p>
+<p>由sigmoid函数的图形及其定义不难得出：</p>
+<p>$当z=0时，e^{-0}=1，\Rightarrow g(z)=0.5$</p>
+<p>$当z \to \infty时，e^{-\infty} \to 0 \Rightarrow g(z)=1$</p>
+<p>$当z \to -\infty时，e^{\infty} \to \infty \Rightarrow g(z)=0$</p>
+<p>另外，sigmoid function的导数满足以下公式：<br>$\frac{d}{d(z)}g(z)=g(z)(1-g(z))$<br>证明过程参考：<a href="https://kawahara.ca/how-to-compute-the-derivative-of-a-sigmoid-function-fully-worked-example/" target="_blank" rel="noopener">https://kawahara.ca/how-to-compute-the-derivative-of-a-sigmoid-function-fully-worked-example/</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/10056/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-10055" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -178,7 +389,7 @@
 <td align="left">👎需要运行很多次迭代</td>
 </tr>
 <tr>
-<td align="left">👎当n(特征数)很大n(特征数)很大性能很差，该算法计算$(X^TX)^{-1}$，其计算复杂度是$O(n^3)$。仅适用于n&lt;1000的情况。</td>
+<td align="left">👎当n(特征数)很大时性能很差，因为该算法计算$(X^TX)^{-1}$的复杂度是$O(n^3)$。仅适用于n&lt;1000的情况。</td>
 <td align="left">👍当n(特征数)很大时(如n&gt;10000)依然能正常运行，计算复杂度是$O(kn^2)$</td>
 </tr>
 <tr>
@@ -186,7 +397,7 @@
 <td align="left">👍适用于更多问题，如神经网络</td>
 </tr>
 </tbody></table>
-<p>正规方程和<a href="10041">梯度下降算法</a>的功能一样，两者都是求取函数极小值时的参数。但和后者不同，Normal Equation不用经过一步步迭代才能达到极小值，而是一次性计算即可得出最优参数，另外，Noral Equation也不需要选择学习率（learning rate $\alpha$），计算前不需要<a href="10052">特征缩放</a>，因此，它比<a href="10041">梯度下降算法</a>简单，但当特征数很大时，性能低于<a href="10041">梯度下降算法</a>。</p>
+<p>正规方程和<a href="10041">梯度下降算法</a>的功能一样，两者都是用于求取函数极小值及其对应参数。但和后者不同，正规方程不用经过一步步迭代才能达到极小值，而是一次性计算即可得出最优参数，另外，Noral Equation也不需要选择学习率（learning rate $\alpha$），计算前不需要<a href="10052">特征缩放</a>，因此，它比<a href="10041">梯度下降算法</a>简单，但当特征数很大时，性能低于<a href="10041">梯度下降算法</a>。</p>
 <p>参考：<a href="https://www.coursera.org/learn/machine-learning/lecture/2DKxQ/normal-equation" target="_blank" rel="noopener">https://www.coursera.org/learn/machine-learning/lecture/2DKxQ/normal-equation</a> 11:59</p>
 
       
@@ -352,9 +563,11 @@
         <p>Standard Deviation</p>
 <p>In <a href="https://en.wikipedia.org/wiki/Statistics" target="_blank" rel="noopener">statistics</a>, the <strong>standard deviation</strong> (<strong>SD</strong>, also represented by the lower case Greek letter sigma <strong>σ</strong> for the population standard deviation or the Latin letter <a href="https://en.wikipedia.org/wiki/S" target="_blank" rel="noopener">s</a> for the sample standard deviation) is a measure of the amount of variation or <a href="https://en.wikipedia.org/wiki/Statistical_dispersion" target="_blank" rel="noopener">dispersion</a> of a set of values.<a href="https://en.wikipedia.org/wiki/Standard_deviation#cite_note-StatNotes-1" target="_blank" rel="noopener">[1]</a> </p>
 <p>A low standard deviation indicates that the values tend to be close to the <a href="https://en.wikipedia.org/wiki/Mean" target="_blank" rel="noopener">mean</a> (also called the expected value) of the set, while a high standard deviation indicates that the values are spread out over a wider range.</p>
-<p>$\sigma=\sqrt{\frac{1}{N} \displaystyle \sum ^{N} _{i=1}{(x_i-\bar{x})}}$ </p>
-<p>其中，$\bar{x}$表示$x$的平均值，即$\bar{x}=\frac{1}{N} \displaystyle \sum ^{N} _{i=1}{x_i}$</p>
-<p>参考资料：<a href="https://en.wikipedia.org/wiki/Standard_deviation" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Standard_deviation</a></p>
+<p>$\sigma=\sqrt{\frac{1}{N} \displaystyle \sum ^{N} _{i=1}{(x_i-\bar{x})^2}}$ </p>
+<p>其中，$\bar{x}$表示$x$的平均值，即$\bar x=\frac{x_1+x_2+\cdots + x_N }{N}$，或简写为$\bar{x}=\frac{1}{N} \displaystyle \sum ^{N} _{i=1}{x_i}$</p>
+<p>参考资料：</p>
+<p><a href="https://www.cnblogs.com/quietwalk/p/8243536.html" target="_blank" rel="noopener">https://www.cnblogs.com/quietwalk/p/8243536.html</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Standard_deviation" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Standard_deviation</a></p>
 
       
 
@@ -518,13 +731,15 @@
 <h2 id="阅读目的和期望收获"><a href="#阅读目的和期望收获" class="headerlink" title="阅读目的和期望收获"></a>阅读目的和期望收获</h2><p>通过阅读此书，希望能了解一个低级系统是如何涌现出高级特性的，如神经系统如何涌现出意识。当人工智能发展到一定程度，是否最终也能涌现出意识，需要哪些条件？</p>
 <h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><p>本书是对涌现现象进行深入探索的第一部著作。在本书中，作者比较了显示涌现现象的不同系统和模型，展现了它们之间共同的规则或规律，讲述了从“蕴含着规范、能够生成像巨大的红杉和普通的雏菊那样复杂而独特结构”的微小种子，到能够通过自学习在西洋跳棋游戏中让设计者一败涂地的计算机；从能够修建桥梁、跨越深沟和驾驭树叶之舟在溪流上航行的蚁群，到诗人充满感情的创作等涌现现象的具体表现。</p>
 <p>涌现的概念(即整体大于其各部分之和)简单得令人惊讶，然而它在科学、商业以及艺术等诸多领域牛都具有极深的寓意。本书中，作者用深入浅出的描述向我们生动地阐明：涌现的理论能够预言许多复杂的行为，同时也给予我们关于生命、智慧和组织的很多启示。</p>
-<h2 id="一级目录架构"><a href="#一级目录架构" class="headerlink" title="一级目录架构"></a>一级目录架构</h2><h3 id="1-序言"><a href="#1-序言" class="headerlink" title="1 序言"></a>1 序言</h3><h3 id="第一章-启程之前"><a href="#第一章-启程之前" class="headerlink" title="第一章 启程之前"></a>第一章 启程之前</h3><h3 id="第二章-游戏与数字"><a href="#第二章-游戏与数字" class="headerlink" title="第二章 游戏与数字"></a>第二章 游戏与数字</h3><h3 id="第三章-地图、对策论和计算机建模"><a href="#第三章-地图、对策论和计算机建模" class="headerlink" title="第三章 地图、对策论和计算机建模"></a>第三章 地图、对策论和计算机建模</h3><h3 id="第四章-西洋跳棋"><a href="#第四章-西洋跳棋" class="headerlink" title="第四章 西洋跳棋"></a>第四章 西洋跳棋</h3><h3 id="第五章-神经网络"><a href="#第五章-神经网络" class="headerlink" title="第五章 神经网络"></a>第五章 神经网络</h3><h3 id="第六章-普适理论"><a href="#第六章-普适理论" class="headerlink" title="第六章 普适理论"></a>第六章 普适理论</h3><h3 id="第七章-受限生成过程"><a href="#第七章-受限生成过程" class="headerlink" title="第七章 受限生成过程"></a>第七章 受限生成过程</h3><h3 id="第八章-西洋跳棋程序和其他受限生成过程模型"><a href="#第八章-西洋跳棋程序和其他受限生成过程模型" class="headerlink" title="第八章 西洋跳棋程序和其他受限生成过程模型"></a>第八章 西洋跳棋程序和其他受限生成过程模型</h3><h3 id="第九章-变易"><a href="#第九章-变易" class="headerlink" title="第九章 变易"></a>第九章 变易</h3><h3 id="第十章-层次描述和还原方法"><a href="#第十章-层次描述和还原方法" class="headerlink" title="第十章 层次描述和还原方法"></a>第十章 层次描述和还原方法</h3><h3 id="第十一章-隐喻和创新"><a href="#第十一章-隐喻和创新" class="headerlink" title="第十一章 隐喻和创新"></a>第十一章 隐喻和创新</h3><h3 id="第十二章-结束语"><a href="#第十二章-结束语" class="headerlink" title="第十二章 结束语"></a>第十二章 结束语</h3><h2 id="正式开始阅读"><a href="#正式开始阅读" class="headerlink" title="正式开始阅读"></a>正式开始阅读</h2><h3 id="通读"><a href="#通读" class="headerlink" title="通读"></a>通读</h3><p>读到 18</p>
+<h2 id="一级目录架构"><a href="#一级目录架构" class="headerlink" title="一级目录架构"></a>一级目录架构</h2><h3 id="1-序言"><a href="#1-序言" class="headerlink" title="1 序言"></a>1 序言</h3><h3 id="第一章-启程之前"><a href="#第一章-启程之前" class="headerlink" title="第一章 启程之前"></a>第一章 启程之前</h3><h3 id="第二章-游戏与数字"><a href="#第二章-游戏与数字" class="headerlink" title="第二章 游戏与数字"></a>第二章 游戏与数字</h3><h3 id="第三章-地图、对策论和计算机建模"><a href="#第三章-地图、对策论和计算机建模" class="headerlink" title="第三章 地图、对策论和计算机建模"></a>第三章 地图、对策论和计算机建模</h3><h3 id="第四章-西洋跳棋"><a href="#第四章-西洋跳棋" class="headerlink" title="第四章 西洋跳棋"></a>第四章 西洋跳棋</h3><h3 id="第五章-神经网络"><a href="#第五章-神经网络" class="headerlink" title="第五章 神经网络"></a>第五章 神经网络</h3><h3 id="第六章-普适理论"><a href="#第六章-普适理论" class="headerlink" title="第六章 普适理论"></a>第六章 普适理论</h3><h3 id="第七章-受限生成过程"><a href="#第七章-受限生成过程" class="headerlink" title="第七章 受限生成过程"></a>第七章 受限生成过程</h3><h3 id="第八章-西洋跳棋程序和其他受限生成过程模型"><a href="#第八章-西洋跳棋程序和其他受限生成过程模型" class="headerlink" title="第八章 西洋跳棋程序和其他受限生成过程模型"></a>第八章 西洋跳棋程序和其他受限生成过程模型</h3><h3 id="第九章-变易"><a href="#第九章-变易" class="headerlink" title="第九章 变易"></a>第九章 变易</h3><h3 id="第十章-层次描述和还原方法"><a href="#第十章-层次描述和还原方法" class="headerlink" title="第十章 层次描述和还原方法"></a>第十章 层次描述和还原方法</h3><h3 id="第十一章-隐喻和创新"><a href="#第十一章-隐喻和创新" class="headerlink" title="第十一章 隐喻和创新"></a>第十一章 隐喻和创新</h3><h3 id="第十二章-结束语"><a href="#第十二章-结束语" class="headerlink" title="第十二章 结束语"></a>第十二章 结束语</h3><h2 id="正式开始阅读"><a href="#正式开始阅读" class="headerlink" title="正式开始阅读"></a>正式开始阅读</h2><h3 id="通读"><a href="#通读" class="headerlink" title="通读"></a>通读</h3><p>读到 23</p>
 <p>边读边添加标签，为符合以下特征的页添加标签：</p>
 <ul>
 <li>这页告诉我以前不知道的事</li>
 <li>这页讲的观念、知识和我当前理解的不一样</li>
 <li>这页讲的故事或描述很有趣、很吸引人，或有些部分让我颇有感触</li>
 </ul>
+<p>22 这一系列脉冲最后会返回，。。。 形成一种环“”</p>
+<p>todo： 如何用神经网络模型解释巴甫洛夫实验</p>
 <h3 id="重读添加标签的页"><a href="#重读添加标签的页" class="headerlink" title="重读添加标签的页"></a>重读添加标签的页</h3><p>如果仍然觉得很重要，则保留标签，否则取消标签</p>
 <h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><p>再次重读添加标签的页，同时做笔记。</p>
 <p>要求：<br>摘抄一段，写一段感想<br>摘抄一定要手写，或打字，不要复制粘贴。<br>摘抄要用块引用，读书笔记中还要记录引用的页码，博客中不必记录。</p>
@@ -609,7 +824,7 @@
 <h2 id="gradient-descent推导"><a href="#gradient-descent推导" class="headerlink" title="gradient descent推导"></a>gradient descent推导</h2><p>用到复合函数的求导，$J(\theta)$由以下几个公式复合而成：</p>
 <ol>
 <li>$\frac{d}{d(x)}log(x)=\frac{1}{x}$</li>
-<li>而$h(\theta)$是一个sigmoid function，定义为： $g(z)=\frac{1}{1+e^{-z}}$<br>sigmoid function的导数满足以下公式：<br>$\frac{d}{d(x)}g(z)=g(z)(1-g(z))$<br>证明过程参考：<a href="https://kawahara.ca/how-to-compute-the-derivative-of-a-sigmoid-function-fully-worked-example/" target="_blank" rel="noopener">https://kawahara.ca/how-to-compute-the-derivative-of-a-sigmoid-function-fully-worked-example/</a></li>
+<li>而$h(\theta)$是一个<a href="/10056">sigmoid函数</a>，定义为： $g(z)=\frac{1}{1+e^{-z}}$<br>sigmoid函数的导数满足以下公式：<br>$\frac{d}{d(z)}g(z)=g(z)(1-g(z))$</li>
 <li>$z=\theta^Tx=\theta_0+\theta_1x_1+…+\theta_nx_n$<br>所以：$\frac{d}{d\theta_j}z=x_j$(除了$\theta_j外其它都视为常数$ )<br>通过复合函数求导并化简得到：<br>$\frac{d}{d\theta_j}[y^{(i)}log(h_\theta(x^{(i)}))+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]=(h_\theta(x^{i})-y^{(i)})x_j^{(i)}$</li>
 </ol>
 
@@ -977,192 +1192,9 @@
 
 
   
-    <article id="post-10047" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/10047/">监督学习</a>
-    </h1>
-  
-
-        
-        <a href="/10047/" class="archive-article-date">
-  	<time datetime="2019-09-25T00:27:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>he idea is that in supervised learning, in every example in our data set, we are told  what is the correct answer that we would have quite liked the algorithms have predicted on that example. So for each example in Supervised Learning, we were told explicitly what is the so-called right answer(each eaxmple was labeled). </p>
-<h2 id="Regression-problem"><a href="#Regression-problem" class="headerlink" title="Regression problem"></a>Regression problem</h2><p>By regression(回归) problem, I mean we’re trying to predict a continuous valued output. </p>
-<p><a href="https://www.coursera.org/learn/machine-learning/lecture/1VkCb/supervised-learning" target="_blank" rel="noopener">https://www.coursera.org/learn/machine-learning/lecture/1VkCb/supervised-learning</a> 2:37</p>
-<p>扩展知识：<a href="https://baike.baidu.com/item/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/2625498" target="_blank" rel="noopener">回归分析</a></p>
-<h2 id="Classification-problem"><a href="#Classification-problem" class="headerlink" title="Classification problem"></a>Classification problem</h2><p>The term classification refers to the fact, that here, we’re trying to predict a discrete value output zero or one, sometimes you can have more than two  possible values for the output.</p>
-<p><a href="https://www.coursera.org/learn/machine-learning/lecture/1VkCb/supervised-learning" target="_blank" rel="noopener">https://www.coursera.org/learn/machine-learning/lecture/1VkCb/supervised-learning</a> 4:43</p>
-<p>逻辑回归又是怎么回事，它和分类问题有什么联系吗？</p>
-<h2 id="Regression-vs-Classification"><a href="#Regression-vs-Classification" class="headerlink" title="Regression vs Classification"></a>Regression vs Classification</h2><p>前者是定量分析，后者是定性分析</p>
-<h1 id="算法流程图"><a href="#算法流程图" class="headerlink" title="算法流程图"></a>算法流程图</h1><p>Lesson 1 Model Representation 4:47</p>
-<p><img src="/10047/flowchart.jpg" alt="flowchart"></p>
-<p>h: hypothesis(a function that takes as input the size of a house like maybe the size of the new your friend’s, and output the estimated price). h is a map from x to y</p>
-<p>$h_\theta = \theta_0 + \theta_1x$</p>
-<p>Linear regression with one variable, 也叫Univariate linear regression.</p>
-<p>参考资料：</p>
-<p><a href="https://www.coursera.org/learn/machine-learning/lecture/1VkCb/supervised-learning" target="_blank" rel="noopener">https://www.coursera.org/learn/machine-learning/lecture/1VkCb/supervised-learning</a> 2:00</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/10047/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-10046" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/10046/">线性回归</a>
-    </h1>
-  
-
-        
-        <a href="/10046/" class="archive-article-date">
-  	<time datetime="2019-09-25T00:26:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="回归分析"><a href="#回归分析" class="headerlink" title="回归分析"></a>回归分析</h2><p>按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多元线性回归分析。</p>
-<h2 id="线性回归-Linear-Regression"><a href="#线性回归-Linear-Regression" class="headerlink" title="线性回归(Linear Regression)"></a>线性回归(Linear Regression)</h2><h3 id="假设函数"><a href="#假设函数" class="headerlink" title="假设函数"></a>假设函数</h3><p>假设函数（hypothesis function）</p>
-<p>一元线性回归：</p>
-<p>$h_\theta(x)=\theta_0+\theta_1x$</p>
-<p>多元线性回归：</p>
-<p>$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\cdots+\theta_nx_n$</p>
-<p>注意：在hypothesis function中，$\theta$是已知求得的数。</p>
-<p>用向量法表示$\theta和x$如下：</p>
-<p>$x = \left[ \begin{matrix} x_0 \\ x_1 \\ \vdots \\ x_n \end{matrix} \right]$，其中，$x_0=1$，$x_j(j=1…n)$表示训练数据的第j个特征值。</p>
-<p>$\theta = \left[ \begin{matrix} \theta_0 \\ \theta_1 \\ \vdots \\ \theta_n \end{matrix} \right]$</p>
-<p>则$h_\theta(x)=\theta^Tx$</p>
-<h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><p>我们有了代价函数（cost function），有时也叫损失函数（loss function），是用来估量选择的模型的预测值和真实值的不一致程度，是用来衡量hypothesis function好不好的。(We can measure the accuracy of our hypothesis function by using a <strong>cost function</strong>， or measure how well the hypothesis function fits int the data.): </p>
-<p>$J(\theta)=\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)}))^2}$</p>
-<p> $J(\theta)$就是我们的优化目标（optimization objective），机器学习的任务就是找出合适的$\theta$，使$J(\theta)$函数值最小。</p>
-<p>注意：$\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)}-y^{(i)}))^2}$是方差的$\frac{1}{2}$，之所以cost function不是方差，主要是为了后续求解最小值时方面计算（使用Gradient descent算法对$(h_\theta(x^{(i)}-y^{(i)}))^2$求导后会有一个2，正好和增加的$\frac{1}{2}$抵消掉）</p>
-<p>参考资料：</p>
-<p><a href="https://baike.baidu.com/item/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/2625498" target="_blank" rel="noopener">回归分析</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Regression_analysis" target="_blank" rel="noopener">Regression_analysis</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">统计分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/10046/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1270,11 +1302,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">统计学</a>
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" class="js-tag color4">统计学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1302,11 +1334,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
+                <a href="javascript:void(0)" class="js-tag color5">统计分析</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">统计分析</a>
+                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1319,6 +1351,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">

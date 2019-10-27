@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="毛竹">
 <meta property="og:description" content="hypothesis functionLogistic regression的hypothesis function相当于一个复合函数，它是sigmoid function和$\theta^Tx$的复合（后者正是Linear regression的hypothesis function）。 注意：hypothesis function函数值$h_\theta(x)$表示某label的概率，而不是l">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-29T05:26:26.351Z">
+<meta property="og:updated_time" content="2019-10-22T23:31:09.045Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="逻辑回归">
 <meta name="twitter:description" content="hypothesis functionLogistic regression的hypothesis function相当于一个复合函数，它是sigmoid function和$\theta^Tx$的复合（后者正是Linear regression的hypothesis function）。 注意：hypothesis function函数值$h_\theta(x)$表示某label的概率，而不是l">
@@ -163,7 +163,7 @@
 <h2 id="gradient-descent推导"><a href="#gradient-descent推导" class="headerlink" title="gradient descent推导"></a>gradient descent推导</h2><p>用到复合函数的求导，$J(\theta)$由以下几个公式复合而成：</p>
 <ol>
 <li>$\frac{d}{d(x)}log(x)=\frac{1}{x}$</li>
-<li>而$h(\theta)$是一个sigmoid function，定义为： $g(z)=\frac{1}{1+e^{-z}}$<br>sigmoid function的导数满足以下公式：<br>$\frac{d}{d(x)}g(z)=g(z)(1-g(z))$<br>证明过程参考：<a href="https://kawahara.ca/how-to-compute-the-derivative-of-a-sigmoid-function-fully-worked-example/" target="_blank" rel="noopener">https://kawahara.ca/how-to-compute-the-derivative-of-a-sigmoid-function-fully-worked-example/</a></li>
+<li>而$h(\theta)$是一个<a href="/10056">sigmoid函数</a>，定义为： $g(z)=\frac{1}{1+e^{-z}}$<br>sigmoid函数的导数满足以下公式：<br>$\frac{d}{d(z)}g(z)=g(z)(1-g(z))$</li>
 <li>$z=\theta^Tx=\theta_0+\theta_1x_1+…+\theta_nx_n$<br>所以：$\frac{d}{d\theta_j}z=x_j$(除了$\theta_j外其它都视为常数$ )<br>通过复合函数求导并化简得到：<br>$\frac{d}{d\theta_j}[y^{(i)}log(h_\theta(x^{(i)}))+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]=(h_\theta(x^{i})-y^{(i)})x_j^{(i)}$</li>
 </ol>
 
@@ -399,11 +399,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">统计学</a>
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" class="js-tag color4">统计学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -431,11 +431,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
+                <a href="javascript:void(0)" class="js-tag color5">统计分析</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">统计分析</a>
+                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -448,6 +448,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">

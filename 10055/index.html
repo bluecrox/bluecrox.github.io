@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="毛竹">
 <meta property="og:description" content="正规方程(Normal Equation)是一种求取函数最小值的技术，其计算公式如下： $\theta=(X^TX)^{-1}X^Ty$ 其中，X称为Design Matrix，假设有m个训练数据，每个数据有n个特征，X矩阵结构如下： $X=\left[ \begin{matrix} 1 &amp;amp;x_1^{(1)} &amp;amp;x_2^{(1)} &amp;amp;\cdots &amp;amp;x_n^{(1)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-09T23:52:09.001Z">
+<meta property="og:updated_time" content="2019-10-18T05:26:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正规方程">
 <meta name="twitter:description" content="正规方程(Normal Equation)是一种求取函数最小值的技术，其计算公式如下： $\theta=(X^TX)^{-1}X^Ty$ 其中，X称为Design Matrix，假设有m个训练数据，每个数据有n个特征，X矩阵结构如下： $X=\left[ \begin{matrix} 1 &amp;amp;x_1^{(1)} &amp;amp;x_2^{(1)} &amp;amp;\cdots &amp;amp;x_n^{(1)">
@@ -181,7 +181,7 @@
 <td align="left">👎需要运行很多次迭代</td>
 </tr>
 <tr>
-<td align="left">👎当n(特征数)很大n(特征数)很大性能很差，该算法计算$(X^TX)^{-1}$，其计算复杂度是$O(n^3)$。仅适用于n&lt;1000的情况。</td>
+<td align="left">👎当n(特征数)很大时性能很差，因为该算法计算$(X^TX)^{-1}$的复杂度是$O(n^3)$。仅适用于n&lt;1000的情况。</td>
 <td align="left">👍当n(特征数)很大时(如n&gt;10000)依然能正常运行，计算复杂度是$O(kn^2)$</td>
 </tr>
 <tr>
@@ -189,7 +189,7 @@
 <td align="left">👍适用于更多问题，如神经网络</td>
 </tr>
 </tbody></table>
-<p>正规方程和<a href="10041">梯度下降算法</a>的功能一样，两者都是求取函数极小值时的参数。但和后者不同，Normal Equation不用经过一步步迭代才能达到极小值，而是一次性计算即可得出最优参数，另外，Noral Equation也不需要选择学习率（learning rate $\alpha$），计算前不需要<a href="10052">特征缩放</a>，因此，它比<a href="10041">梯度下降算法</a>简单，但当特征数很大时，性能低于<a href="10041">梯度下降算法</a>。</p>
+<p>正规方程和<a href="10041">梯度下降算法</a>的功能一样，两者都是用于求取函数极小值及其对应参数。但和后者不同，正规方程不用经过一步步迭代才能达到极小值，而是一次性计算即可得出最优参数，另外，Noral Equation也不需要选择学习率（learning rate $\alpha$），计算前不需要<a href="10052">特征缩放</a>，因此，它比<a href="10041">梯度下降算法</a>简单，但当特征数很大时，性能低于<a href="10041">梯度下降算法</a>。</p>
 <p>参考：<a href="https://www.coursera.org/learn/machine-learning/lecture/2DKxQ/normal-equation" target="_blank" rel="noopener">https://www.coursera.org/learn/machine-learning/lecture/2DKxQ/normal-equation</a> 11:59</p>
 
       
@@ -273,6 +273,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/10056/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          sigmoid函数
+        
+      </div>
+    </a>
   
   
     <a href="/10054/" id="article-nav-older" class="article-nav-link-wrap">
@@ -415,11 +424,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">统计学</a>
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" class="js-tag color4">统计学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -447,11 +456,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
+                <a href="javascript:void(0)" class="js-tag color5">统计分析</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">统计分析</a>
+                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -464,6 +473,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">

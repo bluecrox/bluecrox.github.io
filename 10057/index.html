@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://maozhu.me">
-  <title>偏导数 | 毛竹</title>
+  <title>python语言基础知识 | 毛竹</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="偏导数（Partial derivative）是指包含多个变量的函数，对其中一个变量求取导数，求取时视其它变量为已知常量。例如：  $z=f(x,y)=x^2+xy+y^2$，实际包含两个变量，分别为$x,y$ 求偏导数$\frac{\partial z}{\partial x}$时y视为y常量，因此，$\frac{\partial z}{\partial x}=2x+y$ 求偏导数$\frac{">
-<meta name="keywords" content="偏导数,partial derivative,数学">
+  <meta name="description" content="运行python直接在命令行输入python，会显示如下提示符： 1&amp;gt;&amp;gt;&amp;gt;  其后可以输入python命令。 如果是开发调试python程序，建议用Visual Studio Code开发环境。 字符+数字时，数字不会自动转字符串，需要用str先把数字转字符串布尔值常量True和False，首字母大写截断字符串首尾空白符用strip注释和文档字符串 注释用# 文档字符串用”””和">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="偏导数">
-<meta property="og:url" content="https://maozhu.me/10043/index.html">
+<meta property="og:title" content="python语言基础知识">
+<meta property="og:url" content="https://maozhu.me/10057/index.html">
 <meta property="og:site_name" content="毛竹">
-<meta property="og:description" content="偏导数（Partial derivative）是指包含多个变量的函数，对其中一个变量求取导数，求取时视其它变量为已知常量。例如：  $z=f(x,y)=x^2+xy+y^2$，实际包含两个变量，分别为$x,y$ 求偏导数$\frac{\partial z}{\partial x}$时y视为y常量，因此，$\frac{\partial z}{\partial x}=2x+y$ 求偏导数$\frac{">
+<meta property="og:description" content="运行python直接在命令行输入python，会显示如下提示符： 1&amp;gt;&amp;gt;&amp;gt;  其后可以输入python命令。 如果是开发调试python程序，建议用Visual Studio Code开发环境。 字符+数字时，数字不会自动转字符串，需要用str先把数字转字符串布尔值常量True和False，首字母大写截断字符串首尾空白符用strip注释和文档字符串 注释用# 文档字符串用”””和">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-03T02:49:11.702Z">
+<meta property="og:updated_time" content="2019-10-27T02:03:35.203Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="偏导数">
-<meta name="twitter:description" content="偏导数（Partial derivative）是指包含多个变量的函数，对其中一个变量求取导数，求取时视其它变量为已知常量。例如：  $z=f(x,y)=x^2+xy+y^2$，实际包含两个变量，分别为$x,y$ 求偏导数$\frac{\partial z}{\partial x}$时y视为y常量，因此，$\frac{\partial z}{\partial x}=2x+y$ 求偏导数$\frac{">
+<meta name="twitter:title" content="python语言基础知识">
+<meta name="twitter:description" content="运行python直接在命令行输入python，会显示如下提示符： 1&amp;gt;&amp;gt;&amp;gt;  其后可以输入python命令。 如果是开发调试python程序，建议用Visual Studio Code开发环境。 字符+数字时，数字不会自动转字符串，需要用str先把数字转字符串布尔值常量True和False，首字母大写截断字符串首尾空白符用strip注释和文档字符串 注释用# 文档字符串用”””和">
   
     <link rel="alternative" href="/atom.xml" title="毛竹" type="application/atom+xml">
   
@@ -135,33 +135,93 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-10043" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-10057" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      偏导数
+      python语言基础知识
     </h1>
   
 
         
-        <a href="/10043/" class="archive-article-date">
-  	<time datetime="2019-09-15T06:47:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-15</time>
+        <a href="/10057/" class="archive-article-date">
+  	<time datetime="2019-10-27T02:02:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>偏导数（Partial derivative）是指包含多个变量的函数，对其中一个变量求取导数，求取时视其它变量为已知常量。例如：</p>
-<p> $z=f(x,y)=x^2+xy+y^2$，实际包含两个变量，分别为$x,y$</p>
-<p>求偏导数$\frac{\partial z}{\partial x}$时y视为y常量，因此，$\frac{\partial z}{\partial x}=2x+y$</p>
-<p>求偏导数$\frac{\partial z}{\partial y}$时x视为常量，因此，$\frac{\partial z}{\partial y}=x+2y$</p>
-<p>如果函数中只包含一个变量，导数符号通常用d表示，例如：</p>
-<p>$z=f(x)=x^2+2x+1$</p>
-<p>导数$\frac{dz}{dx}=2x+2$</p>
+        <h2 id="运行python"><a href="#运行python" class="headerlink" title="运行python"></a>运行python</h2><p>直接在命令行输入python，会显示如下提示符：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其后可以输入python命令。</p>
+<p>如果是开发调试python程序，建议用Visual Studio Code开发环境。</p>
+<h2 id="字符-数字时，数字不会自动转字符串，需要用str先把数字转字符串"><a href="#字符-数字时，数字不会自动转字符串，需要用str先把数字转字符串" class="headerlink" title="字符+数字时，数字不会自动转字符串，需要用str先把数字转字符串"></a>字符+数字时，数字不会自动转字符串，需要用str先把数字转字符串</h2><h2 id="布尔值常量True和False，首字母大写"><a href="#布尔值常量True和False，首字母大写" class="headerlink" title="布尔值常量True和False，首字母大写"></a>布尔值常量True和False，首字母大写</h2><h2 id="截断字符串首尾空白符用strip"><a href="#截断字符串首尾空白符用strip" class="headerlink" title="截断字符串首尾空白符用strip"></a>截断字符串首尾空白符用strip</h2><h2 id="注释和文档字符串"><a href="#注释和文档字符串" class="headerlink" title="注释和文档字符串"></a>注释和文档字符串</h2><p> 注释用#<br> 文档字符串用”””和”””包裹， 文档字符串可以被help查询。每个模块开头，以及每个函数定义后应添加文档描述</p>
+<h2 id="使用缩进关系指明块代码，而不是用"><a href="#使用缩进关系指明块代码，而不是用" class="headerlink" title="使用缩进关系指明块代码，而不是用{}"></a>使用缩进关系指明块代码，而不是用{}</h2><h2 id="语句结尾不需要"><a href="#语句结尾不需要" class="headerlink" title="语句结尾不需要;"></a>语句结尾不需要;</h2><h2 id="控制台输出print"><a href="#控制台输出print" class="headerlink" title="控制台输出print"></a>控制台输出print</h2><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串比较用 ==和!=，字符串可以用一对双引号（<code>&quot;字符串内容&quot;</code>），也可以用一对单引号(<code>&#39;字符串内容&#39;</code>)</p>
+<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><h3 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h3><p>pop可以指定序号，pop不指定序号则移除最后一个，或del list[index] del也可以加括号<br>remove指定值，如果没有该值则报错，如果数组中有多个指定值，remove只会移除第一个</p>
+<h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a_list = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span><br><span class="line">a_list[from_index:to_index]</span><br></pre></td></tr></table></figure>
+
+<h3 id="长度"><a href="#长度" class="headerlink" title="长度"></a>长度</h3><p>len(a_list)</p>
+<h3 id="判断非空"><a href="#判断非空" class="headerlink" title="判断非空"></a>判断非空</h3><p>if a_list:<br>    do_sth</p>
+<h3 id="访问最后一个元素"><a href="#访问最后一个元素" class="headerlink" title="访问最后一个元素"></a>访问最后一个元素</h3><p>a_list[-1]</p>
+<p>同理，访问倒数第二个元素是：a_list[-2]</p>
+<h3 id="元组turple（不可改列表）"><a href="#元组turple（不可改列表）" class="headerlink" title="元组turple（不可改列表）"></a>元组turple（不可改列表）</h3><p>a_list = (“a”, “b”, “c”, “d”)</p>
+<h3 id="二维list"><a href="#二维list" class="headerlink" title="二维list"></a>二维list</h3><p>lists = [[] for i in range(3)]<br>lists[0].append(3)<br>lists[1].append(5)<br>lists[2].append(7)<br>lists<br>[[3], [5], [7]]</p>
+<p>注意： lists = [[]] * 3是浅复制</p>
+<h2 id="numpy数组"><a href="#numpy数组" class="headerlink" title="numpy数组"></a>numpy数组</h2><p>lists = [1, 2, 3] # &lt;class ‘list’&gt;<br>print(type(lists)) # &lt;class ‘numpy.ndarray’&gt;</p>
+<p>to_array = np.array(lists, dtype = int)<br>print(type(to_array))</p>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>遍历</p>
+<p>for key, value in a_dict.items():<br>    do_something</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>变量没有固定类型，赋予什么值，就成为什么类型        </p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数定义<br>def func_name(var):<br>    do_something</p>
+<p> func_name(xxx)   </p>
+<p>函数调用时可指明参数名（以便实参的数量和顺序可以不等于形参）<br>cars.sort(reverse=True)</p>
+<p>函数没有返回类型，形参没有类型</p>
+<p>任意数量实参：形参前加*<br>任意数量键值对：形参前加**</p>
+<p>def foo(**user_info):<br>    for key, value in user_info:<br>        do_something</p>
+<p>foo(first_name=”mao”, last_name=”rl”)      </p>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>class Class_Name():<br>    # 构造函数<br>    def <strong>init</strong>(self):<br><br>    def func_name():</p>
+<p>实例化<br>object1 = Class_Name();</p>
+<p>实例化类不用new</p>
+<p>类的方法定义的首个参数必须是self，但实例化或调用时不需要传self</p>
+<p>不需要定义类的属性，而是通过给self来管理类的属性</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>class SuperClass():<br>    def <strong>init</strong>(self):<br>        do_super_job</p>
+<p>class SubClass(SuperClass):<br>    def <strong>init_(self):<br>        super().</strong>init__()<br>        do_sub_job()        </p>
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><p>a_list = [1, 5, 7]<br>for num in a_list:<br>    print(num)</p>
+<p>fruits = [‘banana’, ‘apple’,  ‘mango’]<br>for index in range(len(fruits)):<br>   print ‘当前水果 :’, fruits[index]    </p>
+<p>注意：后要带:   </p>
+<h1 id="if判断"><a href="#if判断" class="headerlink" title="if判断"></a>if判断</h1><p>if value == “abc”:<br>    doxxx</p>
+<p>一个元素是否在列表中， in或not in</p>
+<p>if elif else</p>
+<p>多个条件用and or组合</p>
+<p>ii 空数组或空字符串均返回false</p>
+<h2 id="乘方用两个"><a href="#乘方用两个" class="headerlink" title="乘方用两个*"></a>乘方用两个*</h2><p>如平方：<br>value**2</p>
+<h2 id="导入模块及方法"><a href="#导入模块及方法" class="headerlink" title="导入模块及方法"></a>导入模块及方法</h2><p>import module_name<br>from module_name import function_name<br>from module_name import function_name as fn<br>import module_name as mn<br>import module_name *</p>
+<p>先导入标准库，再导自己编写的模块，两者用空行分隔</p>
+<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><p>with open(‘your_file’) as file_object:<br>    contents = file_object.read()<br>    print(contents.tstrip())</p>
+<p>with的作用是在指定代码块结束后自动释放资源    </p>
+<p>也可一行一行读取</p>
+<h2 id="块作用域"><a href="#块作用域" class="headerlink" title="块作用域"></a>块作用域</h2><p>变量无块作用域，即在代码块内定义的变量，在代码块外也能使用</p>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p>官方文档：<br><a href="https://www.runoob.com/python/python-exceptions.html" target="_blank" rel="noopener">https://www.runoob.com/python/python-exceptions.html</a></p>
+<p>try:<br>    4/0<br>except ZeroDivisionError:<br>    print()   </p>
+<p>except可以指定错误类型，也可以不指定：<br>a=10<br>b=0<br>try:<br>    print a/b<br>except:<br>    print “error”</p>
+<p>还可以有一个else代码块，即依赖于try代码块成功执行（无异常）的代码应放在else代码块中。</p>
+<p>try:<br>    c = b/ a<br>    print c<br>except (IOError ,ZeroDivisionError),x:<br>    print x<br>else:<br>    print “no error”</p>
+<p>finally不管是否有异常都执行<br>finally:<br>    print “always excute”</p>
+<h2 id="pass语句"><a href="#pass语句" class="headerlink" title="pass语句"></a>pass语句</h2><p>用于需要代码，但实际上不需要执行任何代码的地方<br>values = [1, 3, 5, 7, 9, 11, 13, 15]<br>for value1 in values:<br>   pass<br>print(“done”)</p>
+<h2 id="json读取和保持数据"><a href="#json读取和保持数据" class="headerlink" title="json读取和保持数据"></a>json读取和保持数据</h2><p>import json</p>
+<p>with open(flename, ‘w’) as file_obj:<br>    json.dump(json_data, file_obj)</p>
+<h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>P104/237 </p>
+<h2 id="数学相关"><a href="#数学相关" class="headerlink" title="数学相关"></a>数学相关</h2><p>import numpy as np</p>
+<p>print(np.pi)</p>
+<p>包含一些三角函数工具库</p>
+<p>随机数<br>from random import randint<br>randint时一个方法：<br>生成一个1到5之间的随机数：randint(1, 5)</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p> <strong>dtype</strong> </p>
+<h2 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h2><p>类名用驼峰命名法，方法名，实例名和模块名采用小写字母并下划线分隔不同单词<br>文件名命名习惯：小写字母并用_分隔<br><a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/#id16" target="_blank" rel="noopener">Python风格规范</a></p>
 
       
 
@@ -175,15 +235,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">偏导数</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">partial derivative</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
@@ -239,7 +291,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://maozhu.me/10043/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://maozhu.me/10057/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -253,18 +305,9 @@
   
 <nav id="article-nav">
   
-    <a href="/10044/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          指数函数
-        
-      </div>
-    </a>
   
-  
-    <a href="/10042/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LaTex符号</div>
+    <a href="/10056/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sigmoid函数</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://maozhu.me/10041/1.jpg">
 <meta property="og:image" content="https://maozhu.me/10041/3.jpg">
 <meta property="og:image" content="https://maozhu.me/10041/10041/2.jpg">
-<meta property="og:updated_time" content="2019-10-08T23:59:27.086Z">
+<meta property="og:updated_time" content="2019-10-21T05:34:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="梯度下降算法">
 <meta name="twitter:description" content="简介梯度下降（Gradient descent）是一种用于找出某个函数最小值的算法。该算法示意图如下，从某个初始点开始，沿着坡度最大的方向下降，经过若干步后，即能达到某个局部最低值。">
@@ -165,31 +165,35 @@
 
 <p>使用梯度下降算法找出$\theta_0, \theta_1, … \theta_n$，使$J(\theta_0, \theta_1, … \theta_n)$最小，步骤如下：</p>
 <ol>
-<li>初始化$\theta_0, \theta_1, … \theta_n$，赋予任意初始值均可，但要求其在函数中有意义。</li>
-<li>逐步更新$\theta_0, \theta_1, … \theta_n$的值，不断减小$J(\theta_0, \theta_1, … \theta_n)$只到其小到期望的最小值。</li>
-</ol>
-<p>注意：起始点不同梯度下降算法最后达到的最小值未必相同。</p>
-<h2 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h2><p>repeat until convergence {</p>
+<li><p>初始化$\theta_0, \theta_1, … \theta_n$，赋予任意初始值均可，但要求初始值在函数中$J$中有定义。</p>
+</li>
+<li><p>逐步更新$\theta_0, \theta_1, … \theta_n$的值，不断减小$J(\theta_0, \theta_1, … \theta_n)$只到其小到期望的极小值。</p>
+<p>repeat until convergence {</p>
 <p>​    $\theta_j = \theta_j - \alpha \frac{\partial}{\partial {\theta_j}}J(\theta_0, \theta_1…,\theta_n)$</p>
 <p>}</p>
-<p>其中，$\alpha$是个正数，称为learning rate，用于控制步进速度。$\alpha$越大，梯度下降算法每次迭代参数变化越大。因此，越快向最小值靠近。但是$\alpha$也不能太大，否则可能因步子太大，越过最小值所在的位置，导致不聚合。偏导数$\frac{\partial}{\partial {\theta_j}}J(\theta_0, \theta_1…,\theta_n)$的意义是当前点斜率的值，它有两个用途：首先，根据其正负即可知道$\theta$应该是增大还是减小才能是函数变小，其次斜率越大（越陡），则$\theta$改变越大，斜率越小（函数越接近局部最小值），$\theta$变化越小。</p>
+</li>
+</ol>
+<h2 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h2><p>$\alpha$是个正数，称为learning rate，用于控制步进速度。$\alpha$越大，梯度下降算法每次迭代参数变化越大，越快向最小值靠近。但是$\alpha$也不能太大，否则可能因步子太大，越过最小值所在的位置，导致不聚合。偏导数$\frac{\partial}{\partial {\theta_j}}J(\theta_0, \theta_1…,\theta_n)$有两个用途：首先，其正负决定$\theta$应该是增大还是减小才能是函数变小，其次斜率越大（越陡），则$\theta$变化越大，斜率越小（函数越接近局部最小值），$\theta$变化越小。当函数抵达局部最小值时，偏导数=0，$\theta$不再变化。如下图所示，位置1的导数大于0，迭代后$\theta_j$减少，位置2的导数小于0，迭代后$\theta_j$增大，迭代后更靠近位置3。</p>
 <p><img src="/10041/3.jpg" alt></p>
-<p>当函数抵达局部最小值时，偏导数=0，$\theta$不再变化。（实际上，如果相邻两次$J(\theta)$减少值小于$10^{-3}$即可认为已到最小值，参考：<a href="https://www.coursera.org/learn/machine-learning/lecture/3iawu/gradient-descent-in-practice-ii-learning-rate" target="_blank" rel="noopener">Gradient Descent in Practice II - Learning Rate</a>）</p>
+<p>（实际上，如果相邻两次$J(\theta)$减少值小于$10^{-3}$即可认为已到最小值，参考：<a href="https://www.coursera.org/learn/machine-learning/lecture/3iawu/gradient-descent-in-practice-ii-learning-rate" target="_blank" rel="noopener">Gradient Descent in Practice II - Learning Rate</a>）</p>
 <p>注意：更新$\theta_j$要求同步更新，如下所示：</p>
 <p> $temp0 = \theta_0 - \alpha \frac{\partial}{\partial {\theta_0}}J(\theta_0, \theta_1…,\theta_n)$</p>
 <p> $temp1 = \theta_1 - \alpha \frac{\partial}{\partial {\theta_1}}J(\theta_0, \theta_1…,\theta_n)$</p>
 <p>即先把所有值记录到临时变量中，最后再更新$\theta_j$:</p>
 <p>$\theta_0 = temp0$</p>
 <p>$\theta_1=temp1$</p>
+<p>注意：起始点不同梯度下降算法最后达到的最小值未必相同。</p>
 <h2 id="学习率-alpha-取值方法"><a href="#学习率-alpha-取值方法" class="headerlink" title="学习率$\alpha$取值方法"></a>学习率$\alpha$取值方法</h2><p>首先选择一个初始的足够小的学习率（learning rate $\alpha$），如0.001，用该学习率运行梯度下降算法并绘制成本函数-迭代次数的图形（不用运行完整个算法，只要运行前面若干次即可），如下图所示：</p>
 <img src="10041/2.jpg" alt="2" style="zoom:80%;">
 
 <p>观察成本函数-迭代次数的图形，如果随着迭代次数的增加，成本函数减少，则说明$\alpha$还够小，再观察成本函数减少的速度，如果足够快（曲线较陡），则可停止尝试，如果太慢（曲线缓慢下降），则逐步增加$\alpha$值：</p>
 <p>…, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1, …，</p>
 <p>直到梯度下降速度足够快（又不至于太大导致成本函数不降反升）。</p>
-<h2 id="线性回归的梯度下降"><a href="#线性回归的梯度下降" class="headerlink" title="线性回归的梯度下降"></a>线性回归的梯度下降</h2><p><a href="/10046">线性回归</a>的假设函数$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\cdots+\theta_nx_n$，代价函数$J(\theta)=\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)}))^2}$</p>
+<h2 id="线性回归的梯度下降"><a href="#线性回归的梯度下降" class="headerlink" title="线性回归的梯度下降"></a>线性回归的梯度下降</h2><p><a href="/10046">线性回归</a>的假设函数$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\cdots+\theta_nx_n$，</p>
+<p>代价函数$J(\theta)=\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)}))^2}$</p>
 <p>$\frac{\partial}{\partial {\theta_j}}J(\theta)=\frac{1}{m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)})x_j}$</p>
-<p>因此，    $\theta_j = \theta_j -\alpha \frac{1}{m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)})x_j}$</p>
+<p>$\theta_j = \theta_j -\alpha \frac{1}{m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)})x_j}$，由于$x_0=1$，因此$\theta_0$的公式可以简写为：</p>
+<p>$\theta_0 = \theta_0 -\alpha \frac{1}{m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)})}$</p>
 <h2 id="全量梯度下降-“Batch”-Gradient-Descent"><a href="#全量梯度下降-“Batch”-Gradient-Descent" class="headerlink" title="全量梯度下降(“Batch” Gradient Descent)"></a>全量梯度下降(“Batch” Gradient Descent)</h2><p>以<a href="/10046">Linear Regression</a>的cost function为例，其$J(\theta)=\displaystyle \sum^m_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2$，可知每步都要遍历所有的训练数据。这种Gradient Descent称为全量法。除了全量法外，也可以每步只用若干个训练数据，甚至只用一个训练数据。</p>
 <h2 id="其它求取最小值的技术"><a href="#其它求取最小值的技术" class="headerlink" title="其它求取最小值的技术"></a>其它求取最小值的技术</h2><p><a href="10055">正规方程</a></p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.coursera.org/learn/machine-learning/lecture/8SpIM/gradient-descent" target="_blank" rel="noopener">Gradient Descent</a></p>
@@ -437,11 +441,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">统计学</a>
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" class="js-tag color4">统计学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -469,11 +473,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
+                <a href="javascript:void(0)" class="js-tag color5">统计分析</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">统计分析</a>
+                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -486,6 +490,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">

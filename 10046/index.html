@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="毛竹">
 <meta property="og:description" content="回归分析按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多元线性回归分析。 线性回归(Linear Re">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-01T09:29:41.657Z">
+<meta property="og:updated_time" content="2019-10-11T23:23:32.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性回归">
 <meta name="twitter:description" content="回归分析按照自变量(independent variable)和因变量(dependent variable)之间的关系类型，可分为线性回归分析和非线性回归分析。如果在回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且自变量之间存在线性相关，则称为多元线性回归分析。 线性回归(Linear Re">
@@ -169,7 +169,7 @@
 <h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><p>我们有了代价函数（cost function），有时也叫损失函数（loss function），是用来估量选择的模型的预测值和真实值的不一致程度，是用来衡量hypothesis function好不好的。(We can measure the accuracy of our hypothesis function by using a <strong>cost function</strong>， or measure how well the hypothesis function fits int the data.): </p>
 <p>$J(\theta)=\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)})-y^{(i)}))^2}$</p>
 <p> $J(\theta)$就是我们的优化目标（optimization objective），机器学习的任务就是找出合适的$\theta$，使$J(\theta)$函数值最小。</p>
-<p>注意：$\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)}-y^{(i)}))^2}$是方差的$\frac{1}{2}$，之所以cost function不是方差，主要是为了后续求解最小值时方面计算（使用Gradient descent算法对$(h_\theta(x^{(i)}-y^{(i)}))^2$求导后会有一个2，正好和增加的$\frac{1}{2}$抵消掉）</p>
+<p>注意：$\frac{1}{2m}\displaystyle \sum^m_{i=1}{(h_\theta(x^{(i)}-y^{(i)}))^2}$是方差的$\frac{1}{2}$，之所以cost function不是方差，主要是为了后续求解最小值时，用到<a href="10041">梯度下降算</a>法，需要对$(h_\theta(x^{(i)}-y^{(i)}))^2$求导，求导产生的2正好和$\frac{1}{2}$抵消掉，因此方便计算。</p>
 <p>参考资料：</p>
 <p><a href="https://baike.baidu.com/item/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/2625498" target="_blank" rel="noopener">回归分析</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Regression_analysis" target="_blank" rel="noopener">Regression_analysis</a></p>
@@ -410,11 +410,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">统计学</a>
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" class="js-tag color4">统计学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -442,11 +442,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
+                <a href="javascript:void(0)" class="js-tag color5">统计分析</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">统计分析</a>
+                <a href="javascript:void(0)" class="js-tag color5">对数函数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -459,6 +459,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
